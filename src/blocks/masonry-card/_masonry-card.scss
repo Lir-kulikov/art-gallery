@@ -1,0 +1,98 @@
+.masonry-card {
+  border: 1px solid (--gray);
+  background-color: var(--white);
+  transition: box-shadow var(--transition) ease;
+
+  &:hover {
+    box-shadow: 0 0 17px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  &__img {
+    position: relative;
+    min-width: 100%;
+    object-fit: cover;
+  }
+
+  &__wrapper {
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    position: relative;
+    padding: 14px 16px 10px 16px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+
+  &__author {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dark-2);
+    font-size: 15px;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+
+  &__type {
+    color: var(--dark-3);
+    font-size: 14px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-top: 1px solid var(--gray);
+  }
+
+  &__price {
+    color: var(--black);
+    font-size: 18px;
+  }
+
+  &__price-rub {
+    font-family: 'PTRoubleSans';
+  }
+
+  &__old-price {
+    color: var(--dark-3);
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    text-decoration: line-through;
+  }
+
+  &__heart-icon {
+    margin-right: 18px;
+    cursor: pointer;
+    transition: fill var(--transition) ease;
+
+    &:hover {
+      fill: var(--hover);
+    }
+  }
+
+  &__basket-icon {
+    cursor: pointer;
+
+    transition: fill var(--transition) ease;
+
+    &:hover {
+      fill: var(--hover);
+    }
+  }
+
+  &__card-sticker {
+    position: absolute;
+    top: -10px;
+    left: 17px;
+  }
+}

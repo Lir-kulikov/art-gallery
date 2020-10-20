@@ -1,0 +1,110 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--dark-opacity);
+
+  &__inner {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    //argin-right: 60px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    margin-left: 55px;
+
+
+    &-item {
+      display: block;
+      flex-shrink: 0;
+
+      &:not(:first-child) {
+        margin-left: 42px;
+      }
+    }
+  }
+
+  &__nav {
+    margin-left: 115px;
+  }
+
+  &__basket {
+    position: relative;
+    padding: 10px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &__basket-icon {
+
+
+    display: block;
+    cursor: pointer;
+
+    &.basket-icon {
+      display: block;
+      fill: var(--white);
+    }
+  }
+
+  &__basket-icon-counter {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    display: block;
+    padding: 0 5px;
+    background-color: var(--dark-3);
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  &__heart-icon {
+    position: relative;
+    display: block;
+    cursor: pointer;
+
+    &.heart-icon {
+      display: block;
+      fill: var(--white);
+    }
+  }
+
+  &__wishlist {
+    position: relative;
+    padding: 10px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &__heart-icon-counter {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    display: block;
+    padding: 0 5px;
+    background-color: var(--dark-3);
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}

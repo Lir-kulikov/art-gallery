@@ -1,0 +1,124 @@
+.search {
+  &__icon {
+    position: relative;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 200%;
+      height: 20px;
+      content: '';
+      transform: translateX(-50%);
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &__drop {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    background-color: #9febeb;
+    opacity: 0;
+    transform: translateY(-300%);
+
+    &.is-open {
+      height: auto;
+      padding: 35px;
+      opacity: 1;
+      transform: translateY(0);
+
+      .search__field-wrapper {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__field-wrapper {
+    position: relative;
+    display: flex;
+    max-width: 900px;
+    justify-content: center;
+    margin: 0 auto;
+    transform: translateY(-300%);
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    padding-top: 15px;
+    padding-right: 110px;
+    padding-bottom: 15px;
+    padding-left: 26px;
+    background-color: var(--white);
+    color: var(--dark-2);
+    font-size: 24px;
+    transition: transform var(--transition) linear;
+  }
+
+  & .icon-search {
+    width: 20px;
+    height: 20px;
+    fill: var(--white);
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    padding: 0;
+    background-color: var(--white);
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    & .icon-close {
+      width: 25px;
+      height: 25px;
+      fill: var(--dark-3);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    padding: 0;
+    background-color: var(--white);
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    & .icon-search {
+      width: 27px;
+      height: 27px;
+      fill: var(--dark-3);
+    }
+  }
+}
+
+
+@keyframes smooth-open {
+  0% {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+
+  50% {
+    height: auto;
+    padding: 35px;
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

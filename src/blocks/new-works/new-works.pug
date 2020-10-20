@@ -1,0 +1,90 @@
+section.new-works
+  .container
+    h2.new-works__title.title-lg Новые работы
+  include ../section-line/section-line
+  +section-line('new-works__section-line')
+  .container
+    .new-works__grid.js-masonry
+
+      .new-works__grid-item-sizer.js-sizer
+      .new-works__grid-item-gutter.js-gutter
+      include ../masonry-fixed-card/masonry-fixed-card
+      +masonry-fixed-card('new-works__grid-item-fixed-card').js-fixed-card
+
+      include ../masonry-card/masonry-card
+      +masonry-card('new-works__grid-item', {
+      img: 'masonry-card-1.jpg',
+      title: 'Распоряжения о структуре тут длинное название картины',
+      author: 'Екатерина Александровна Преображенская',
+      price: '927 750'}, {
+      }, {
+      oldPriceValue: '727 750'})
+
+      +masonry-card('new-works__grid-item', {
+      img: 'masonry-card-2.jpg',
+      title: 'Абстракция, Опус J202',
+      author: 'Соколов Виталий',
+      price: '927 750'}, {
+      text: 'Новинка',
+      mod: 'new'}, {
+      oldPriceValue: '727 750'})
+
+      .new-works__grid-item.new-works__grid-item--empty.js-item.hidden-desktop-up.hidden-mobile-down
+
+      +masonry-card('new-works__grid-item', {
+      img: 'masonry-card-3.jpg',
+      title: 'Распоряжения о структуре тут длинное название картины',
+      author: 'Екатерина Александровна Преображенская',
+      price: '927 750',
+      oldPrice: '727 750'}, {
+      text: 'Новинка',
+      mod: 'new'
+      })
+
+      .new-works__grid-item.new-works__grid-item--empty.js-item.hidden-tablet-down
+
+      +masonry-card('new-works__grid-item', {
+      img: 'masonry-card-4.jpg',
+      title: 'Распоряжения о структуре',
+      author: 'Говард Херш',
+      price: '27 750'}, {}, {})
+
+      +masonry-card('new-works__grid-item', {
+      img: 'masonry-card-5.jpg',
+      title: 'Абстракция, Опус J202',
+      author: 'Соколов Виталий',
+      price: '27 750'}, {}, {})
+
+      +masonry-card('new-works__grid-item', {
+      img: 'masonry-card-6.jpg',
+      title: 'Распоряжения о структуре тут длинное название картины',
+      author: 'Екатерина Александровна Преображенская',
+      price: '927 750',
+      oldPrice: '727 750'}, {
+      text: 'Скидка 20%',
+      mod: 'sale'
+      })
+
+      +masonry-card('new-works__grid-item', {
+      img: 'masonry-card-7.jpg',
+      title: 'Растущее действие',
+      author: 'Рамина Роуз',
+      price: '927 750',
+      oldPrice: '727 750'}, {
+      text: 'Скидка 20%',
+      mod: 'sale'
+      })
+
+      +masonry-card('new-works__grid-item', {
+      img: 'masonry-card-8.jpg',
+      title: 'Абстракция, Опус J202',
+      author: 'Соколов Виталий',
+      price: '27 750'}, {}, {})
+
+      +masonry-card('new-works__grid-item', {
+      img: 'masonry-card-9.jpg',
+      title: 'Абстракция, Опус J202',
+      author: 'Соколов Виталий',
+      price: '27 750'}, {}, {})
+    
+    button.new-works__btn Смотреть все

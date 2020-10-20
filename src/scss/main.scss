@@ -1,0 +1,46 @@
+// settings
+
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+//vendor styles
+@import '../../node_modules/swiper/swiper-bundle.css';
+//global
+
+body {
+  position: relative;
+  color: var(--white);
+  font-family: var(--font-base);
+}
+
+.container {
+  max-width: 1270px;
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//blocks
+
+@import '../blocks/logo/_logo';
+@import '../blocks/header/_header';
+@import '../blocks/nav/_nav';
+@import '../blocks/account/_account';
+@import '../blocks/lang/_lang';
+@import '../blocks/hero/_hero';
+@import '../blocks/search/_search';
+@import '../blocks/start/_start';
+@import '../blocks/title-lg/_title-lg';
+@import '../blocks/section-line/_section-line';
+@import '../blocks/video-start/_video-start';
+@import '../blocks/article-card/_article-card';
+@import '../blocks/new-works/_new-works';
+@import '../blocks/masonry-card/_masonry-card';
+@import '../blocks/heart-icon/_heart-icon';
+@import '../blocks/basket-icon/_basket-icon';
+@import '../blocks/card-sticker/_card-sticker';
+@import '../blocks/style-review/_style-review';
+@import '../blocks/masonry-fixed-card/_masonry-fixed-card';
+@import '../blocks/style-card/_style-card';

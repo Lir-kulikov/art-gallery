@@ -1,0 +1,14 @@
+.card-sticker {
+  padding: 0 10px;
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 13px;
+
+  &--new {
+    background-color: var(--sticker-dark);
+  }
+
+  &--sale {
+    background-color: var(--sticker-light);
+  }
+}

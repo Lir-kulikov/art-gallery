@@ -1,0 +1,23 @@
+mixin masonry-card(ClassName, dataCard, sticker, oldPrice)
+  - sticker = sticker || ''
+  - oldPrice = oldPrice || ''
+  .masonry-card(class= ClassName)
+    a.masonry-card__img-wrapper(href="#")
+      img.masonry-card__img(src="img/" + dataCard.img)
+    .masonry-card__info
+      if sticker
+        include ../card-sticker/card-sticker
+        +card-sticker('masonry-card__card-sticker', sticker.text, sticker.mod)
+      a.masonry-card__title(href="#")= dataCard.title
+      a.masonry-card__author(href="#")= dataCard.author
+      span.masonry-card__type Картина,  80x60 см.
+    .masonry-card__footer
+      .masonry-card__price= dataCard.price
+        <span class="masonry-card__price-rub">7</span>
+      if oldPrice
+        .masonry-card__old-price= oldPrice.oldPriceValue
+      .masonry-card__actions
+        include ../heart-icon/heart-icon
+        +heart-icon('masonry-card__heart-icon')
+        include ../basket-icon/basket-icon
+        +basket-icon('masonry-card__basket-icon')

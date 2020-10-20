@@ -1,0 +1,6 @@
+mixin style-card(elementClass, mod, content)
+  a.style-card(class= elementClass href="#")
+    img.style-card__img(src="img/" + content.img)
+    .style-card__overlay
+      .style-card__title= content.title
+      .style-card__category= content.category

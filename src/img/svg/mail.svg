@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="mail.svg"
+   id="svg20"
+   viewBox="0 0 5.91 4.53"
+   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+   version="1.1"
+   height="5.8152mm"
+   width="7.588mm"
+   xml:space="preserve"><metadata
+   id="metadata24"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   inkscape:current-layer="svg20"
+   inkscape:window-maximized="0"
+   inkscape:window-y="23"
+   inkscape:window-x="0"
+   inkscape:cy="10.989354"
+   inkscape:cx="14.339527"
+   inkscape:zoom="30.43855"
+   showgrid="false"
+   id="namedview22"
+   inkscape:window-height="480"
+   inkscape:window-width="711"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+ <defs
+   id="defs12"><style
+     id="style10"
+     type="text/css">
+   <![CDATA[
+    .fil0 {fill:#FEFEFE;fill-rule:nonzero}
+   ]]>
+  </style></defs>
+ <g
+   id="Layer_x0020_1">
+  <metadata
+   id="CorelCorpID_0Corel-Layer" />
+  <path
+   id="path15"
+   d="M5.91 0.29l0 4.24 -5.91 0 0 -4.53 5.91 0 0 0.29zm-0.58 3.65l0 -3.36 -4.74 0 0 3.36 4.74 0z"
+   class="fil0" />
+  <path
+   id="path17"
+   d="M5.78 0.54l-2.67 2.03c-0.11,0.08 -0.26,0.08 -0.37,-0.01l-2.63 -2.04c-0.13,-0.1 -0.15,-0.28 -0.05,-0.41 0.06,-0.07 0.14,-0.11 0.23,-0.11l0 -0 5.33 0c0.16,0 0.29,0.13 0.29,0.29 0,0.1 -0.05,0.19 -0.13,0.24zm-2.85 1.44l1.82 -1.39 -3.61 0 1.79 1.39z"
+   class="fil0" />
+ </g>
+</svg>

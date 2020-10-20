@@ -1,0 +1,122 @@
+.new-works {
+  padding-top: 47px;
+  padding-bottom: 65px;
+  background-color: var(--light-gray);
+
+  &__title {
+    margin-bottom: 9px;
+  }
+
+  &__section-line {
+    margin-bottom: 50px;
+  }
+
+  &__grid {
+    position: relative;
+    width: 1240px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+  }
+
+  &__grid-item-sizer,
+  &__grid-item,
+  &__grid-item-fixed-card {
+    width: calc((100% - 45px * 3) / 4);
+  }
+
+  &__grid-item {
+    margin-bottom: 32px;
+  }
+
+  &__grid-item--empty {
+    height: 1px;
+    border: none;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  @media (max-width: 1279px) {
+    &__grid-item-sizer,
+    &__grid-item,
+    &__grid-item-fixed-card {
+      width: calc((100% - 45px * 2) / 3);
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__grid-item-sizer,
+    &__grid-item,
+    &__grid-item-fixed-card {
+      width: calc((100% - 30px) / 2);
+    }
+  }
+
+  &__grid-item-gutter {
+    width: 45px;
+  }
+
+  @media (max-width: 767px) {
+    &__grid-item-gutter {
+      width: 30px;
+    }
+  }
+
+  &__grid-item-fixed-card {
+    position: absolute;
+    top: 0;
+    right: 0 !important;
+    height: 480px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 767px) {
+    &__grid-item-fixed-card {
+      display: none;
+    }
+  }
+
+  &__btn {
+    display: block;
+    min-width: 218px;
+    padding: 12px 70px;
+    border: 1px solid #999999;
+    margin: 0 auto;
+    color: var(--black);
+    cursor: pointer;
+    font-size: 17px;
+
+    transition: var(--transition) ease;
+
+    &:hover {
+      border: 1px solid var(--black);
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-mobile-down {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1279px) {
+  .hidden-tablet-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hidden-desktop-up {
+    display: none !important;
+  }
+}
+
+.js-fixed-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

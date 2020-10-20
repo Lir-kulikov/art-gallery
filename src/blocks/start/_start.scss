@@ -1,0 +1,26 @@
+.start {
+  padding-top: 48px;
+  padding-bottom: 65px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 43px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__video {
+    width: 62.75%;
+    height: auto;
+    flex-shrink: 0;
+    padding-top: 33.1%;
+    margin-right: 57px;
+  }
+
+  &__card {
+    width: 404px;
+  }
+}

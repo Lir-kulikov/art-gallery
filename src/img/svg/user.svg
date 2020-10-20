@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="user.svg"
+   id="svg20"
+   viewBox="0 0 4.99 5.15"
+   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+   version="1.1"
+   height="7.5102mm"
+   width="7.2751mm"
+   xml:space="preserve"><metadata
+   id="metadata24"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   inkscape:current-layer="svg20"
+   inkscape:window-maximized="0"
+   inkscape:window-y="23"
+   inkscape:window-x="0"
+   inkscape:cy="14.192504"
+   inkscape:cx="13.748221"
+   inkscape:zoom="23.56878"
+   showgrid="false"
+   id="namedview22"
+   inkscape:window-height="480"
+   inkscape:window-width="711"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+ <defs
+   id="defs12">
+  <style
+   id="style10"
+   type="text/css">
+   <![CDATA[
+    .fil0 {fill:#2B2A29;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g
+   id="Layer_x0020_1">
+  <metadata
+   id="CorelCorpID_0Corel-Layer" />
+  <path
+   id="path15"
+   d="M4.26 3.32c0.49,0.49 0.73,1.13 0.73,1.76l-0 0c0,0.02 -0,0.05 -0,0.07l-0.52 0c0,-0.02 0,-0.05 0,-0.07l-0 0c0,-0.51 -0.19,-1.01 -0.58,-1.4 -0.39,-0.39 -0.89,-0.58 -1.4,-0.58 -0.51,0 -1.01,0.19 -1.4,0.58 -0.39,0.39 -0.58,0.89 -0.58,1.4 0,0.02 0,0.05 0,0.07l-0.52 0c-0,-0.02 -0,-0.05 -0,-0.07 0,-0.64 0.24,-1.28 0.73,-1.76 0.49,-0.49 1.13,-0.73 1.76,-0.73 0.64,0 1.28,0.24 1.76,0.73z"
+   class="fil0" />
+  <path
+   id="path17"
+   d="M3.05 1.86c0.15,-0.15 0.23,-0.35 0.23,-0.55 0,-0.2 -0.08,-0.4 -0.23,-0.55 -0.15,-0.15 -0.35,-0.23 -0.55,-0.23 -0.2,0 -0.4,0.08 -0.55,0.23 -0.15,0.15 -0.23,0.35 -0.23,0.55 0,0.2 0.08,0.4 0.23,0.55 0.15,0.15 0.35,0.23 0.55,0.23 0.2,0 0.4,-0.08 0.55,-0.23zm0.75 -0.55c0,0.33 -0.13,0.67 -0.38,0.92 -0.25,0.25 -0.59,0.38 -0.92,0.38 -0.33,0 -0.67,-0.13 -0.92,-0.38 -0.25,-0.25 -0.38,-0.59 -0.38,-0.92 0,-0.33 0.13,-0.67 0.38,-0.92 0.25,-0.25 0.59,-0.38 0.92,-0.38 0.33,0 0.67,0.13 0.92,0.38 0.25,0.25 0.38,0.59 0.38,0.92z"
+   class="fil0" />
+ </g>
+</svg>

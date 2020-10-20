@@ -1,0 +1,19 @@
+header.header
+  .container
+    .header__inner
+      .header__left
+        include ../blocks/logo/logo
+        include ../blocks/nav/nav
+      .header__action
+        include ../blocks/account/account
+        button.header__wishlist.header__action-item
+          include ../blocks/heart-icon/heart-icon
+          +heart-icon('header__heart-icon')
+          span.header__heart-icon-counter 85
+        button.header__basket.header__action-item
+          include ../blocks/basket-icon/basket-icon
+          +basket-icon('header__basket-icon')
+          span.header__basket-icon-counter 23
+        include ../blocks/search/search
+        include ../blocks/lang/lang
+          

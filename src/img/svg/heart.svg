@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="heart.svg"
+   id="svg19"
+   viewBox="0 0 4.85 4.3"
+   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+   version="1.1"
+   height="6.7488mm"
+   width="7.6072mm"
+   xml:space="preserve"><metadata
+   id="metadata23"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   inkscape:current-layer="svg19"
+   inkscape:window-maximized="0"
+   inkscape:window-y="23"
+   inkscape:window-x="0"
+   inkscape:cy="5.7473819"
+   inkscape:cx="-1.2858394"
+   inkscape:zoom="8.6177199"
+   showgrid="false"
+   id="namedview21"
+   inkscape:window-height="480"
+   inkscape:window-width="711"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+ <defs
+   id="defs12"><style
+     id="style10"
+     type="text/css">
+   <![CDATA[
+    .fil0 {fill:black}
+   ]]>
+  </style></defs>
+ <g
+   id="Layer_x0020_1">
+  <metadata
+   id="CorelCorpID_0Corel-Layer" />
+  <g
+   id="_1786866298320">
+   <path
+   id="path15"
+   d="M3.45 0c-0.4,0 -0.77,0.16 -1.03,0.44 -0.53,-0.57 -1.45,-0.6 -2.01,-0.04 -0.55,0.55 -0.55,1.43 -0,1.98l1.84 1.85c0.09,0.09 0.23,0.09 0.32,0l1.86 -1.85c0.27,-0.27 0.41,-0.62 0.41,-0.99 -0,-0.77 -0.63,-1.4 -1.4,-1.4zm0.67 2.06l-1.7 1.69 -1.69 -1.69c-0.37,-0.37 -0.37,-0.96 0,-1.33 0.43,-0.43 1.18,-0.35 1.49,0.21 0.09,0.16 0.32,0.16 0.4,-0 0.16,-0.3 0.47,-0.48 0.82,-0.48 0.52,0 0.94,0.42 0.94,0.94 0,0.25 -0.1,0.49 -0.28,0.67z"
+   class="fil0" />
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,36 @@
+.style-review {
+  padding-top: 50px;
+
+  &__title {
+    margin-bottom: 9px;
+  }
+
+  &__slide {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__slide-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 42px;
+  }
+
+  &__slide-col {
+    width: 50%;
+
+    &:not(:last-child) {
+      margin-right: 42px;
+    }
+  }
+}
+
+.swiper-container-style-review {
+  overflow: hidden;
+}

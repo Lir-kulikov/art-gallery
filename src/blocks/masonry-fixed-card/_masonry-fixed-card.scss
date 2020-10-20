@@ -1,0 +1,76 @@
+.masonry-fixed-card {
+  position: relative;
+  display: block;
+  height: 480px;
+  padding: 15px 20px 0 20px;
+  cursor: pointer;
+  text-decoration: none;
+
+  &__inner {
+    height: 100%;
+    padding: 38px;
+    background-color: #191b1f;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__title {
+    position: relative;
+    margin-top: 180px;
+    margin-bottom: 50px;
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0.55px;
+
+    &::before {
+      position: absolute;
+      top: -25px;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background-color: var(--white);
+      content: '';
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      top: -20px;
+      left: -50px;
+      width: 91px;
+      height: 100px;
+      background-image: url('../img/masonry-card-fixed-2.png');
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -18px;
+      width: 36px;
+      height: 10px;
+      background-image: url('../img/long-arrow-right.svg');
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      transform: translateY(-50%);
+    }
+  }
+}

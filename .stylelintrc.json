@@ -1,0 +1,7 @@
+{
+    "extends": ["stylelint-config-htmlacademy",
+                "stylelint-config-idiomatic-order"],
+    "rules": {
+      "string-quotes": "single"
+    }
+}
