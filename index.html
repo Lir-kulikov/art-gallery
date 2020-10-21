@@ -1,0 +1,504 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ArtGallery - </title>
+    <link rel="stylesheet" href="css/main.min.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__left"><a class="logo__link" href="#"><img class="logo header__logo" src="img/logo.png" alt="logo"/></a>
+            <nav class="nav header__nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Художникам</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Блог</a></li>
+                <li class="nav__item nav__item--more"><a class="nav__link nav__link--drop" href="#">Ещё</a>
+                  <div class="nav__drop js-drop">
+                    <div class="container">
+                      <ul class="nav__drop-list">
+                        <li class="nav__item"><a class="nav__link nav__link--dark" href="#">О проекте</a></li>
+                        <li class="nav__item"><a class="nav__link nav__link--dark" href="#">Доставка</a></li>
+                        <li class="nav__item"><a class="nav__link nav__link--dark" href="#">Политика конфиденциальности</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__action">
+            <div class="account">
+              <button class="account__btn header__action-item js-account-opener"><span class="account__icon"></span><span class="account__name">Александрелло</span></button>
+              <div class="account__drop js-account-drop">
+                <ul class="account__menu-group">
+                  <li class="account__menu-item"><a class="account__menu-link" href="#">Мой профиль</a></li>
+                  <li class="account__menu-item"><a class="account__menu-link" href="#">Мои заказы</a></li>
+                  <li class="account__menu-item"><a class="account__menu-link" href="#">Сообщения</a></li>
+                </ul>
+                <ul class="account__menu-group">
+                  <li class="account__menu-item"><a class="account__menu-link" href="#">Настройки профиля</a></li>
+                  <li class="account__menu-item"><a class="account__menu-link" href="#">Мои работы</a></li>
+                </ul>
+                <button class="account__btn-close">Выйти</button>
+              </div>
+            </div>
+            <button class="header__wishlist header__action-item">
+                            <svg class="heart-icon header__heart-icon">
+                              <use xlink:href="img/svg/sprite.svg#heart"></use>
+                            </svg><span class="header__heart-icon-counter">85</span>
+            </button>
+            <button class="header__basket header__action-item">
+                            <svg class="basket-icon header__basket-icon">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg><span class="header__basket-icon-counter">23</span>
+            </button>
+            <div class="search header__action-item">
+              <button class="search__icon js-search-opener">
+                <svg class="icon icon-search ">
+                  <use xlink:href="img/svg/sprite.svg#search"></use>
+                </svg>
+              </button>
+              <div class="search__drop js-search-drop">
+                <div class="search__field-wrapper">
+                  <input class="search__field js-search-focus" type="search" placeholder="Поиск..."/>
+                  <button class="search__close-btn js-search-close">
+                    <svg class="icon icon-close ">
+                      <use xlink:href="img/svg/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                  <button class="search__btn">
+                    <svg class="icon icon-search ">
+                      <use xlink:href="img/svg/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="lang header__action-item">
+              <button class="lang__btn js-lang-opener">RU</button>
+              <div class="lang__drop js-lang-drop"><a class="lang__link" href="#">EN</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="swiper-container-hero hero__slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide hero__slide" style="background-image: url(img/hero-slide-1.jpg);">
+            <div class="container">
+              <div class="hero__body">
+                <p class="hero__subtitle">Новое на этой неделе</p>
+                <div class="hero__title">Лучшие фигуративные произведения</div>
+                <p class="hero__text">Новые оригинальные работы, выбранные нашим эспертом</p><a class="hero__btn" href="#">Открыть</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide hero__slide" style="background-image: url(img/hero-slide-2.jpg);">
+            <div class="container">
+              <div class="hero__body">
+                <p class="hero__subtitle">Новое на этой неделе</p>
+                <div class="hero__title">Лучшие фигуративные произведения</div>
+                <p class="hero__text">Новые оригинальные работы, выбранные нашим эспертом</p><a class="hero__btn" href="#">Открыть</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide hero__slide" style="background-image: url(img/hero-slide-1.jpg);">
+            <div class="container">
+              <div class="hero__body">
+                <p class="hero__subtitle">Новое на этой неделе</p>
+                <div class="hero__title">Лучшие фигуративные произведения</div>
+                <p class="hero__text">Новые оригинальные работы, выбранные нашим эспертом</p><a class="hero__btn" href="#">Открыть</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section class="start">
+      <div class="container">
+        <div class="start__title title-lg">Не знаете с чего начать?</div>
+      </div>
+            <div class="section-line"></div>
+      <div class="container">
+        <div class="start__row">
+                    <div class="video-start start__video">это видео<img class="video-start__img" src="img/video-start.jpg"/>
+                      <div class="video-start__overlay">
+                        <h3 class="video-start__title">Видеобзор нашего ресурса возможности для пользователя</h3>
+                        <button class="video-start__btn">
+                          <svg class="icon icon-play ">
+                            <use xlink:href="img/svg/sprite.svg#play"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="article-card start__card"><a class="article-card__img-link" href="#"><img class="article-card__img" src="img/start-card.jpg"/></a><a class="article-card__category" href="#">Выбор экспертов</a><a class="article-card__title" href="#">Обзор нашего экспетра Элеоноры Рубинштейн-Загорской</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="new-works">
+      <div class="container">
+        <h2 class="new-works__title title-lg">Новые работы</h2>
+      </div>
+            <div class="section-line new-works__section-line"></div>
+      <div class="container">
+        <div class="new-works__grid js-gallery">
+          <div class="new-works__grid-item-sizer js-sizer"></div>
+          <div class="new-works__grid-item-gutter js-gutter"></div>
+                    <div class="masonry-fixed-card new-works__grid-item-fixed-card">
+                      <div class="masonry-fixed-card__inner"><img class="masonry-fixed-card__img" src="img/masonry-card-fixed-1.png"/>
+                        <h3 class="masonry-fixed-card__title">Умный выбор по параметрам с примерами</h3><a class="masonry-fixed-card__btn">Подобрать</a>
+                      </div>
+                    </div>
+                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-1.jpg"/></a>
+                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                      </div>
+                      <div class="masonry-card__footer">
+                        <div class="masonry-card__price">927 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__old-price">727 750</div>
+                        <div class="masonry-card__actions">
+                                          <svg class="heart-icon masonry-card__heart-icon">
+                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                          </svg>
+                                          <svg class="basket-icon masonry-card__basket-icon">
+                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-2.jpg"/></a>
+                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--new">Новинка</span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                      </div>
+                      <div class="masonry-card__footer">
+                        <div class="masonry-card__price">927 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__old-price">727 750</div>
+                        <div class="masonry-card__actions">
+                                          <svg class="heart-icon masonry-card__heart-icon">
+                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                          </svg>
+                                          <svg class="basket-icon masonry-card__basket-icon">
+                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                          </svg>
+                        </div>
+                      </div>
+                    </div>
+          <div class="new-works__grid-item new-works__grid-item--empty js-item hidden-desktop-up hidden-mobile-down"></div>
+                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-3.jpg"/></a>
+                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--new">Новинка</span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                      </div>
+                      <div class="masonry-card__footer">
+                        <div class="masonry-card__price">927 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__actions">
+                                          <svg class="heart-icon masonry-card__heart-icon">
+                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                          </svg>
+                                          <svg class="basket-icon masonry-card__basket-icon">
+                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                          </svg>
+                        </div>
+                      </div>
+                    </div>
+          <div class="new-works__grid-item new-works__grid-item--empty js-item hidden-tablet-down"></div>
+                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-4.jpg"/></a>
+                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре</a><a class="masonry-card__author" href="#">Говард Херш</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                      </div>
+                      <div class="masonry-card__footer">
+                        <div class="masonry-card__price">27 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__old-price"></div>
+                        <div class="masonry-card__actions">
+                                          <svg class="heart-icon masonry-card__heart-icon">
+                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                          </svg>
+                                          <svg class="basket-icon masonry-card__basket-icon">
+                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-5.jpg"/></a>
+                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                      </div>
+                      <div class="masonry-card__footer">
+                        <div class="masonry-card__price">27 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__old-price"></div>
+                        <div class="masonry-card__actions">
+                                          <svg class="heart-icon masonry-card__heart-icon">
+                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                          </svg>
+                                          <svg class="basket-icon masonry-card__basket-icon">
+                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-6.jpg"/></a>
+                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--sale">Скидка 20%</span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                      </div>
+                      <div class="masonry-card__footer">
+                        <div class="masonry-card__price">927 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__actions">
+                                          <svg class="heart-icon masonry-card__heart-icon">
+                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                          </svg>
+                                          <svg class="basket-icon masonry-card__basket-icon">
+                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-7.jpg"/></a>
+                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--sale">Скидка 20%</span><a class="masonry-card__title" href="#">Растущее действие</a><a class="masonry-card__author" href="#">Рамина Роуз</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                      </div>
+                      <div class="masonry-card__footer">
+                        <div class="masonry-card__price">927 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__actions">
+                                          <svg class="heart-icon masonry-card__heart-icon">
+                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                          </svg>
+                                          <svg class="basket-icon masonry-card__basket-icon">
+                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-8.jpg"/></a>
+                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                      </div>
+                      <div class="masonry-card__footer">
+                        <div class="masonry-card__price">27 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__old-price"></div>
+                        <div class="masonry-card__actions">
+                                          <svg class="heart-icon masonry-card__heart-icon">
+                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                          </svg>
+                                          <svg class="basket-icon masonry-card__basket-icon">
+                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-9.jpg"/></a>
+                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                      </div>
+                      <div class="masonry-card__footer">
+                        <div class="masonry-card__price">27 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__old-price"></div>
+                        <div class="masonry-card__actions">
+                                          <svg class="heart-icon masonry-card__heart-icon">
+                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                          </svg>
+                                          <svg class="basket-icon masonry-card__basket-icon">
+                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                          </svg>
+                        </div>
+                      </div>
+                    </div>
+        </div>
+        <button class="new-works__btn">Смотреть все</button>
+      </div>
+    </section>
+    <section class="style-review">
+      <div class="container style-review__wrapper">
+        <h2 class="style-review__title title-lg">Обзор стилей</h2>
+        <button class="swiper-button-next">
+          <svg class="swiper-button-next__icon">
+            <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <button class="swiper-button-prev">
+          <svg class="swiper-button-prev__icon">
+            <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+          </svg>
+        </button>
+      </div>
+            <div class="section-line style-review__section-line"></div>
+      <div class="container">
+        <div class="style-review__slider swiper-container-style-review">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide style-review__slide">
+              <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-1.jpg"/>
+                                  <div class="style-card__overlay">
+                                    <div class="style-card__title">Современное НЮ</div>
+                                    <div class="style-card__category">Новое изобразительное искусство</div>
+                                  </div></a>
+              </div>
+              <div class="style-review__slide-row">
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-2.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Уорхолом</div>
+                                      <div class="style-card__category">Новый Поп Арт</div>
+                                    </div></a>
+                </div>
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-3.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                      <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide style-review__slide">
+              <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-4.jpg"/>
+                                  <div class="style-card__overlay">
+                                    <div class="style-card__title">Современное НЮ</div>
+                                    <div class="style-card__category">Новое изобразительное искусство</div>
+                                  </div></a>
+              </div>
+              <div class="style-review__slide-row">
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-5.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Уорхолом</div>
+                                      <div class="style-card__category">Новый Поп Арт</div>
+                                    </div></a>
+                </div>
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-6.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                      <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide style-review__slide">
+              <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-1.jpg"/>
+                                  <div class="style-card__overlay">
+                                    <div class="style-card__title">Современное НЮ</div>
+                                    <div class="style-card__category">Новое изобразительное искусство</div>
+                                  </div></a>
+              </div>
+              <div class="style-review__slide-row">
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-2.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Уорхолом</div>
+                                      <div class="style-card__category">Новый Поп Арт</div>
+                                    </div></a>
+                </div>
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-3.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                      <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide style-review__slide">
+              <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-1.jpg"/>
+                                  <div class="style-card__overlay">
+                                    <div class="style-card__title">Современное НЮ</div>
+                                    <div class="style-card__category">Новое изобразительное искусство</div>
+                                  </div></a>
+              </div>
+              <div class="style-review__slide-row">
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-2.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Уорхолом</div>
+                                      <div class="style-card__category">Новый Поп Арт</div>
+                                    </div></a>
+                </div>
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-3.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                      <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide style-review__slide">
+              <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-1.jpg"/>
+                                  <div class="style-card__overlay">
+                                    <div class="style-card__title">Современное НЮ</div>
+                                    <div class="style-card__category">Новое изобразительное искусство</div>
+                                  </div></a>
+              </div>
+              <div class="style-review__slide-row">
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-2.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Уорхолом</div>
+                                      <div class="style-card__category">Новый Поп Арт</div>
+                                    </div></a>
+                </div>
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-3.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                      <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                    </div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="news">
+      <div class="container">
+        <h2 class="news__title title-lg">Новости искусства</h2>
+      </div>
+            <div class="section-line news__section-line"></div>
+      <div class="container">
+        <div class="news__slider swiper-container-news">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                            <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
+                              <div class="news-card__info">
+                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a>
+                                  <div class="news-card__date">21.12.2018</div>
+                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                      <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                        <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                      </svg></a>
+                              </div>
+                            </div>
+            </div>
+            <div class="swiper-slide">
+                            <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-2.jpg"/></a>
+                              <div class="news-card__info">
+                                <div class="news-card__header"><a class="news-card__category" href="#">Коллекционирование</a>
+                                  <div class="news-card__date">21.12.2018</div>
+                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                      <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                        <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                      </svg></a>
+                              </div>
+                            </div>
+            </div>
+            <div class="swiper-slide">
+                            <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
+                              <div class="news-card__info">
+                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a>
+                                  <div class="news-card__date">21.12.2018</div>
+                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                      <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                        <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                      </svg></a>
+                              </div>
+                            </div>
+            </div>
+            <div class="swiper-slide">
+                            <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
+                              <div class="news-card__info">
+                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a>
+                                  <div class="news-card__date">21.12.2018</div>
+                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                      <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                        <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                      </svg></a>
+                              </div>
+                            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>footer</p>
+    <script src="js/main.js"></script>
+  </body>
+</html>
