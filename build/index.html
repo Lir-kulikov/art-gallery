@@ -147,7 +147,7 @@
       </div>
             <div class="section-line new-works__section-line"></div>
       <div class="container">
-        <div class="new-works__grid js-masonry">
+        <div class="new-works__grid js-gallery">
           <div class="new-works__grid-item-sizer js-sizer"></div>
           <div class="new-works__grid-item-gutter js-gutter"></div>
                     <div class="masonry-fixed-card new-works__grid-item-fixed-card">
@@ -303,10 +303,20 @@
       </div>
     </section>
     <section class="style-review">
-      <div class="container">
+      <div class="container style-review__wrapper">
         <h2 class="style-review__title title-lg">Обзор стилей</h2>
+        <button class="swiper-button-next">
+          <svg class="swiper-button-next__icon">
+            <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <button class="swiper-button-prev">
+          <svg class="swiper-button-prev__icon">
+            <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+          </svg>
+        </button>
       </div>
-      <div class="section-line"></div>
+            <div class="section-line style-review__section-line"></div>
       <div class="container">
         <div class="style-review__slider swiper-container-style-review">
           <div class="swiper-wrapper">
@@ -376,10 +386,118 @@
                 </div>
               </div>
             </div>
+            <div class="swiper-slide style-review__slide">
+              <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-1.jpg"/>
+                                  <div class="style-card__overlay">
+                                    <div class="style-card__title">Современное НЮ</div>
+                                    <div class="style-card__category">Новое изобразительное искусство</div>
+                                  </div></a>
+              </div>
+              <div class="style-review__slide-row">
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-2.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Уорхолом</div>
+                                      <div class="style-card__category">Новый Поп Арт</div>
+                                    </div></a>
+                </div>
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-3.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                      <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide style-review__slide">
+              <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-1.jpg"/>
+                                  <div class="style-card__overlay">
+                                    <div class="style-card__title">Современное НЮ</div>
+                                    <div class="style-card__category">Новое изобразительное искусство</div>
+                                  </div></a>
+              </div>
+              <div class="style-review__slide-row">
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-2.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Уорхолом</div>
+                                      <div class="style-card__category">Новый Поп Арт</div>
+                                    </div></a>
+                </div>
+                <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-3.jpg"/>
+                                    <div class="style-card__overlay">
+                                      <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                      <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                    </div></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <div class="news">
+      <div class="container">
+        <h2 class="news__title title-lg">Новости искусства</h2>
+      </div>
+            <div class="section-line news__section-line"></div>
+      <div class="container">
+        <div class="news__slider swiper-container-news">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                            <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
+                              <div class="news-card__info">
+                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a>
+                                  <div class="news-card__date">21.12.2018</div>
+                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                      <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                        <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                      </svg></a>
+                              </div>
+                            </div>
+            </div>
+            <div class="swiper-slide">
+                            <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-2.jpg"/></a>
+                              <div class="news-card__info">
+                                <div class="news-card__header"><a class="news-card__category" href="#">Коллекционирование</a>
+                                  <div class="news-card__date">21.12.2018</div>
+                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                      <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                        <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                      </svg></a>
+                              </div>
+                            </div>
+            </div>
+            <div class="swiper-slide">
+                            <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
+                              <div class="news-card__info">
+                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a>
+                                  <div class="news-card__date">21.12.2018</div>
+                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                      <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                        <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                      </svg></a>
+                              </div>
+                            </div>
+            </div>
+            <div class="swiper-slide">
+                            <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
+                              <div class="news-card__info">
+                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a>
+                                  <div class="news-card__date">21.12.2018</div>
+                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                      <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                        <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                      </svg></a>
+                              </div>
+                            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <p>footer</p>
     <script src="js/main.js"></script>
   </body>

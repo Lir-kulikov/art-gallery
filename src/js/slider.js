@@ -26,3 +26,15 @@ const mySwiperStyleReview = new Swiper('.swiper-container-style-review', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+const mySwiperNews = new Swiper('.swiper-container-news', {
+  slidesPerView: 2,
+  loop: false,
+  spaceBetween: 42,
+  speed: 700,
+  autoHeight: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

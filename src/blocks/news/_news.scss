@@ -1,0 +1,15 @@
+.news {
+  padding-top: 50px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__section-line {
+    margin-bottom: 70px;
+  }
+}
+
+.swiper-container-news {
+  overflow: hidden;
+}

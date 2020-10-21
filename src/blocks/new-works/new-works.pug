@@ -4,12 +4,12 @@ section.new-works
   include ../section-line/section-line
   +section-line('new-works__section-line')
   .container
-    .new-works__grid.js-masonry
+    .new-works__grid.js-gallery
 
       .new-works__grid-item-sizer.js-sizer
       .new-works__grid-item-gutter.js-gutter
       include ../masonry-fixed-card/masonry-fixed-card
-      +masonry-fixed-card('new-works__grid-item-fixed-card').js-fixed-card
+      +masonry-fixed-card('new-works__grid-item-fixed-card')
 
       include ../masonry-card/masonry-card
       +masonry-card('new-works__grid-item', {

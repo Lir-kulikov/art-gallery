@@ -1,0 +1,47 @@
+.news
+  .container
+    h2.news__title.title-lg Новости искусства
+  include ../section-line/section-line
+  +section-line('news__section-line')
+  .container
+    .news__slider.swiper-container-news
+      .swiper-wrapper
+        .swiper-slide
+          include ../news-card/news-card
+          +news-card('news__news-card', {
+            img: 'news-card-1.jpg',
+            category: 'ГАЛЕРЕИ И ВЫСТАВКИ',
+            date: '21.12.2018',
+            title: 'Обзор нашего экспетра Владимира Рубинштейна-Загорского',
+            intro: 'Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.'
+          })
+
+        .swiper-slide
+          include ../news-card/news-card
+          +news-card('news__news-card', {
+            img: 'news-card-2.jpg',
+            category: 'Коллекционирование',
+            date: '21.12.2018',
+            title: 'Обзор нашего экспетра Владимира Рубинштейна-Загорского',
+            intro: 'Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.'
+          })
+
+        .swiper-slide
+          include ../news-card/news-card
+          +news-card('news__news-card', {
+            img: 'news-card-1.jpg',
+            category: 'ГАЛЕРЕИ И ВЫСТАВКИ',
+            date: '21.12.2018',
+            title: 'Обзор нашего экспетра Владимира Рубинштейна-Загорского',
+            intro: 'Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.'
+          })
+
+        .swiper-slide
+          include ../news-card/news-card
+          +news-card('news__news-card', {
+            img: 'news-card-1.jpg',
+            category: 'ГАЛЕРЕИ И ВЫСТАВКИ',
+            date: '21.12.2018',
+            title: 'Обзор нашего экспетра Владимира Рубинштейна-Загорского',
+            intro: 'Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.'
+          })

@@ -1,0 +1,13 @@
+mixin news-card(ClassName, contentCard)
+  .news-card(class= ClassName)
+    a.news-card__img-link(href="#")
+      img.news-card__img(src="img/" + contentCard.img)
+    .news-card__info
+      .news-card__header
+        a(href="#").news-card__category= contentCard.category
+        .news-card__date= contentCard.date
+      a(href="#").news-card__title= contentCard.title
+      p.news-card__intro= contentCard.intro
+      a(href="#").news-card__btn Смотреть и читать
+        include ../long-arrow-icon/long-arrow-icon
+        +long-arrow-icon('news-card__long-arrow-icon')

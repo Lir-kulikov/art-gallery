@@ -1,7 +1,14 @@
 section.style-review
-  .container
+  .container.style-review__wrapper
     h2.style-review__title.title-lg Обзор стилей
-  .section-line
+    button.swiper-button-next
+      svg.swiper-button-next__icon
+        use(xlink:href="img/svg/sprite.svg#arrow-right")
+    button.swiper-button-prev
+      svg.swiper-button-prev__icon
+          use(xlink:href="img/svg/sprite.svg#arrow-left")
+  include ../section-line/section-line
+  +section-line('style-review__section-line')
   .container
     .style-review__slider.swiper-container-style-review
       .swiper-wrapper
@@ -50,6 +57,54 @@ section.style-review
               +style-card('style-review__style-card', {
               },{
                 img: 'style-card-6.jpg',
+                title: 'Вдохновение Гансом Хофманном',
+                category: 'Новый абстрактный экспрессионизм'
+              })
+        .swiper-slide.style-review__slide
+          .style-review__slide-row
+            include ../style-card/style-card
+            +style-card('style-review__style-card', {
+            },{
+              img: 'style-card-1.jpg',
+              title: 'Современное НЮ',
+              category: 'Новое изобразительное искусство'
+            })
+          .style-review__slide-row
+            .style-review__slide-col
+              +style-card('style-review__style-card', {
+              },{
+                img: 'style-card-2.jpg',
+                title: 'Вдохновение Уорхолом',
+                category: 'Новый Поп Арт'
+              })
+            .style-review__slide-col
+              +style-card('style-review__style-card', {
+              },{
+                img: 'style-card-3.jpg',
+                title: 'Вдохновение Гансом Хофманном',
+                category: 'Новый абстрактный экспрессионизм'
+              })
+        .swiper-slide.style-review__slide
+          .style-review__slide-row
+            include ../style-card/style-card
+            +style-card('style-review__style-card', {
+            },{
+              img: 'style-card-1.jpg',
+              title: 'Современное НЮ',
+              category: 'Новое изобразительное искусство'
+            })
+          .style-review__slide-row
+            .style-review__slide-col
+              +style-card('style-review__style-card', {
+              },{
+                img: 'style-card-2.jpg',
+                title: 'Вдохновение Уорхолом',
+                category: 'Новый Поп Арт'
+              })
+            .style-review__slide-col
+              +style-card('style-review__style-card', {
+              },{
+                img: 'style-card-3.jpg',
                 title: 'Вдохновение Гансом Хофманном',
                 category: 'Новый абстрактный экспрессионизм'
               })

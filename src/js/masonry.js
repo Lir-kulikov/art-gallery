@@ -1,12 +1,12 @@
 import Masonry from 'masonry-layout'
 
-const newWorksGrid = new Masonry('.js-masonry', {
+const newWorksGrid = new Masonry('.js-gallery', {
   // options
   itemSelector: '.new-works__grid-item',
   columnWidth: '.js-sizer',
   gutter: '.js-gutter',
   horizontalOrder: true,
-  stamp: '.js-fixed-card',
+  stamp: '.new-works__grid-item-fixed-card',
   percentPosition: true
 });
 
