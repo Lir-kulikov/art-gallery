@@ -17,13 +17,13 @@ const mySwiper = new Swiper('.swiper-container-hero', {
 
 const mySwiperStyleReview = new Swiper('.swiper-container-style-review', {
   slidesPerView: 2,
-  loop: false,
+  loop: true,
   spaceBetween: 42,
   speed: 700,
   autoHeight: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.js-swiper-style-review-next',
+    prevEl: '.js-swiper-style-review-prev',
   },
 });
 
@@ -34,7 +34,7 @@ const mySwiperNews = new Swiper('.swiper-container-news', {
   speed: 700,
   autoHeight: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.js-swiper-news-next',
+    prevEl: '.js-swiper-news-prev',
   },
 });

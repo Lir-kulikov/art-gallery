@@ -1,5 +1,11 @@
 .news {
   padding-top: 50px;
+  padding-bottom: 110px;
+  background-color: var(--light-gray);
+
+  &__wrapper {
+    position: relative;
+  }
 
   &__title {
     margin-bottom: 10px;
@@ -7,6 +13,19 @@
 
   &__section-line {
     margin-bottom: 70px;
+  }
+
+  &__slider-btn {
+    position: absolute;
+    top: 0;
+
+    &.slider-btn--right {
+      right: 15px;
+    }
+
+    &.slider-btn--left {
+      right: 75px;
+    }
   }
 }
 

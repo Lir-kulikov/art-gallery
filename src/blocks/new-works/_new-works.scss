@@ -1,10 +1,22 @@
 .new-works {
+
   padding-top: 47px;
   padding-bottom: 65px;
   background-color: var(--light-gray);
 
   &__title {
     margin-bottom: 9px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__sort {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    width: 282px;
   }
 
   &__section-line {

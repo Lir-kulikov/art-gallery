@@ -7,7 +7,12 @@
 
 //vendor styles
 @import '../../node_modules/swiper/swiper-bundle.css';
+@import '../../node_modules/choices.js/public/assets/styles/choices.min.css';
 //global
+
+* {
+  outline: none;
+}
 
 body {
   position: relative;
@@ -22,7 +27,9 @@ body {
   margin-left: auto;
 }
 
-//blocks
+// component blocks
+
+// layout blocks
 
 @import '../blocks/logo/_logo';
 @import '../blocks/header/_header';
@@ -47,3 +54,12 @@ body {
 @import '../blocks/news/_news';
 @import '../blocks/news-card/_news-card';
 @import '../blocks/long-arrow-icon/_long-arrow-icon';
+@import '../blocks/slider-btn/_slider-btn';
+@import '../blocks/footer/_footer';
+@import '../blocks/location-icon/_location-icon';
+@import '../blocks/phone-icon/_phone-icon';
+@import '../blocks/mail-icon/_mail-icon';
+@import '../blocks/social/_social';
+@import '../blocks/modal/_modal';
+@import '../blocks/sort/_sort';
+@import '../blocks/user-icon/_user-icon';

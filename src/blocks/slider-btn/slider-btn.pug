@@ -1,0 +1,7 @@
+mixin slider-btn(ClassName, mod)
+  button.slider-btn(class="slider-btn" + "--" + mod + " " + ClassName)
+    svg.slider-btn__icon
+      if mod == 'left'
+        use(xlink:href="img/svg/sprite.svg#arrow-left")
+      if mod == 'right'
+        use(xlink:href="img/svg/sprite.svg#arrow-right")

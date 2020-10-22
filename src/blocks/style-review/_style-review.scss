@@ -39,6 +39,20 @@
       margin-right: 42px;
     }
   }
+
+  &__slider-btn {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+
+    &.slider-btn--left {
+      right: 75px;
+    }
+
+    &.slider-btn--right {
+      right: 15px;
+    }
+  }
 }
 
 .swiper-container-style-review {

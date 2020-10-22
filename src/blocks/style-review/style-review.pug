@@ -1,12 +1,9 @@
 section.style-review
   .container.style-review__wrapper
     h2.style-review__title.title-lg Обзор стилей
-    button.swiper-button-next
-      svg.swiper-button-next__icon
-        use(xlink:href="img/svg/sprite.svg#arrow-right")
-    button.swiper-button-prev
-      svg.swiper-button-prev__icon
-          use(xlink:href="img/svg/sprite.svg#arrow-left")
+    include ../slider-btn/slider-btn
+    +slider-btn('style-review__slider-btn js-swiper-style-review-prev', 'left')
+    +slider-btn('style-review__slider-btn js-swiper-style-review-next', 'right')
   include ../section-line/section-line
   +section-line('style-review__section-line')
   .container

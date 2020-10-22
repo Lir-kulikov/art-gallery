@@ -33,6 +33,12 @@
     text-decoration: none;
     text-transform: uppercase;
 
+    transition: color var(--transition) ease;
+
+    &:hover {
+      color: var(--hover);
+    }
+
     &::after {
       position: absolute;
       bottom: -1px;
@@ -55,5 +61,11 @@
     font-weight: 600;
     letter-spacing: 0;
     text-decoration: none;
+
+    transition: color var(--transition) ease;
+
+    &:hover {
+      color: var(--hover);
+    }
   }
 }

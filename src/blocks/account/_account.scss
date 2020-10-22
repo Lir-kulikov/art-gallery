@@ -23,15 +23,9 @@
     }
   }
 
-  &__icon {
+  &__user-icon {
     display: block;
-    width: 22px;
-    height: 22px;
     margin-right: 10px;
-    background-image: url('../img/user.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
   }
 
   &__drop {

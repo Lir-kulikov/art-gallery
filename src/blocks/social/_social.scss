@@ -1,0 +1,34 @@
+.social {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    transition: background-color var(--transition) ease;
+
+    &:hover {
+      background-color: var(--line);
+
+      & .social__icon {
+        fill: #1e2026;
+      }
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    fill: var(--line);
+    transition: fill var(--transition) ease;
+  }
+}

@@ -1,0 +1,133 @@
+.footer {
+  background-color: #1e2026;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+    padding-bottom: 75px;
+  }
+
+  &__col-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: car(--white);
+    font-size: 18px;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background-color: var(--white);
+      content: '';
+    }
+  }
+
+  &__list {
+    &--contacts {
+      & .footer__col-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__col-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__mail-icon,
+  &__location-icon,
+  &__phone-icon {
+    margin-right: 10px;
+  }
+
+  &__col-link {
+    display: flex;
+    align-items: flex-start;
+    padding: 7px 15px;
+    margin-left: -15px;
+    color: var(--white);
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color var(--transition) ease;
+
+    &:hover {
+      background-color: var(--hover);
+    }
+
+    &--no-hover {
+      &:hover {
+        background-color: none;
+      }
+    }
+  }
+
+  &__pay-systems {
+
+  }
+
+  &__social {
+    margin-bottom: 40px;
+  }
+
+  &__under {
+    background-color: #191b1f;
+  }
+
+  &__under-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+
+  &__copy {
+    display: flex;
+    max-width: 1020px;
+    justify-content: space-between;
+    color: var(--line);
+    text-decoration: none;
+    transition: color var(--transition) ease;
+  }
+
+  &__copy-item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &:last-child {
+      margin-left: 160px;
+    }
+    color: inherit;
+    text-decoration: inherit;
+    transition: inherit;
+
+    &:hover {
+      color: var(--white);
+    }
+
+    &--right {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  &__creator-text {
+    color: var(--dark-3);
+    font-size: 12px;
+    letter-spacing: 0.3px;
+  }
+
+  &__creator-img {
+    width: 100px;
+    height: 26px;
+    margin-bottom: 5px;
+  }
+}

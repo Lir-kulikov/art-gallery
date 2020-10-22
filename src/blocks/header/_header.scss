@@ -62,17 +62,18 @@
     }
   }
 
-  &__basket-icon-counter {
+  &__basket-icon-counter,
+  &__heart-icon-counter {
     position: absolute;
-    top: 5px;
-    right: -10px;
+    top: 10px;
+    left: 60%;
     display: block;
-    padding: 0 5px;
+    padding: 1px 5px 0;
     background-color: var(--dark-3);
     border-radius: 20px;
     color: var(--white);
     font-size: 13px;
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   &__heart-icon {
@@ -95,16 +96,16 @@
     }
   }
 
-  &__heart-icon-counter {
-    position: absolute;
-    top: 5px;
-    right: -10px;
-    display: block;
-    padding: 0 5px;
-    background-color: var(--dark-3);
-    border-radius: 20px;
-    color: var(--white);
-    font-size: 13px;
-    line-height: 1.4;
-  }
+  // &__heart-icon-counter {
+  //   position: absolute;
+  //   top: 5px;
+  //   right: -10px;
+  //   display: block;
+  //   padding: 0 5px;
+  //   background-color: var(--dark-3);
+  //   border-radius: 20px;
+  //   color: var(--white);
+  //   font-size: 13px;
+  //   line-height: 1.4;
+  // }
 }

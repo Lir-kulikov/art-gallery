@@ -1,7 +1,10 @@
 .news
-  .container
+  .container.news__wrapper
     h2.news__title.title-lg Новости искусства
-  include ../section-line/section-line
+    include ../slider-btn/slider-btn
+    +slider-btn('news__slider-btn js-swiper-news-prev', 'left')
+    +slider-btn('news__slider-btn js-swiper-news-next', 'right')
+    include ../section-line/section-line
   +section-line('news__section-line')
   .container
     .news__slider.swiper-container-news

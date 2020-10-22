@@ -1,0 +1,23 @@
+.slider-btn {
+  width: 56px;
+  height: 56px;
+  background-color: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color var(--transition) ease;
+
+  &:hover {
+    background-color: #4a4f52;
+
+    .slider-btn__icon {
+      fill: var(--white);
+    }
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--black);
+    transition: fill var(--transition) ease;
+  }
+}

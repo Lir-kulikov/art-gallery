@@ -1,6 +1,7 @@
 .account
   button.account__btn.header__action-item.js-account-opener
-    span.account__icon
+    include ../user-icon/user-icon
+    +user-icon('account__user-icon')
     span.account__name Александрелло
   .account__drop.js-account-drop
     ul.account__menu-group
