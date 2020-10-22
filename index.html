@@ -32,7 +32,11 @@
           </div>
           <div class="header__action">
             <div class="account">
-              <button class="account__btn header__action-item js-account-opener"><span class="account__icon"></span><span class="account__name">Александрелло</span></button>
+              <button class="account__btn header__action-item js-account-opener">
+                                <svg class="user-icon account__user-icon">
+                                  <use xlink:href="img/svg/sprite.svg#user"></use>
+                                </svg><span class="account__name">Александрелло</span>
+              </button>
               <div class="account__drop js-account-drop">
                 <ul class="account__menu-group">
                   <li class="account__menu-item"><a class="account__menu-link" href="#">Мой профиль</a></li>
@@ -127,10 +131,10 @@
             <div class="section-line"></div>
       <div class="container">
         <div class="start__row">
-                    <div class="video-start start__video">это видео<img class="video-start__img" src="img/video-start.jpg"/>
+                    <div class="video-start start__video"><img class="video-start__img" src="img/video-start.jpg"/>
                       <div class="video-start__overlay">
                         <h3 class="video-start__title">Видеобзор нашего ресурса возможности для пользователя</h3>
-                        <button class="video-start__btn">
+                        <button class="video-start__btn" data-modal-open="modal-video">
                           <svg class="icon icon-play ">
                             <use xlink:href="img/svg/sprite.svg#play"></use>
                           </svg>
@@ -142,8 +146,16 @@
       </div>
     </section>
     <section class="new-works">
-      <div class="container">
+      <div class="container new-works__wrapper">
         <h2 class="new-works__title title-lg">Новые работы</h2>
+                <div class="sort new-works__sort">
+                  <label class="sort__label"></label>
+                  <select class="sort__select" id="choices-sort">
+                    <option value="По дате добавления"></option>
+                    <option value="По цене"></option>
+                    <option value="По популярности"></option>
+                  </select>
+                </div>
       </div>
             <div class="section-line new-works__section-line"></div>
       <div class="container">
@@ -305,16 +317,16 @@
     <section class="style-review">
       <div class="container style-review__wrapper">
         <h2 class="style-review__title title-lg">Обзор стилей</h2>
-        <button class="swiper-button-next">
-          <svg class="swiper-button-next__icon">
-            <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-          </svg>
-        </button>
-        <button class="swiper-button-prev">
-          <svg class="swiper-button-prev__icon">
-            <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-          </svg>
-        </button>
+                <button class="slider-btn slider-btn--left style-review__slider-btn js-swiper-style-review-prev">
+                  <svg class="slider-btn__icon">
+                    <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <button class="slider-btn slider-btn--right style-review__slider-btn js-swiper-style-review-next">
+                  <svg class="slider-btn__icon">
+                    <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
       </div>
             <div class="section-line style-review__section-line"></div>
       <div class="container">
@@ -435,10 +447,20 @@
       </div>
     </section>
     <div class="news">
-      <div class="container">
+      <div class="container news__wrapper">
         <h2 class="news__title title-lg">Новости искусства</h2>
+                <button class="slider-btn slider-btn--left news__slider-btn js-swiper-news-prev">
+                  <svg class="slider-btn__icon">
+                    <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <button class="slider-btn slider-btn--right news__slider-btn js-swiper-news-next">
+                  <svg class="slider-btn__icon">
+                    <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
       </div>
-            <div class="section-line news__section-line"></div>
+              <div class="section-line news__section-line"></div>
       <div class="container">
         <div class="news__slider swiper-container-news">
           <div class="swiper-wrapper">
@@ -498,7 +520,92 @@
         </div>
       </div>
     </div>
-    <p>footer</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__col">
+            <h3 class="footer__col-title">Об Artgallery</h3>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">О проекте</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Блог</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Авторы</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Покупателям</h3>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Доставка</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Оплата</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Возврат</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Каталог</h3>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Картины</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Коллажи</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Иллюстрации</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Контакты</h3>
+            <ul class="footer__col-list footer__col-list--contacts">
+              <li class="footer__col-item footer__col-item"><a class="footer__col-link footer__col-link" href="tel:+799912312344">
+                                    <svg class="phone-icon footer__phone-icon">
+                                      <use xlink:href="img/svg/sprite.svg#phone"></use>
+                                    </svg><span>+ 7 (999) 123-123-44</span></a></li>
+              <li class="footer__col-item"><a class="footer__col-link footer__col-link" href="mailto:info@domainname.ru">
+                                    <svg class="mail-icon footer__mail-icon">
+                                      <use xlink:href="img/svg/sprite.svg#mail"></use>
+                                    </svg><span>info@domainname.ru</span></a></li>
+              <li class="footer__col-item"><a class="footer__col-link footer__col-link">
+                                    <svg class="location-icon footer__location-icon">
+                                      <use xlink:href="img/svg/sprite.svg#location"></use>
+                                    </svg><span>г. Москва,<br> Преснесенская наб., 12</span></a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Мы в социальных сетях:</h3>
+                        <div class="social footer__social">
+                          <ul class="social__list">
+                            <li class="social__item"><a class="social__link" href="#" target="_blank">
+                                <svg class="social__icon">
+                                  <use xlink:href="img/svg/sprite.svg#vk"></use>
+                                </svg></a></li>
+                            <li class="social__item"><a class="social__link" href="#" target="_blank">
+                                <svg class="social__icon">
+                                  <use xlink:href="img/svg/sprite.svg#facebook"></use>
+                                </svg></a></li>
+                            <li class="social__item"><a class="social__link" href="#" target="_blank">
+                                <svg class="social__icon">
+                                  <use xlink:href="img/svg/sprite.svg#odnoklassniki"></use>
+                                </svg></a></li>
+                            <li class="social__item"><a class="social__link" href="#" target="_blank">
+                                <svg class="social__icon">
+                                  <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                                </svg></a></li>
+                          </ul>
+                        </div>
+            <h3 class="footer__col-title">Платёжные системы</h3><img class="pay-systems" src="img/pay-systems.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="footer__under">
+        <div class="container">
+          <div class="footer__under-inner">
+            <div class="footer__copy"><a class="footer__copy-item" href="#">Политика конфендициальности</a><a class="footer__copy-item" href="about.html">Условия и положения</a><span class="footer__copy-item">©  Artgallery, 2018</span></div>
+            <div class="footer__creator"><img class="footer__creator-img" src="img/hawking-brothers.png"/><span class="footer__creator-text">Разработка сайта</span></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+        <div class="modal modal-video" id="modal-video" aria-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-modal-close="">
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+              <button class="modal__close" aria-label="Close modal" data-modal-close=""></button><iframe class="youtube-video" width="100%" height="100%" src="https://www.youtube.com/embed/h3RNElMbdUY?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src-video="https://www.youtube.com/embed/h3RNElMbdUY?autoplay=1"></iframe>
+            </div>
+          </div>
+        </div>
     <script src="js/main.js"></script>
   </body>
 </html>
