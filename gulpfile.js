@@ -269,7 +269,7 @@ const stylesBuild = () => {
 		.pipe(autoprefixer({
 			cascade: false,
 		}))
-		.pipe(gcmq())
+		// .pipe(gcmq())
 		.pipe(cleanCSS({
 			level: 2
 		}))
