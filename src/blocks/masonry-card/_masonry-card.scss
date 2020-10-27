@@ -1,4 +1,5 @@
 .masonry-card {
+  overflow: hidden;
   border: 1px solid (--gray);
   background-color: var(--white);
   transition: box-shadow var(--transition) ease;
@@ -20,6 +21,10 @@
   &__info {
     position: relative;
     padding: 14px 16px 10px 16px;
+
+    @include media('<tablet') {
+      padding: 14px 7px 10px 7px;
+    }
   }
 
   &__title {
@@ -31,6 +36,11 @@
     line-height: 1.2;
     text-decoration: none;
     transition: color var(--transition) ease;
+
+    @include media('<desktop-sm') {
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
 
     &:hover {
       color: var(--hover);
@@ -44,11 +54,20 @@
     font-size: 15px;
     line-height: 1.2;
     text-decoration: none;
+
+    @include media('<desktop-sm') {
+      font-size: 14px;
+      font-weight: 600;
+    }
   }
 
   &__type {
     color: var(--dark-3);
     font-size: 14px;
+
+    @include media('<desktop-sm') {
+      font-size: 12px;
+    }
   }
 
   &__footer {
@@ -57,15 +76,38 @@
     justify-content: space-between;
     padding: 10px 16px;
     border-top: 1px solid var(--gray);
+
+    @include media('<desktop-sm') {
+      padding: 8px 16px;
+    }
+
+    @include media('<tablet') {
+      flex-direction: column;
+    }
   }
 
   &__price {
+    position: relative;
     color: var(--black);
     font-size: 18px;
-  }
 
-  &__price-rub {
-    font-family: 'PTRoubleSans';
+    &::after {
+      position: absolute;
+      right: -12px;
+      bottom: 2px;
+      // margin-left: 5px;
+      content: '7';
+      font-family: 'PTRoubleSans', sans-serif;
+    }
+
+    @include media('<desktop-sm') {
+      font-size: 16px;
+    }
+
+    @include media('<tablet') {
+      font-size: 14px;
+      font-weight: 600;
+    }
   }
 
   &__old-price {
@@ -73,25 +115,67 @@
     font-size: 14px;
     letter-spacing: 0.35px;
     text-decoration: line-through;
+
+    @include media('<desktop-sm') {
+      font-size: 12px;
+    }
+
+    @include media('<tablet') {
+      order: -1;
+    }
+  }
+
+  &__actions {
+    @include media('<tablet') {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding-top: 7px;
+      margin-top: 7px;
+      //border-top: 1px solid var(--gray);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: calc(100% + 33px);
+        height: 1px;
+        background-color: var(--gray);
+        content: '';
+        transform: translateX(-50%);
+      }
+    }
   }
 
   &__heart-icon {
     margin-right: 18px;
     cursor: pointer;
-    transition: fill var(--transition) ease;
+    transition: var(--transition) ease;
+
+    &.is-active {
+      animation: beating 0.3s ease;
+      fill: var(--hover);
+      stroke: var(--hover);
+    }
 
     &:hover {
-      fill: var(--hover);
+      stroke: var(--hover);
     }
   }
 
   &__basket-icon {
     cursor: pointer;
+    transition: var(--transition) ease;
 
-    transition: fill var(--transition) ease;
+    &.is-active {
+      animation: beating 0.3s ease;
+      fill: var(--hover);
+      stroke: var(--hover);
+    }
 
     &:hover {
-      fill: var(--hover);
+      stroke: var(--hover);
     }
   }
 
@@ -99,5 +183,27 @@
     position: absolute;
     top: -10px;
     left: 17px;
+
+    @include media('<tablet') {
+      left: 7px;
+    }
+  }
+}
+
+@keyframes beating {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.25);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

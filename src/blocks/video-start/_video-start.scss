@@ -1,6 +1,7 @@
 .video-start {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 
   &:hover .video-start__img {
     transform: scale(1.05);
@@ -22,10 +23,19 @@
     left: 0;
     display: flex;
     width: 100%;
-    height: 100%;
+    //height: auto;
     align-items: flex-end;
     padding: 30px 48px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 94%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 50%);
+
+    @include media('<desktop-sm') {
+      padding: 20px 28px;
+      line-height: 1.4;
+    }
+
+    @include media('<tablet') {
+      padding: 15px;
+    }
   }
 
   &__title {
@@ -33,6 +43,16 @@
     font-size: 25px;
     font-weight: 600;
     letter-spacing: 0.63px;
+
+    @include media('<desktop-sm') {
+      font-size: 18px;
+      letter-spacing: 0.74px;
+    }
+
+    @include media('<tablet') {
+      font-size: 17px;
+      letter-spacing: 0.5px;
+    }
   }
 
   &__btn {

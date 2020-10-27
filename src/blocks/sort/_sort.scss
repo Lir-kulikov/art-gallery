@@ -27,7 +27,7 @@
   &__inner {
     display: inline-block;
     overflow: hidden;
-    width: 100%;
+    min-width: 282px;
     min-height: 44px;
     padding: 7.5px 10px 3.75px;
     border: none;

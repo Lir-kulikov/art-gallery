@@ -1,7 +1,7 @@
 import Masonry from 'masonry-layout'
+import Imagesloaded from 'imagesloaded'
 
 const newWorksGrid = new Masonry('.js-gallery', {
-  // options
   itemSelector: '.new-works__grid-item',
   columnWidth: '.js-sizer',
   gutter: '.js-gutter',
@@ -10,14 +10,12 @@ const newWorksGrid = new Masonry('.js-gallery', {
   percentPosition: true
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(() => {
-    newWorksGrid.reloadItems()
-    newWorksGrid.layout()
-  }, 500)
-});
-
 document.addEventListener("resize", function() {
     newWorksGrid.reloadItems()
     newWorksGrid.layout()
+});
+
+const masonryReload = new Imagesloaded('.js-gallery', () => {
+  newWorksGrid.reloadItems()
+  newWorksGrid.layout()
 });

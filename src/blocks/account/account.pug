@@ -1,19 +1,21 @@
-.account
-  button.account__btn.header__action-item.js-account-opener
-    include ../user-icon/user-icon
-    +user-icon('account__user-icon')
-    span.account__name Александрелло
-  .account__drop.js-account-drop
-    ul.account__menu-group
-      li.account__menu-item
-        a.account__menu-link(href="#") Мой профиль
-      li.account__menu-item
-        a.account__menu-link(href="#") Мои заказы
-      li.account__menu-item
-        a.account__menu-link(href="#") Сообщения
-    ul.account__menu-group
-      li.account__menu-item
-        a.account__menu-link(href="#") Настройки профиля
-      li.account__menu-item
-        a.account__menu-link(href="#") Мои работы
-    button.account__btn-close Выйти
+mixin account(ClassName)
+  .account(class= ClassName)
+    button.account__btn.js-account-opener
+      include ../user-icon/user-icon
+      +user-icon('account__user-icon')
+      img.account__avatar(src="img/avatar.png")
+      span.account__name Александрелло
+    .account__drop.js-account-drop
+      ul.account__menu-group
+        li.account__menu-item
+          a.account__menu-link(href="#") Мой профиль
+        li.account__menu-item
+          a.account__menu-link(href="#") Мои заказы
+        li.account__menu-item
+          a.account__menu-link(href="#") Сообщения
+      ul.account__menu-group
+        li.account__menu-item
+          a.account__menu-link(href="#") Настройки профиля
+        li.account__menu-item
+          a.account__menu-link(href="#") Мои работы
+      button.account__btn-close Выйти

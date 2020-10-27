@@ -3,9 +3,11 @@ header.header
     .header__inner
       .header__left
         include ../blocks/logo/logo
+        +logo('header__logo')
         include ../blocks/nav/nav
       .header__action
         include ../blocks/account/account
+        +account('header__account header__action-item')
         button.header__wishlist.header__action-item
           include ../blocks/heart-icon/heart-icon
           +heart-icon('header__heart-icon')
@@ -15,5 +17,7 @@ header.header
           +basket-icon('header__basket-icon')
           span.header__basket-icon-counter 23
         include ../blocks/search/search
+        +search('header__search header__action-item')
         include ../blocks/lang/lang
+        +lang('header__lang header__action-item')
           

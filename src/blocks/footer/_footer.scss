@@ -4,16 +4,51 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    padding-top: 90px;
+    padding-top: 87px;
     padding-bottom: 75px;
+
+    @include media('<desktop-sm') {
+      padding-top: 33px;
+      padding-bottom: 29px;
+    }
+
+    @include media('<tablet') {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__col {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    @include media('<desktop-sm') {
+      flex-basis: 50%;
+    }
+
+    &--tablet-hidden {
+      @include media('<desktop-sm') {
+        display: none;
+      }
+    }
   }
 
   &__col-title {
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     margin-bottom: 25px;
     color: car(--white);
     font-size: 18px;
+
+    @include media('<desktop-sm') {
+      padding-bottom: 7px;
+      margin-bottom: 15px;
+    }
+
+    @include media('<tablet') {
+      display: none;
+    }
 
     &::after {
       position: absolute;
@@ -38,7 +73,11 @@
 
   &__col-item {
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 0;
+
+      @include media('<desktop-sm') {
+        margin-bottom: 5px;
+      }
     }
   }
 
@@ -49,9 +88,9 @@
   }
 
   &__col-link {
-    display: flex;
+    display: inline-flex;
     align-items: flex-start;
-    padding: 7px 15px;
+    padding: 5px 15px;
     margin-left: -15px;
     color: var(--white);
     font-size: 16px;
@@ -70,15 +109,44 @@
   }
 
   &__pay-systems {
+    @include media('<tablet') {
+      display: block;
+      height: 27px;
+      margin-top: 25px;
+    }
+  }
 
+  &__adress {
+    font-size: 16px;
+
+    @include media('<tablet') {
+      font-size: 14px;
+    }
+  }
+
+  &__email {
+    font-size: 16px;
+
+    @include media('<tablet') {
+      color: var(--line);
+      font-size: 14px;
+    }
   }
 
   &__social {
     margin-bottom: 40px;
+
+    @include media('<desktop-sm') {
+      margin-bottom: 20px;
+    }
   }
 
   &__under {
     background-color: #191b1f;
+
+    @include media('<tablet') {
+      background-color: #1e2026;
+    }
   }
 
   &__under-inner {
@@ -86,28 +154,44 @@
     align-items: center;
     justify-content: space-between;
     padding: 30px 0;
+
+    @include media('<desktop-sm') {
+      padding: 14px 0;
+    }
+
+    @include media('<tablet') {
+      flex-direction: column;
+      padding: 0 0 14px;
+    }
   }
 
   &__copy {
-    display: flex;
-    max-width: 1020px;
-    justify-content: space-between;
     color: var(--line);
     text-decoration: none;
     transition: color var(--transition) ease;
+
+    @include media('<tablet') {
+      text-align: center;
+    }
   }
 
   &__copy-item {
+    color: inherit;
+    font-size: 14px;
+    text-decoration: inherit;
+    transition: inherit;
+
+    @include media('<tablet') {
+      font-size: 12px;
+    }
+
     &:not(:last-child) {
       margin-right: 40px;
     }
 
     &:last-child {
-      margin-left: 160px;
+      margin-left: 35px;
     }
-    color: inherit;
-    text-decoration: inherit;
-    transition: inherit;
 
     &:hover {
       color: var(--white);
@@ -115,11 +199,58 @@
 
     &--right {
       display: block;
-      margin-left: auto;
+      margin-left: 100px;
+    }
+
+    @include media('<desktop-sm') {
+      display: block;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__company {
+    display: inline-block;
+    align-self: center;
+    margin-right: 250px;
+    color: var(--line);
+    font-size: 14px;
+
+    @include media('<desktop-sm') {
+      margin-right: 0;
+    }
+
+    @include media('<tablet') {
+      display: block;
+      width: calc(100% + 20px);
+      order: -1;
+      padding: 15px 0;
+      margin-right: -10px;
+      margin-bottom: 12px;
+      margin-left: -10px;
+      background-color: #191b1f;
+      text-align: center;
     }
   }
 
   &__creator-text {
+    display: none;
+    color: var(--dark-3);
+    font-size: 12px;
+    letter-spacing: 0.3px;
+
+    @include media('<tablet') {
+      display: inline;
+    }
+  }
+
+  &__creator-link {
     color: var(--dark-3);
     font-size: 12px;
     letter-spacing: 0.3px;
@@ -129,5 +260,9 @@
     width: 100px;
     height: 26px;
     margin-bottom: 5px;
+
+    @include media('<tablet') {
+      display: none;
+    }
   }
 }

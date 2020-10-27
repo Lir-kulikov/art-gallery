@@ -5,7 +5,8 @@ mixin news-card(ClassName, contentCard)
     .news-card__info
       .news-card__header
         a(href="#").news-card__category= contentCard.category
-        .news-card__date= contentCard.date
+        span.news-card__date= contentCard.date
+      span.news-card__date.news-card__date--mobile= contentCard.date
       a(href="#").news-card__title= contentCard.title
       p.news-card__intro= contentCard.intro
       a(href="#").news-card__btn Смотреть и читать

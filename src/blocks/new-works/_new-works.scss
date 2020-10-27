@@ -1,26 +1,74 @@
 .new-works {
 
+  --msnry-gutter: 45px;
+
+  @include media('<desktop-sm') {
+    --msnry-gutter: 13px;
+  }
+
+  @include media('<desktop-sm') {
+    --msnry-gutter: 7px;
+  }
+
   padding-top: 47px;
-  padding-bottom: 65px;
+  padding-bottom: 62px;
   background-color: var(--light-gray);
+
+  @include media('<desktop-sm') {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  @include media('<tablet') {
+    padding-bottom: 36px;
+  }
 
   &__title {
     margin-bottom: 9px;
+
+    @include media('<tablet') {
+      margin-bottom: 15px;
+    }
   }
 
   &__wrapper {
     position: relative;
+    margin: 0 20px;
   }
 
   &__sort {
     position: absolute;
     right: 0;
     bottom: 5px;
-    width: 282px;
+    display: flex;
+    align-items: center;
+
+    @include media('<desktop') {
+      bottom: -80px;
+    }
+
+    @include media('<tablet') {
+      bottom: -100px;
+      flex-wrap: wrap;
+      padding-top: 10px;
+    }
+
+    & .sort__label {
+      margin-right: 20px;
+      color: var(--black);
+
+      @include media('<tablet') {
+        margin-bottom: 5px;
+      }
+    }
   }
 
   &__section-line {
     margin-bottom: 50px;
+
+    @include media('<desktop') {
+      margin-bottom: 100px;
+    }
   }
 
   &__grid {
@@ -30,16 +78,28 @@
     margin-right: auto;
     margin-bottom: 20px;
     margin-left: auto;
+
+    @include media('<desktop-sm') {
+      margin-bottom: 0;
+    }
   }
 
   &__grid-item-sizer,
   &__grid-item,
   &__grid-item-fixed-card {
-    width: calc((100% - 45px * 3) / 4);
+    width: calc((100% - var(--msnry-gutter) * 3) / 4);
   }
 
   &__grid-item {
     margin-bottom: 32px;
+
+    @include media('<tablet') {
+      margin-bottom: 24px;
+    }
+
+    // &:nth-child(-n+2) {
+    //   display: none !important;
+    // }
   }
 
   &__grid-item--empty {
@@ -53,7 +113,7 @@
     &__grid-item-sizer,
     &__grid-item,
     &__grid-item-fixed-card {
-      width: calc((100% - 45px * 2) / 3);
+      width: calc((100% - var(--msnry-gutter) * 2) / 3);
     }
   }
 
@@ -61,18 +121,12 @@
     &__grid-item-sizer,
     &__grid-item,
     &__grid-item-fixed-card {
-      width: calc((100% - 30px) / 2);
+      width: calc((100% - var(--msnry-gutter)) / 2);
     }
   }
 
   &__grid-item-gutter {
-    width: 45px;
-  }
-
-  @media (max-width: 767px) {
-    &__grid-item-gutter {
-      width: 30px;
-    }
+    width: var(--msnry-gutter);
   }
 
   &__grid-item-fixed-card {
@@ -105,6 +159,10 @@
       border: 1px solid var(--black);
       background-color: var(--black);
       color: var(--white);
+    }
+
+    @include media('<tablet') {
+      min-width: 100%;
     }
   }
 }

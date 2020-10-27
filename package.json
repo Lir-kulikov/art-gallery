@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "choices.js": "^9.0.1",
+    "imagesloaded": "^4.1.4",
     "masonry-layout": "^4.2.2",
     "micromodal": "^0.4.6",
     "swiper": "^6.3.3"

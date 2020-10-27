@@ -1,8 +1,8 @@
 mixin video-start(className)
-  .video-start(class= className)
+  .video-start(data-modal-open='modal-video' class= className)
     img.video-start__img(src="img/video-start.jpg")
+    button.video-start__btn
+      +icon("play")
     .video-start__overlay
       h3.video-start__title Видеобзор нашего ресурса возможности для пользователя
-      button.video-start__btn(data-modal-open='modal-video')
-        +icon("play")
       

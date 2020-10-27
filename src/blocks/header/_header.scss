@@ -6,19 +6,33 @@
   width: 100%;
   background-color: var(--dark-opacity);
 
+  @include media('<tablet') {
+    border-bottom: 1px solid var(--line);
+    background-color: var(--white);
+  }
+
   &__inner {
     display: flex;
     height: 80px;
     align-items: center;
     justify-content: space-between;
+
+    @include media('<tablet') {
+      height: 52px;
+    }
   }
 
   &__left {
     display: flex;
-    //argin-right: 60px;
     flex-shrink: 0;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__logo {
+    @include media('<desktop-sm') {
+      order: 2;
+    }
   }
 
   &__action {
@@ -26,24 +40,59 @@
     align-items: center;
     margin-left: 55px;
 
+    @include media('<tablet') {
+      margin-left: 0;
+    }
+
 
     &-item {
       display: block;
       flex-shrink: 0;
+      margin-right: 42px;
 
-      &:not(:first-child) {
-        margin-left: 42px;
+      @include media('<desktop-sm') {
+        margin-right: 10px;
+      }
+
+      @include media('>tablet') {
+        &:nth-last-child(-n+1) {
+          margin-right: 0;
+        }
+      }
+
+      @include media('<tablet') {
+        margin-right: 0;
+
+        &:not(:first-child) {
+          margin-left: 21px;
+        }
       }
     }
   }
 
   &__nav {
     margin-left: 115px;
+
+    @include media('<desktop') {
+      margin-left: 50px;
+
+      .nav__link {
+        padding: 8px 20px;
+      }
+    }
+
+    @include media('<desktop-sm') {
+      margin-left: 0;
+    }
   }
 
   &__basket {
-    position: relative;
+    display: flex;
     padding: 10px;
+
+    @include media('<tablet') {
+      padding: 0;
+    }
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.8);
@@ -51,24 +100,23 @@
   }
 
   &__basket-icon {
-
-
     display: block;
     cursor: pointer;
 
     &.basket-icon {
       display: block;
-      fill: var(--white);
+      stroke: var(--white);
+
+      @include media('<tablet') {
+        stroke: var(--black);
+      }
     }
   }
 
   &__basket-icon-counter,
   &__heart-icon-counter {
-    position: absolute;
-    top: 10px;
-    left: 60%;
-    display: block;
-    padding: 1px 5px 0;
+    padding: 3px 5px 0;
+    margin-left: -10px;
     background-color: var(--dark-3);
     border-radius: 20px;
     color: var(--white);
@@ -77,35 +125,35 @@
   }
 
   &__heart-icon {
-    position: relative;
     display: block;
     cursor: pointer;
 
     &.heart-icon {
       display: block;
-      fill: var(--white);
+      stroke: var(--white);
+
+      @include media('<tablet') {
+        stroke: var(--black);
+      }
     }
   }
 
   &__wishlist {
-    position: relative;
+    display: flex;
     padding: 10px;
+
+    @include media('<tablet') {
+      padding: 0;
+    }
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.8);
     }
   }
 
-  // &__heart-icon-counter {
-  //   position: absolute;
-  //   top: 5px;
-  //   right: -10px;
-  //   display: block;
-  //   padding: 0 5px;
-  //   background-color: var(--dark-3);
-  //   border-radius: 20px;
-  //   color: var(--white);
-  //   font-size: 13px;
-  //   line-height: 1.4;
-  // }
+  &__lang {
+    @include media('<tablet') {
+      display: none;
+    }
+  }
 }

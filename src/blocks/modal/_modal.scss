@@ -76,6 +76,11 @@
     padding: 0;
     cursor: pointer;
 
+    @include media('<tablet') {
+      right: 50%;
+      transform: translateX(50%);
+    }
+
     &:hover {
       &::before,
       &::after {

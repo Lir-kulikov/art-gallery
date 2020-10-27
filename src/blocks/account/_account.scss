@@ -1,12 +1,36 @@
 .account {
   position: relative;
+  //width: min-content;
+
+  &__name {
+    @include media('<desktop') {
+      display: none;
+    }
+
+    @include media('<desktop-sm') {
+      display: block;
+    }
+
+    @include media('<tablet') {
+      display: none;
+    }
+  }
 
   &__btn {
     display: flex;
+    align-items: center;
     padding: 8px 20px;
     color: var(--white);
     cursor: pointer;
     transition: var(--transition) ease;
+
+    @include media('<desktop') {
+      padding: 8px;
+    }
+
+    @include media('<tablet') {
+      padding: 0;
+    }
 
     &::before {
       position: absolute;
@@ -25,7 +49,29 @@
 
   &__user-icon {
     display: block;
+    flex-shrink: 0;
     margin-right: 10px;
+
+    @include media('>desktop-sm', '<desktop') {
+      margin-right: 0;
+    }
+
+    @include media('<desktop-sm') {
+      display: none;
+    }
+  }
+
+  &__avatar {
+    display: none;
+
+    @include media('<desktop-sm') {
+      display: block;
+      margin-right: 10px;
+    }
+
+    @include media('<tablet') {
+      margin-right: 0;
+    }
   }
 
   &__drop {
@@ -37,9 +83,15 @@
     background-color: var(--white);
     box-shadow: 0 0 17px 3px rgba(0, 0, 0, 0.15);
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateX(-51.3%);
     transition: var(--transition) ease;
     visibility: hidden;
+
+    @include media('<tablet') {
+      min-width: 250px;
+      max-width: 250px;
+      padding: 20px 10px;
+    }
 
     &.is-open {
       opacity: 1;
@@ -62,6 +114,11 @@
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     margin-bottom: 25px;
+
+    @include media('<tablet') {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   &__menu-item {
@@ -80,6 +137,11 @@
       background-color: rgba(0, 0, 0, 0.8);
       color: var(--white);
     }
+
+    @include media('<tablet') {
+      padding: 10px 15px;
+      font-size: 15px;
+    }
   }
 
   &__btn-close {
@@ -93,6 +155,11 @@
     &:hover {
       background-color: rgba(0, 0, 0, 0.8);
       color: var(--white);
+    }
+
+    @include media('<tablet') {
+      padding: 10px 15px;
+      font-size: 15px;
     }
   }
 }

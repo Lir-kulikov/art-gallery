@@ -1,8 +1,7 @@
 footer.footer
   .container
     .footer__top
-
-      .footer__col
+      .footer__col.footer__col--tablet-hidden
         h3.footer__col-title Об Artgallery
         ul.footer__col-list
           li.footer__col-item
@@ -12,7 +11,7 @@ footer.footer
           li.footer__col-item
             a.footer__col-link(href="#") Авторы
 
-      .footer__col
+      .footer__col.footer__col--tablet-hidden
         h3.footer__col-title Покупателям
         ul.footer__col-list
           li.footer__col-item
@@ -22,7 +21,7 @@ footer.footer
           li.footer__col-item
             a.footer__col-link(href="#") Возврат
 
-      .footer__col
+      .footer__col.footer__col--tablet-hidden
         h3.footer__col-title Каталог
         ul.footer__col-list
           li.footer__col-item
@@ -44,19 +43,19 @@ footer.footer
             a.footer__col-link.footer__col-link(href="mailto:info@domainname.ru")
               include ../blocks/mail-icon/mail-icon
               +mail-icon('footer__mail-icon')
-              span info@domainname.ru
+              span.footer__email info@domainname.ru
           li.footer__col-item
             a.footer__col-link.footer__col-link
               include ../blocks/location-icon/location-icon
               +location-icon('footer__location-icon')
-              span г. Москва,<br> Преснесенская наб., 12
+              span.footer__adress г. Москва,<br> Преснесенская наб., 12
 
       .footer__col
         h3.footer__col-title Мы в социальных сетях:
         include ../blocks/social/social
         +social('footer__social')
         h3.footer__col-title Платёжные системы
-        img.pay-systems(src="img/pay-systems.png")
+        img.footer__pay-systems(src="img/pay-systems.png" data-da="footer__top, 0, 767")
 
   .footer__under
     .container
@@ -64,7 +63,8 @@ footer.footer
         .footer__copy
           a.footer__copy-item(href="#") Политика конфендициальности
           a.footer__copy-item(href="about.html") Условия и положения
-          span.footer__copy-item ©  Artgallery, 2018
+        span.footer__company ©  Artgallery, 2018
         .footer__creator
           img.footer__creator-img(src="img/hawking-brothers.png")
-          span.footer__creator-text Разработка сайта
+          span.footer__creator-text Cайт создан 
+          a.footer__creator-link(href="#" data-mobile-text="Hawking Brothers") Разработка сайта

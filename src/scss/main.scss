@@ -21,16 +21,20 @@ body {
 }
 
 .container {
-  max-width: 1270px;
-  padding: 0 15px;
+  max-width: 1280px;
+  padding: 0 20px;
   margin-right: auto;
   margin-left: auto;
+
+  @include media('<tablet') {
+    padding: 0 10px;
+  }
 }
 
 // component blocks
 
 // layout blocks
-
+@import '../blocks/title-lg/_title-lg';
 @import '../blocks/logo/_logo';
 @import '../blocks/header/_header';
 @import '../blocks/nav/_nav';
@@ -39,7 +43,6 @@ body {
 @import '../blocks/hero/_hero';
 @import '../blocks/search/_search';
 @import '../blocks/start/_start';
-@import '../blocks/title-lg/_title-lg';
 @import '../blocks/section-line/_section-line';
 @import '../blocks/video-start/_video-start';
 @import '../blocks/article-card/_article-card';
@@ -63,3 +66,4 @@ body {
 @import '../blocks/modal/_modal';
 @import '../blocks/sort/_sort';
 @import '../blocks/user-icon/_user-icon';
+@import '../blocks/burger/_burger';

@@ -4,4 +4,12 @@
   font-weight: 100;
   letter-spacing: 0.9px;
   text-align: center;
+
+  @include media('<desktop-sm') {
+    --title-lg: 30px;
+  }
+
+  @include media('<tablet') {
+    --title-lg: 22px;
+  }
 }

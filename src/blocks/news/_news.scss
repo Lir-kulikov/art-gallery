@@ -3,6 +3,16 @@
   padding-bottom: 110px;
   background-color: var(--light-gray);
 
+  @include media('<desktop-sm') {
+    padding-top: 43px;
+    padding-bottom: 56px;
+  }
+
+  @include media('<tablet') {
+    padding-top: 36px;
+    padding-bottom: 30px;
+  }
+
   &__wrapper {
     position: relative;
   }
@@ -13,18 +23,25 @@
 
   &__section-line {
     margin-bottom: 70px;
+
+    @include media('<tablet') {
+      margin-bottom: 90px;
+    }
   }
 
-  &__slider-btn {
+  &__slider-buttons {
     position: absolute;
     top: 0;
+    right: 20px;
 
-    &.slider-btn--right {
-      right: 15px;
+    @include media('<desktop-sm') {
+      top: -10px;
     }
 
-    &.slider-btn--left {
-      right: 75px;
+    @include media('<tablet') {
+      top: 60px;
+      right: 50%;
+      transform: translateX(50%);
     }
   }
 }

@@ -1,11 +1,11 @@
-.search.header__action-item
-  button.search__icon.js-search-opener
-    +icon("search")
-  .search__drop.js-search-drop
-    .search__field-wrapper
-      input.search__field.js-search-focus(type="search" placeholder="Поиск...")
-      button.search__close-btn.js-search-close
-        +icon("close")
-      button.search__btn
-        +icon("search")
-  
+mixin search(ClassName)
+  .search(class= ClassName)
+    button.search__icon.js-search-opener
+      +icon("search")
+    .search__drop.js-search-drop
+      .search__field-wrapper
+        input.search__field.js-search-focus(type="search" placeholder="Поиск...")
+        button.search__close-btn.js-search-close
+          +icon("close")
+        button.search__btn
+          +icon("search")

@@ -4,6 +4,10 @@
   color: var(--white);
   font-size: 13px;
 
+  @include media('<desktop-sm') {
+    font-size: 11px;
+  }
+
   &--new {
     background-color: var(--sticker-dark);
   }

@@ -2,19 +2,19 @@
   position: absolute;
   top: 0;
   right: 0;
-  display: block;
   height: 480px;
   padding: 15px 20px 0 20px;
   cursor: pointer;
   text-decoration: none;
 
+  @include media('<desktop-sm') {
+    height: 440px;
+    padding: 23px 8px 0 8px;
+  }
+
   &:hover {
     .masonry-fixed-card__btn::before {
       transform: translateX(-10px) rotate(20deg);
-    }
-
-    .masonry-fixed-card__img {
-      transform: scale(1.05);
     }
   }
 
@@ -22,13 +22,22 @@
     height: 100%;
     padding: 38px;
     background-color: #191b1f;
+
+    @include media('<desktop-sm') {
+      padding: 28px;
+    }
   }
 
   &__img {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     transition: transform var(--transition) ease;
+
+    @include media('<desktop-sm') {
+      top: -7px;
+    }
   }
 
   &__title {
@@ -39,6 +48,11 @@
     font-size: 22px;
     font-weight: 300;
     letter-spacing: 0.55px;
+
+    @include media('<desktop-sm') {
+      margin-top: 140px;
+      margin-bottom: 50px;
+    }
 
     &::before {
       position: absolute;
@@ -59,8 +73,15 @@
     color: var(--white);
     font-size: 16px;
     font-weight: 600;
+    letter-spacing: 0.55px;
     text-align: center;
     transition: color var(--transition) ease;
+
+    @include media('<desktop-sm') {
+      display: inline-block;
+      margin-right: auto;
+      margin-left: 55px;
+    }
 
     &:hover {
       color: var(--hover);
@@ -76,6 +97,10 @@
       background-repeat: no-repeat;
       content: '';
       transition: transform var(--transition) ease;
+
+      @include media('<desktop-sm') {
+        left: -90px;
+      }
     }
 
     &::after {
@@ -90,6 +115,13 @@
       background-size: contain;
       content: '';
       transform: translateY(-50%);
+
+      @include media('<desktop-sm') {
+        top: auto;
+        bottom: -25px;
+        left: 0;
+        transform: translateY(0);
+      }
     }
   }
 }

@@ -1,19 +1,25 @@
 nav.nav.header__nav
+  include ../burger/burger
+  +burger('nav__burger js-burger')
   ul.nav__list
-    li.nav__item
+    li.nav__item(data-da="nav__drop-list, 0, 1023.8")
       a.nav__link(href="#") Каталог
-    li.nav__item
+    li.nav__item(data-da="nav__drop-list, 0, 1023.9")
       a.nav__link(href="#") Художникам
-    li.nav__item
+    li.nav__item(data-da="nav__drop-list, 0, 1024")
       a.nav__link(href="#") Блог
     li.nav__item.nav__item--more
       a.nav__link.nav__link--drop(href="#") Ещё
+        img.nav__dropdown-icon(src="img/dropdown.svg")
       .nav__drop.js-drop
-        .container
+        .container.nav__container
           ul.nav__drop-list
             li.nav__item
               a.nav__link.nav__link--dark(href="#") О проекте
             li.nav__item
               a.nav__link.nav__link--dark(href="#") Доставка
             li.nav__item
-              a.nav__link.nav__link--dark(href="#") Политика конфиденциальности
+              a.nav__link.nav__link--dark.nav__link--mobile-border(href="#") Политика конфиденциальности
+            li.nav__item
+              a.nav__link.nav__link--hidden(href="#") Английская версия
+        .nav__company ©  Artgallery, 2018

@@ -12,7 +12,9 @@
 
   &__img {
     position: relative;
+
     width: auto;
+    width: 100%;
     object-fit: cover;
     transition: transform var(--transition) ease;
   }
@@ -21,6 +23,10 @@
     display: block;
     overflow: hidden;
     margin-bottom: 17px;
+
+    @include media('<desktop-sm') {
+      margin-bottom: 10px;
+    }
   }
 
   &__category {
@@ -30,10 +36,16 @@
     color: var(--black);
     font-size: 14px;
     font-weight: 600;
+    letter-spacing: 0.6px;
     text-decoration: none;
     text-transform: uppercase;
 
     transition: color var(--transition) ease;
+
+    @include media('<desktop-sm') {
+      padding-bottom: 5px;
+      font-size: 12px;
+    }
 
     &:hover {
       color: var(--hover);
@@ -63,6 +75,12 @@
     text-decoration: none;
 
     transition: color var(--transition) ease;
+
+    @include media('<desktop-sm') {
+      padding-top: 10px;
+      font-size: 15px;
+      line-height: 1.35;
+    }
 
     &:hover {
       color: var(--hover);

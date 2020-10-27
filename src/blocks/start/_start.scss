@@ -1,15 +1,29 @@
 .start {
-  padding-top: 48px;
+  padding-top: 38px;
   padding-bottom: 65px;
+
+  @include media('<tablet') {
+    padding-top: 26px;
+    padding-bottom: 38px;
+  }
 
   &__row {
     display: flex;
     justify-content: space-between;
     margin-top: 43px;
+
+    @include media('<600px') {
+      flex-direction: column;
+      margin-top: 32px;
+    }
   }
 
   &__title {
     margin-bottom: 10px;
+
+    @include media('<tablet') {
+      margin-bottom: 5px;
+    }
   }
 
   &__video {
@@ -18,9 +32,26 @@
     flex-shrink: 0;
     padding-top: 33.1%;
     margin-right: 57px;
+
+    @include media('<desktop-sm') {
+      padding-top: 25%;
+      margin-right: 34px;
+    }
+
+    @include media('<600px') {
+      width: 100%;
+      padding-top: 70%;
+      margin: 0 auto;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__card {
     width: 404px;
+
+    @include media('<600px') {
+      width: 100%;
+    }
   }
 }

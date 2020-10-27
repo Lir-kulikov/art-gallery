@@ -13,11 +13,10 @@ mixin masonry-card(ClassName, dataCard, sticker, oldPrice)
       span.masonry-card__type Картина,  80x60 см.
     .masonry-card__footer
       .masonry-card__price= dataCard.price
-        <span class="masonry-card__price-rub">7</span>
       if oldPrice
         .masonry-card__old-price= oldPrice.oldPriceValue
       .masonry-card__actions
         include ../heart-icon/heart-icon
-        +heart-icon('masonry-card__heart-icon')
+        +heart-icon('masonry-card__heart-icon js-icon')
         include ../basket-icon/basket-icon
-        +basket-icon('masonry-card__basket-icon')
+        +basket-icon('masonry-card__basket-icon js-icon')
