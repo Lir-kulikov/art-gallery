@@ -10,46 +10,52 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <div class="header__left"><a class="logo__link" href="#"><img class="logo header__logo" src="img/logo.png" alt="logo"/></a>
+          <div class="header__left"><a class="logo__link header__logo" href="#">
+                          <picture class="logo header__logo">
+                            <source srcset="img/AG.png" media="(max-width: 767px)"/><img src="img/logo.png" alt="logo"/>
+                          </picture></a>
             <nav class="nav header__nav">
+                            <button class="burger nav__burger js-burger"><span class="burger__line"></span></button>
               <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Художникам</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Блог</a></li>
-                <li class="nav__item nav__item--more"><a class="nav__link nav__link--drop" href="#">Ещё</a>
+                <li class="nav__item" data-da="nav__drop-list, 0, 1023.8"><a class="nav__link" href="#">Каталог</a></li>
+                <li class="nav__item" data-da="nav__drop-list, 0, 1023.9"><a class="nav__link" href="#">Художникам</a></li>
+                <li class="nav__item" data-da="nav__drop-list, 0, 1024"><a class="nav__link" href="#">Блог</a></li>
+                <li class="nav__item nav__item--more"><a class="nav__link nav__link--drop" href="#">Ещё<img class="nav__dropdown-icon" src="img/dropdown.svg"/></a>
                   <div class="nav__drop js-drop">
-                    <div class="container">
+                    <div class="container nav__container">
                       <ul class="nav__drop-list">
                         <li class="nav__item"><a class="nav__link nav__link--dark" href="#">О проекте</a></li>
                         <li class="nav__item"><a class="nav__link nav__link--dark" href="#">Доставка</a></li>
-                        <li class="nav__item"><a class="nav__link nav__link--dark" href="#">Политика конфиденциальности</a></li>
+                        <li class="nav__item"><a class="nav__link nav__link--dark nav__link--mobile-border" href="#">Политика конфиденциальности</a></li>
+                        <li class="nav__item"><a class="nav__link nav__link--hidden" href="#">Английская версия</a></li>
                       </ul>
                     </div>
+                    <div class="nav__company">©  Artgallery, 2018</div>
                   </div>
                 </li>
               </ul>
             </nav>
           </div>
           <div class="header__action">
-            <div class="account">
-              <button class="account__btn header__action-item js-account-opener">
-                                <svg class="user-icon account__user-icon">
-                                  <use xlink:href="img/svg/sprite.svg#user"></use>
-                                </svg><span class="account__name">Александрелло</span>
-              </button>
-              <div class="account__drop js-account-drop">
-                <ul class="account__menu-group">
-                  <li class="account__menu-item"><a class="account__menu-link" href="#">Мой профиль</a></li>
-                  <li class="account__menu-item"><a class="account__menu-link" href="#">Мои заказы</a></li>
-                  <li class="account__menu-item"><a class="account__menu-link" href="#">Сообщения</a></li>
-                </ul>
-                <ul class="account__menu-group">
-                  <li class="account__menu-item"><a class="account__menu-link" href="#">Настройки профиля</a></li>
-                  <li class="account__menu-item"><a class="account__menu-link" href="#">Мои работы</a></li>
-                </ul>
-                <button class="account__btn-close">Выйти</button>
-              </div>
-            </div>
+                        <div class="account header__account header__action-item">
+                          <button class="account__btn js-account-opener">
+                                            <svg class="user-icon account__user-icon">
+                                              <use xlink:href="img/svg/sprite.svg#user"></use>
+                                            </svg><img class="account__avatar" src="img/avatar.png"/><span class="account__name">Александрелло</span>
+                          </button>
+                          <div class="account__drop js-account-drop">
+                            <ul class="account__menu-group">
+                              <li class="account__menu-item"><a class="account__menu-link" href="#">Мой профиль</a></li>
+                              <li class="account__menu-item"><a class="account__menu-link" href="#">Мои заказы</a></li>
+                              <li class="account__menu-item"><a class="account__menu-link" href="#">Сообщения</a></li>
+                            </ul>
+                            <ul class="account__menu-group">
+                              <li class="account__menu-item"><a class="account__menu-link" href="#">Настройки профиля</a></li>
+                              <li class="account__menu-item"><a class="account__menu-link" href="#">Мои работы</a></li>
+                            </ul>
+                            <button class="account__btn-close">Выйти</button>
+                          </div>
+                        </div>
             <button class="header__wishlist header__action-item">
                             <svg class="heart-icon header__heart-icon">
                               <use xlink:href="img/svg/sprite.svg#heart"></use>
@@ -60,32 +66,32 @@
                               <use xlink:href="img/svg/sprite.svg#basket"></use>
                             </svg><span class="header__basket-icon-counter">23</span>
             </button>
-            <div class="search header__action-item">
-              <button class="search__icon js-search-opener">
-                <svg class="icon icon-search ">
-                  <use xlink:href="img/svg/sprite.svg#search"></use>
-                </svg>
-              </button>
-              <div class="search__drop js-search-drop">
-                <div class="search__field-wrapper">
-                  <input class="search__field js-search-focus" type="search" placeholder="Поиск..."/>
-                  <button class="search__close-btn js-search-close">
-                    <svg class="icon icon-close ">
-                      <use xlink:href="img/svg/sprite.svg#close"></use>
-                    </svg>
-                  </button>
-                  <button class="search__btn">
-                    <svg class="icon icon-search ">
-                      <use xlink:href="img/svg/sprite.svg#search"></use>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="lang header__action-item">
-              <button class="lang__btn js-lang-opener">RU</button>
-              <div class="lang__drop js-lang-drop"><a class="lang__link" href="#">EN</a></div>
-            </div>
+                        <div class="search header__search header__action-item">
+                          <button class="search__icon js-search-opener">
+                            <svg class="icon icon-search ">
+                              <use xlink:href="img/svg/sprite.svg#search"></use>
+                            </svg>
+                          </button>
+                          <div class="search__drop js-search-drop">
+                            <div class="search__field-wrapper">
+                              <input class="search__field js-search-focus" type="search" placeholder="Поиск..."/>
+                              <button class="search__close-btn js-search-close">
+                                <svg class="icon icon-close ">
+                                  <use xlink:href="img/svg/sprite.svg#close"></use>
+                                </svg>
+                              </button>
+                              <button class="search__btn">
+                                <svg class="icon icon-search ">
+                                  <use xlink:href="img/svg/sprite.svg#search"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lang header__lang header__action-item">
+                          <button class="lang__btn js-lang-opener">RU</button>
+                          <div class="lang__drop js-lang-drop"><a class="lang__link" href="#">EN</a></div>
+                        </div>
           </div>
         </div>
       </div>
@@ -131,14 +137,14 @@
             <div class="section-line"></div>
       <div class="container">
         <div class="start__row">
-                    <div class="video-start start__video"><img class="video-start__img" src="img/video-start.jpg"/>
+                    <div class="video-start start__video" data-modal-open="modal-video"><img class="video-start__img" src="img/video-start.jpg"/>
+                      <button class="video-start__btn">
+                        <svg class="icon icon-play ">
+                          <use xlink:href="img/svg/sprite.svg#play"></use>
+                        </svg>
+                      </button>
                       <div class="video-start__overlay">
                         <h3 class="video-start__title">Видеобзор нашего ресурса возможности для пользователя</h3>
-                        <button class="video-start__btn" data-modal-open="modal-video">
-                          <svg class="icon icon-play ">
-                            <use xlink:href="img/svg/sprite.svg#play"></use>
-                          </svg>
-                        </button>
                       </div>
                     </div>
                     <div class="article-card start__card"><a class="article-card__img-link" href="#"><img class="article-card__img" src="img/start-card.jpg"/></a><a class="article-card__category" href="#">Выбор экспертов</a><a class="article-card__title" href="#">Обзор нашего экспетра Элеоноры Рубинштейн-Загорской</a></div>
@@ -149,11 +155,11 @@
       <div class="container new-works__wrapper">
         <h2 class="new-works__title title-lg">Новые работы</h2>
                 <div class="sort new-works__sort">
-                  <label class="sort__label"></label>
+                  <label class="sort__label">Сортировать по</label>
                   <select class="sort__select" id="choices-sort">
-                    <option value="По дате добавления"></option>
-                    <option value="По цене"></option>
-                    <option value="По популярности"></option>
+                    <option value="Дате добавления"></option>
+                    <option value="Цене"></option>
+                    <option value="Популярности"></option>
                   </select>
                 </div>
       </div>
@@ -171,13 +177,13 @@
                       <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
                       </div>
                       <div class="masonry-card__footer">
-                        <div class="masonry-card__price">927 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__price">927 750</div>
                         <div class="masonry-card__old-price">727 750</div>
                         <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon">
+                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#heart"></use>
                                           </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon">
+                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#basket"></use>
                                           </svg>
                         </div>
@@ -187,13 +193,13 @@
                       <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--new">Новинка</span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
                       </div>
                       <div class="masonry-card__footer">
-                        <div class="masonry-card__price">927 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__price">927 750</div>
                         <div class="masonry-card__old-price">727 750</div>
                         <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon">
+                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#heart"></use>
                                           </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon">
+                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#basket"></use>
                                           </svg>
                         </div>
@@ -204,12 +210,12 @@
                       <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--new">Новинка</span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
                       </div>
                       <div class="masonry-card__footer">
-                        <div class="masonry-card__price">927 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__price">927 750</div>
                         <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon">
+                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#heart"></use>
                                           </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon">
+                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#basket"></use>
                                           </svg>
                         </div>
@@ -220,13 +226,13 @@
                       <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре</a><a class="masonry-card__author" href="#">Говард Херш</a><span class="masonry-card__type">Картина,  80x60 см.</span>
                       </div>
                       <div class="masonry-card__footer">
-                        <div class="masonry-card__price">27 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__price">27 750</div>
                         <div class="masonry-card__old-price"></div>
                         <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon">
+                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#heart"></use>
                                           </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon">
+                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#basket"></use>
                                           </svg>
                         </div>
@@ -236,13 +242,13 @@
                       <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
                       </div>
                       <div class="masonry-card__footer">
-                        <div class="masonry-card__price">27 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__price">27 750</div>
                         <div class="masonry-card__old-price"></div>
                         <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon">
+                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#heart"></use>
                                           </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon">
+                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#basket"></use>
                                           </svg>
                         </div>
@@ -252,12 +258,12 @@
                       <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--sale">Скидка 20%</span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
                       </div>
                       <div class="masonry-card__footer">
-                        <div class="masonry-card__price">927 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__price">927 750</div>
                         <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon">
+                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#heart"></use>
                                           </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon">
+                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#basket"></use>
                                           </svg>
                         </div>
@@ -267,44 +273,44 @@
                       <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--sale">Скидка 20%</span><a class="masonry-card__title" href="#">Растущее действие</a><a class="masonry-card__author" href="#">Рамина Роуз</a><span class="masonry-card__type">Картина,  80x60 см.</span>
                       </div>
                       <div class="masonry-card__footer">
-                        <div class="masonry-card__price">927 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__price">927 750</div>
                         <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon">
+                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#heart"></use>
                                           </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon">
+                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#basket"></use>
                                           </svg>
                         </div>
                       </div>
                     </div>
-                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-8.jpg"/></a>
+                    <div class="masonry-card new-works__grid-item hidden-tablet-down"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-8.jpg"/></a>
                       <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
                       </div>
                       <div class="masonry-card__footer">
-                        <div class="masonry-card__price">27 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__price">27 750</div>
                         <div class="masonry-card__old-price"></div>
                         <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon">
+                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#heart"></use>
                                           </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon">
+                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#basket"></use>
                                           </svg>
                         </div>
                       </div>
                     </div>
-                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-9.jpg"/></a>
+                    <div class="masonry-card new-works__grid-item hidden-tablet-down"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-9.jpg"/></a>
                       <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
                       </div>
                       <div class="masonry-card__footer">
-                        <div class="masonry-card__price">27 750<span class="masonry-card__price-rub">7</span></div>
+                        <div class="masonry-card__price">27 750</div>
                         <div class="masonry-card__old-price"></div>
                         <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon">
+                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#heart"></use>
                                           </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon">
+                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
                                             <use xlink:href="img/svg/sprite.svg#basket"></use>
                                           </svg>
                         </div>
@@ -317,16 +323,18 @@
     <section class="style-review">
       <div class="container style-review__wrapper">
         <h2 class="style-review__title title-lg">Обзор стилей</h2>
-                <button class="slider-btn slider-btn--left style-review__slider-btn js-swiper-style-review-prev">
-                  <svg class="slider-btn__icon">
-                    <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-                  </svg>
-                </button>
-                <button class="slider-btn slider-btn--right style-review__slider-btn js-swiper-style-review-next">
-                  <svg class="slider-btn__icon">
-                    <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-                  </svg>
-                </button>
+        <div class="style-review__slider-buttons">
+                    <button class="slider-btn slider-btn--left style-review__slider-btn js-swiper-style-review-prev">
+                      <svg class="slider-btn__icon">
+                        <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+                      </svg>
+                    </button>
+                    <button class="slider-btn slider-btn--right style-review__slider-btn js-swiper-style-review-next">
+                      <svg class="slider-btn__icon">
+                        <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </button>
+        </div>
       </div>
             <div class="section-line style-review__section-line"></div>
       <div class="container">
@@ -449,16 +457,18 @@
     <div class="news">
       <div class="container news__wrapper">
         <h2 class="news__title title-lg">Новости искусства</h2>
-                <button class="slider-btn slider-btn--left news__slider-btn js-swiper-news-prev">
-                  <svg class="slider-btn__icon">
-                    <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-                  </svg>
-                </button>
-                <button class="slider-btn slider-btn--right news__slider-btn js-swiper-news-next">
-                  <svg class="slider-btn__icon">
-                    <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-                  </svg>
-                </button>
+        <div class="news__slider-buttons">
+                    <button class="slider-btn slider-btn--left news__slider-btn js-swiper-news-prev">
+                      <svg class="slider-btn__icon">
+                        <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+                      </svg>
+                    </button>
+                    <button class="slider-btn slider-btn--right news__slider-btn js-swiper-news-next">
+                      <svg class="slider-btn__icon">
+                        <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </button>
+        </div>
       </div>
               <div class="section-line news__section-line"></div>
       <div class="container">
@@ -467,9 +477,7 @@
             <div class="swiper-slide">
                             <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
                               <div class="news-card__info">
-                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a>
-                                  <div class="news-card__date">21.12.2018</div>
-                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a><span class="news-card__date">21.12.2018</span></div><span class="news-card__date news-card__date--mobile">21.12.2018</span><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
                                 <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
                                                       <svg class="long-arrow-icon news-card__long-arrow-icon">
                                                         <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
@@ -480,9 +488,7 @@
             <div class="swiper-slide">
                             <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-2.jpg"/></a>
                               <div class="news-card__info">
-                                <div class="news-card__header"><a class="news-card__category" href="#">Коллекционирование</a>
-                                  <div class="news-card__date">21.12.2018</div>
-                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <div class="news-card__header"><a class="news-card__category" href="#">Коллекционирование</a><span class="news-card__date">21.12.2018</span></div><span class="news-card__date news-card__date--mobile">21.12.2018</span><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
                                 <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
                                                       <svg class="long-arrow-icon news-card__long-arrow-icon">
                                                         <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
@@ -493,9 +499,7 @@
             <div class="swiper-slide">
                             <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
                               <div class="news-card__info">
-                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a>
-                                  <div class="news-card__date">21.12.2018</div>
-                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a><span class="news-card__date">21.12.2018</span></div><span class="news-card__date news-card__date--mobile">21.12.2018</span><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
                                 <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
                                                       <svg class="long-arrow-icon news-card__long-arrow-icon">
                                                         <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
@@ -506,9 +510,7 @@
             <div class="swiper-slide">
                             <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
                               <div class="news-card__info">
-                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a>
-                                  <div class="news-card__date">21.12.2018</div>
-                                </div><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a><span class="news-card__date">21.12.2018</span></div><span class="news-card__date news-card__date--mobile">21.12.2018</span><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
                                 <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
                                                       <svg class="long-arrow-icon news-card__long-arrow-icon">
                                                         <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
@@ -523,7 +525,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__top">
-          <div class="footer__col">
+          <div class="footer__col footer__col--tablet-hidden">
             <h3 class="footer__col-title">Об Artgallery</h3>
             <ul class="footer__col-list">
               <li class="footer__col-item"><a class="footer__col-link" href="#">О проекте</a></li>
@@ -531,7 +533,7 @@
               <li class="footer__col-item"><a class="footer__col-link" href="#">Авторы</a></li>
             </ul>
           </div>
-          <div class="footer__col">
+          <div class="footer__col footer__col--tablet-hidden">
             <h3 class="footer__col-title">Покупателям</h3>
             <ul class="footer__col-list">
               <li class="footer__col-item"><a class="footer__col-link" href="#">Доставка</a></li>
@@ -539,7 +541,7 @@
               <li class="footer__col-item"><a class="footer__col-link" href="#">Возврат</a></li>
             </ul>
           </div>
-          <div class="footer__col">
+          <div class="footer__col footer__col--tablet-hidden">
             <h3 class="footer__col-title">Каталог</h3>
             <ul class="footer__col-list">
               <li class="footer__col-item"><a class="footer__col-link" href="#">Картины</a></li>
@@ -557,11 +559,11 @@
               <li class="footer__col-item"><a class="footer__col-link footer__col-link" href="mailto:info@domainname.ru">
                                     <svg class="mail-icon footer__mail-icon">
                                       <use xlink:href="img/svg/sprite.svg#mail"></use>
-                                    </svg><span>info@domainname.ru</span></a></li>
+                                    </svg><span class="footer__email">info@domainname.ru</span></a></li>
               <li class="footer__col-item"><a class="footer__col-link footer__col-link">
                                     <svg class="location-icon footer__location-icon">
                                       <use xlink:href="img/svg/sprite.svg#location"></use>
-                                    </svg><span>г. Москва,<br> Преснесенская наб., 12</span></a></li>
+                                    </svg><span class="footer__adress">г. Москва,<br> Преснесенская наб., 12</span></a></li>
             </ul>
           </div>
           <div class="footer__col">
@@ -586,15 +588,15 @@
                                 </svg></a></li>
                           </ul>
                         </div>
-            <h3 class="footer__col-title">Платёжные системы</h3><img class="pay-systems" src="img/pay-systems.png"/>
+            <h3 class="footer__col-title">Платёжные системы</h3><img class="footer__pay-systems" src="img/pay-systems.png" data-da="footer__top, 0, 767"/>
           </div>
         </div>
       </div>
       <div class="footer__under">
         <div class="container">
           <div class="footer__under-inner">
-            <div class="footer__copy"><a class="footer__copy-item" href="#">Политика конфендициальности</a><a class="footer__copy-item" href="about.html">Условия и положения</a><span class="footer__copy-item">©  Artgallery, 2018</span></div>
-            <div class="footer__creator"><img class="footer__creator-img" src="img/hawking-brothers.png"/><span class="footer__creator-text">Разработка сайта</span></div>
+            <div class="footer__copy"><a class="footer__copy-item" href="#">Политика конфендициальности</a><a class="footer__copy-item" href="about.html">Условия и положения</a></div><span class="footer__company">©  Artgallery, 2018</span>
+            <div class="footer__creator"><img class="footer__creator-img" src="img/hawking-brothers.png"/><span class="footer__creator-text">Cайт создан </span><a class="footer__creator-link" href="#" data-mobile-text="Hawking Brothers">Разработка сайта</a></div>
           </div>
         </div>
       </div>
