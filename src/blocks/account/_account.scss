@@ -87,7 +87,12 @@
     transition: var(--transition) ease;
     visibility: hidden;
 
+    @include media('<desktop-sm') {
+      top: 69px;
+    }
+
     @include media('<tablet') {
+      top: 59px;
       min-width: 250px;
       max-width: 250px;
       padding: 20px 10px;
@@ -107,6 +112,10 @@
       background-color: var(--white);
       content: '';
       transform: rotate(45deg) translateX(-50%);
+
+      @include media('<desktop-sm') {
+        top: 3px;
+      }
     }
   }
 
@@ -145,21 +154,32 @@
   }
 
   &__btn-close {
-    display: block;
+    display: flex;
     width: 100%;
+    align-items: center;
     padding: 15px 20px;
     cursor: pointer;
     font-size: 17px;
     text-align: left;
+    transition: var(--transition) ease;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.8);
       color: var(--white);
+
+      .account__logout-icon {
+        fill: var(--white);
+      }
     }
 
     @include media('<tablet') {
       padding: 10px 15px;
       font-size: 15px;
     }
+  }
+
+  &__logout-icon.logout-icon {
+    padding-bottom: 2px;
+    margin-right: 7px;
   }
 }

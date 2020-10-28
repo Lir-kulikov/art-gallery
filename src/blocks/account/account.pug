@@ -18,4 +18,7 @@ mixin account(ClassName)
           a.account__menu-link(href="#") Настройки профиля
         li.account__menu-item
           a.account__menu-link(href="#") Мои работы
-      button.account__btn-close Выйти
+      button.account__btn-close
+        include ../logout-icon/logout-icon
+        +logout-icon('account__logout-icon')
+        | Выйти

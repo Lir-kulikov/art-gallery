@@ -53,7 +53,11 @@
                               <li class="account__menu-item"><a class="account__menu-link" href="#">Настройки профиля</a></li>
                               <li class="account__menu-item"><a class="account__menu-link" href="#">Мои работы</a></li>
                             </ul>
-                            <button class="account__btn-close">Выйти</button>
+                            <button class="account__btn-close">
+                                                <svg class="logout-icon account__logout-icon">
+                                                  <use xlink:href="img/svg/sprite.svg#logout"></use>
+                                                </svg>Выйти
+                            </button>
                           </div>
                         </div>
             <button class="header__wishlist header__action-item">
@@ -74,7 +78,7 @@
                           </button>
                           <div class="search__drop js-search-drop">
                             <div class="search__field-wrapper">
-                              <input class="search__field js-search-focus" type="search" placeholder="Поиск..."/>
+                              <input class="search__field js-search-focus" type="text" placeholder="Поиск..."/>
                               <button class="search__close-btn js-search-close">
                                 <svg class="icon icon-close ">
                                   <use xlink:href="img/svg/sprite.svg#close"></use>

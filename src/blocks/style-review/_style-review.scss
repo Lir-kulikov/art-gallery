@@ -26,9 +26,13 @@
     height: 100%;
     flex-direction: column;
 
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+
     @include media('<500px') {
       &:nth-child(even) {
-        flex-direction: column-reverse;
+        flex-direction: column;
       }
     }
   }
