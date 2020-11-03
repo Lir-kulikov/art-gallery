@@ -3,6 +3,8 @@
   //width: min-content;
 
   &__name {
+    transition: color var(--transition) ease;
+
     @include media('<desktop') {
       display: none;
     }
@@ -13,6 +15,14 @@
 
     @include media('<tablet') {
       display: none;
+    }
+
+    &--theme-light {
+      color: var(--black);
+    }
+
+    &--theme-dark {
+      color: var(--white);
     }
   }
 

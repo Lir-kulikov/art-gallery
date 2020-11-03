@@ -53,7 +53,6 @@
   &__link {
     display: block;
     padding: 8px 28px;
-    color: var(--white);
     cursor: pointer;
     text-decoration: none;
     transition: var(--transition) ease;
@@ -71,6 +70,22 @@
       }
     }
 
+    &--theme-dark {
+      color: var(--white);
+
+      @include media('<tablet') {
+        color: var(--black);
+      }
+    }
+
+    &--theme-light {
+      color: var(--black);
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+
     @include media('<tablet') {
       font-size: 15px;
     }
@@ -78,6 +93,7 @@
     &--drop {
       position: relative;
       display: inline-flex;
+      align-items: center;
       padding: 8px 20px;
 
       @include media('<desktop-sm') {
@@ -150,6 +166,7 @@
     z-index: 10;
     top: 100%;
     left: 0;
+    overflow: hidden;
     width: 100%;
     padding: 20px 0;
     background-color: var(--white);
@@ -209,6 +226,23 @@
       font-weight: 300;
       letter-spacing: 0.3px;
       text-align: center;
+    }
+  }
+
+  &--theme-light {
+    .nav__item--more:hover {
+      .nav__dropdown-icon {
+        fill: var(--white);
+      }
+    }
+
+    .nav__drop {
+      top: calc(100% + 1px);
+    }
+
+    .nav__link--drop::after {
+      border-top: 1px solid #ededed;
+      border-left: 1px solid #ededed;
     }
   }
 }

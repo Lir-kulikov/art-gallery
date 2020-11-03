@@ -2,5 +2,13 @@
   width: 22px;
   height: 20px;
   fill: none;
-  stroke: var(--black);
+  transition: fill var(--transition) ease;
+
+  &--theme-light {
+    stroke: var(--black);
+  }
+
+  &--theme-dark {
+    stroke: var(--white);
+  }
 }

@@ -1,0 +1,85 @@
+mixin grid-masonry(ClassName)
+  - mod = mod || ''
+  .grid-masonry(class= ClassName)
+
+    .grid-masonry__item-sizer.js-sizer
+    .grid-masonry__item-gutter.js-gutter
+    if mod = 'fixed'
+      include ../masonry-fixed-card/masonry-fixed-card
+      +masonry-fixed-card('grid-masonry__item-fixed-card')
+
+    include ../masonry-card/masonry-card
+    +masonry-card('grid-masonry__item js-grid-item', {
+    img: 'masonry-card-1.jpg',
+    title: 'Распоряжения о структуре тут длинное название картины',
+    author: 'Екатерина Александровна Преображенская',
+    price: '927 750'}, {
+    }, {
+    oldPriceValue: '727 750'})
+
+    +masonry-card('grid-masonry__item js-grid-item', {
+    img: 'masonry-card-2.jpg',
+    title: 'Абстракция, Опус J202',
+    author: 'Соколов Виталий',
+    price: '927 750'}, {
+    text: 'Новинка',
+    mod: 'new'}, {
+    oldPriceValue: '727 750'})
+
+    .grid-masonry__item.grid-masonry__item--empty.js-grid-item.hidden-desktop-up.hidden-mobile-down
+
+    +masonry-card('grid-masonry__item js-grid-item', {
+    img: 'masonry-card-3.jpg',
+    title: 'Распоряжения о структуре тут длинное название картины',
+    author: 'Екатерина Александровна Преображенская',
+    price: '927 750',
+    oldPrice: '727 750'}, {
+    text: 'Новинка',
+    mod: 'new'
+    })
+
+    .grid-masonry__item.grid-masonry__item--empty.js-item.hidden-tablet-down
+
+    +masonry-card('grid-masonry__item js-grid-item', {
+    img: 'masonry-card-4.jpg',
+    title: 'Распоряжения о структуре',
+    author: 'Говард Херш',
+    price: '27 750'}, {}, {})
+
+    +masonry-card('grid-masonry__item js-grid-item', {
+    img: 'masonry-card-5.jpg',
+    title: 'Абстракция, Опус J202',
+    author: 'Соколов Виталий',
+    price: '27 750'}, {}, {})
+
+    +masonry-card('grid-masonry__item js-grid-item', {
+    img: 'masonry-card-6.jpg',
+    title: 'Распоряжения о структуре тут длинное название картины',
+    author: 'Екатерина Александровна Преображенская',
+    price: '927 750',
+    oldPrice: '727 750'}, {
+    text: 'Скидка 20%',
+    mod: 'sale'
+    })
+
+    +masonry-card('grid-masonry__item js-grid-item', {
+    img: 'masonry-card-7.jpg',
+    title: 'Растущее действие',
+    author: 'Рамина Роуз',
+    price: '927 750',
+    oldPrice: '727 750'}, {
+    text: 'Скидка 20%',
+    mod: 'sale'
+    })
+
+    +masonry-card('grid-masonry__item js-grid-item hidden-tablet-down', {
+    img: 'masonry-card-8.jpg',
+    title: 'Абстракция, Опус J202',
+    author: 'Соколов Виталий',
+    price: '27 750'}, {}, {})
+
+    +masonry-card('grid-masonry__item js-grid-item hidden-tablet-down', {
+    img: 'masonry-card-9.jpg',
+    title: 'Абстракция, Опус J202',
+    author: 'Соколов Виталий',
+    price: '27 750'}, {}, {})

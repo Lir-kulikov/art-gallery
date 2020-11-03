@@ -1,11 +1,12 @@
-mixin search(ClassName)
+mixin search(ClassName, mod)
   .search(class= ClassName)
     button.search__icon.js-search-opener
-      +icon("search")
+      include ../search-icon/search-icon
+      +search-icon("search__search-icon", mod)
     .search__drop.js-search-drop
       .search__field-wrapper
         input.search__field.js-search-focus(type="text" placeholder="Поиск...")
         button.search__close-btn.js-search-close
           +icon("close")
         button.search__btn
-          +icon("search")
+          +search-icon("search__search-icon", 'gray')

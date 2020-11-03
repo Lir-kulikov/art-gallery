@@ -1,0 +1,123 @@
+mixin filter(ClassName)
+  .filter(class= ClassName)
+    .filter__main
+      .container
+        .filter__main-inner
+
+          .filter__item.ui-slider.ui-slider--type-price
+            .ui-slider__fields
+              input.ui-slider__field.js-ui-slider-field(type="number")
+              span.ui-slider__field-separator
+              input.ui-slider__field.js-ui-slider-field(type="number")
+            .ui-slider__range-wrapper
+              .filter__item-title Цена
+              .ui-slider__range.js-ui-slider-price(data-min="0" data-max="99999")
+                span.ui-slider__min.js-ui-slider-min
+                span.ui-slider__max.js-ui-slider-max
+
+          .filter__item.ui-slider.ui-slider--type-size
+            .filter__item-title Размер
+            .ui-slider__range.js-ui-slider-size
+
+          .filter__item.filter__type
+            .filter__item-title Ориентация
+            .filter__checkbox-wrapper
+              .filter__checkbox
+                input.filter__checkbox-input(type="checkbox" id="filter-checkbox-square" name="filter-checkbox-square")
+                label.filter__checkbox-label(for="filter-checkbox-square")
+              .filter__checkbox
+                input.filter__checkbox-input(type="checkbox" id="filter-checkbox-vertical" name="filter-checkbox-vertical")
+                label.filter__checkbox-label(for="filter-checkbox-vertical")
+              .filter__checkbox
+                input.filter__checkbox-input(type="checkbox" id="filter-checkbox-horizontal" name="filter-checkbox-horizontal")
+                label.filter__checkbox-label(for="filter-checkbox-horizontal")
+          button.filter__btn.filter__item.js-filter-reset
+            | Сбросить фильтр
+            include ../reset-icon/reset-icon
+            +reset-icon('filter__reset-icon')
+    .filter__more
+      .filter__btn-wrapper
+        button.filter__btn.filter__btn--show.js-filter-show-btn(data-value="Свернуть фильтр")
+          span Показать фильтр
+          include ../dropdown-icon/dropdown-icon
+          +dropdown-icon
+      .filter__tabs.js-show-filters
+        .container
+          .filter__tabs-nav
+            ul.filter__tabs-nav-list
+              li.filter__tabs-nav-item.js-tab-nav.is-active(data-tab-name="js-tab-1")
+                | Автор
+                +dropdown-icon('filter__dropdown-icon')
+              li.filter__tabs-nav-item.js-tab-nav(data-tab-name="js-tab-2")
+                | Жанр
+                +dropdown-icon('filter__dropdown-icon')
+              li.filter__tabs-nav-item.js-tab-nav(data-tab-name="js-tab-3")
+                | Цвет
+                +dropdown-icon('filter__dropdown-icon')
+              li.filter__tabs-nav-item.js-tab-nav(data-tab-name="js-tab-4")
+                | Тема
+                +dropdown-icon('filter__dropdown-icon')
+              li.filter__tabs-nav-item.js-tab-nav(data-tab-name="js-tab-5")
+                | Материал
+                +dropdown-icon('filter__dropdown-icon')
+              li.filter__tabs-nav-item.js-tab-nav(data-tab-name="js-tab-6")
+                | Стиль
+                +dropdown-icon('filter__dropdown-icon')
+        .filter__tabs-content
+          .container
+
+            .filter__tab.js-tab.js-tab-1.is-active
+              .filter__author
+                .filter__author-select-wrapper 
+                  span.filter__author-text Начните вводить имя или фамилию автора
+                  select.filter__author-select#js-filter-select(multiple)
+                    optgroup.filter__author-select-group(label="А")
+                      option.filter__author-select-opt Абулафия Крайнова
+                      option.filter__author-select-opt Арменинов Тримедул
+                      option.filter__author-select-opt Асадуллин Нефедов
+                      option.filter__author-select-opt Абулафия Крайнова
+                    optgroup.filter__author-select-group(label="Б")
+                      option.filter__author-select-opt Бабурин Константин
+                      option.filter__author-select-opt Бабуркин Вениамин
+                      option.filter__author-select-opt Бердюгин Бетюг
+                      option.filter__author-select-opt Бенвенист Трамп
+                    optgroup.filter__author-select-group(label="В")
+                      option.filter__author-select-opt Вабурин Константин
+                      option.filter__author-select-opt Вабуркин Вениамин
+                      option.filter__author-select-opt Вердюгин Бетюг
+                      option.filter__author-select-opt Венвенист Трамп
+                .filter__author-autocomplete.js-autocomplete
+
+            .filter__tab.js-tab.js-tab-2 Жанр
+
+            .filter__tab.js-tab.js-tab-3 Цвет
+            .filter__tab.js-tab.js-tab-4 Тема
+            .filter__tab.js-tab.js-tab-5 Материал
+            .filter__tab.js-tab.js-tab-6
+              .filter__style
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Вортицизм")
+                  label.filter__style-label(for="Вортицизм") Вортицизм
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Модернизм")
+                  label.filter__style-label(for="Модернизм") Модернизм
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Авангардизм")
+                  label.filter__style-label(for="Авангардизм") Авангардизм
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Реализм")
+                  label.filter__style-label(for="Реализм") Реализм
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Конструктивизм")
+                  label.filter__style-label(for="Конструктивизм") Конструктивизм
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Готика")
+                  label.filter__style-label(for="Готика") Готика
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Классицизм")
+                  label.filter__style-label(for="Классицизм") Классицизм
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Поп-арт")
+                  label.filter__style-label(for="Поп-арт") Поп-арт
+        
+          

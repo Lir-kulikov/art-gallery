@@ -85,13 +85,11 @@
     }
   }
 
-  & .icon-search {
-    width: 20px;
-    height: 20px;
-    fill: var(--white);
-
-    @include media('<tablet') {
-      fill: var(--black);
+  &__icon {
+    .search-icon--theme-dark {
+      @include media('<tablet') {
+        fill: var(--black);
+      }
     }
   }
 
@@ -133,7 +131,7 @@
       right: 10px;
     }
 
-    & .icon-search {
+    & .search-icon {
       width: 27px;
       height: 27px;
       fill: var(--dark-3);

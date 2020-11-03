@@ -127,7 +127,7 @@ const svgSprites = () => {
 		}))
 		.pipe(cheerio({
 			run: function ($) {
-				$('[fill]').removeAttr('fill');
+				//$('[fill]').removeAttr('fill');
 				$('[stroke]').removeAttr('stroke');
 				$('[style]').removeAttr('style');
 			},

@@ -1,0 +1,17 @@
+.search-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--dark-3);
+  transition: fill var(--transition) ease;
+
+  &--theme-light {
+    fill: var(--black);
+  }
+
+  &--theme-dark {
+    fill: var(--white);
+  }
+
+  &--gray {
+  }
+}

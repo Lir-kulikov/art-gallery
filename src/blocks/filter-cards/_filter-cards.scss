@@ -1,0 +1,57 @@
+.filter-cards {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    @include media('<desktop-sm') {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    color: var(--dark-2);
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .slider-btn {
+    border: 1px solid var(--line);
+
+    &:hover {
+      border: 1px solid #4a4f52;
+    }
+
+    @include media('<desktop-sm') {
+      width: 50px;
+      height: 50px;
+      border: none;
+
+      &:hover {
+        border: none;
+        background-color: white;
+
+        .slider-btn__icon {
+          fill: var(--hover);
+        }
+      }
+    }
+  }
+}
+
+.swiper-container-filter {
+  overflow: hidden;
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper-wrapper {
+    width: 238px;
+
+    @include media('<desktop') {
+      width: 176px;
+    }
+  }
+}

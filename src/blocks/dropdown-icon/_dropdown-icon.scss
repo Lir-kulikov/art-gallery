@@ -1,0 +1,12 @@
+.dropdown-icon {
+  width: 11px;
+  height: 7px;
+
+  &--theme-light {
+    fill: var(--black);
+  }
+
+  &--theme-dark {
+    fill: var(--white);
+  }
+}

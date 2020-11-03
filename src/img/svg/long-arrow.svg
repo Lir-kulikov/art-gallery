@@ -11,7 +11,11 @@
    sodipodi:docname="long-arrow-right.svg"
    id="svg20"
    viewBox="0 0 11.36 3.15"
-   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+   style=" clip-rule: evenodd;
+  fill-rule: evenodd;
+  image-rendering: optimizeQuality;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;"
    version="1.1"
    height="3.4274mm"
    width="12.3509mm"
@@ -43,9 +47,6 @@
   <style
    id="style10"
    type="text/css">
-   <![CDATA[
-    .fil0 {fill:#FEFEFE}
-   ]]>
   </style>
  </defs>
  <g

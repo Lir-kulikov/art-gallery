@@ -151,6 +151,7 @@
   &__heart-icon {
     margin-right: 18px;
     cursor: pointer;
+    stroke: var(--black);
     transition: var(--transition) ease;
 
     &.is-active {
@@ -165,7 +166,9 @@
   }
 
   &__basket-icon {
+    color: rgba(0, 0, 0, 0);
     cursor: pointer;
+    stroke: var(--black);
     transition: var(--transition) ease;
 
     &.is-active {
@@ -196,12 +199,12 @@
   }
 
   40% {
-    transform: scale(1.25);
+    transform: scale(1.2);
   }
 
-  70% {
-    transform: scale(0.9);
-  }
+  // 70% {
+  //   transform: scale(0.9);
+  // }
 
   100% {
     transform: scale(1);

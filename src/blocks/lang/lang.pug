@@ -1,5 +1,5 @@
-mixin lang(ClassName)
-  .lang(class= ClassName)
+mixin lang(ClassName, mod)
+  .lang(class= ClassName + " " + "lang" + "--" + mod)
     button.lang__btn.js-lang-opener RU
     .lang__drop.js-lang-drop
       a.lang__link(href="#") EN

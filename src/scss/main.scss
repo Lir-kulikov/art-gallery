@@ -8,10 +8,16 @@
 //vendor styles
 @import '../../node_modules/swiper/swiper-bundle.css';
 @import '../../node_modules/choices.js/public/assets/styles/choices.min.css';
+@import '../../node_modules/nouislider/distribute/nouislider.min.css';
 //global
 
 * {
   outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
 }
 
 body {
@@ -41,6 +47,7 @@ body {
 @import '../blocks/account/_account';
 @import '../blocks/lang/_lang';
 @import '../blocks/hero/_hero';
+@import '../blocks/btn/_btn';
 @import '../blocks/search/_search';
 @import '../blocks/start/_start';
 @import '../blocks/section-line/_section-line';
@@ -68,3 +75,13 @@ body {
 @import '../blocks/sort/_sort';
 @import '../blocks/user-icon/_user-icon';
 @import '../blocks/burger/_burger';
+@import '../blocks/page-index/_page-index';
+@import '../blocks/dropdown-icon/_dropdown-icon';
+@import '../blocks/search-icon/_search-icon';
+@import '../blocks/grid-masonry/_grid-masonry';
+@import '../blocks/catalog/_catalog';
+@import '../blocks/filter/_filter';
+@import '../blocks/filter-cards/_filter-cards';
+@import '../blocks/genre-card/_genre-card';
+@import '../blocks/reset-icon/_reset-icon';
+

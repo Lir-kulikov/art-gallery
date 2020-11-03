@@ -1,25 +1,27 @@
-nav.nav.header__nav
-  include ../burger/burger
-  +burger('nav__burger js-burger')
-  ul.nav__list
-    li.nav__item(data-da="nav__drop-list, 0, 1023.8")
-      a.nav__link(href="#") Каталог
-    li.nav__item(data-da="nav__drop-list, 0, 1023.9")
-      a.nav__link(href="#") Художникам
-    li.nav__item(data-da="nav__drop-list, 0, 1024")
-      a.nav__link(href="#") Блог
-    li.nav__item.nav__item--more
-      a.nav__link.nav__link--drop(href="#") Ещё
-        img.nav__dropdown-icon(src="img/dropdown.svg")
-      .nav__drop.js-drop
-        .container.nav__container
-          ul.nav__drop-list
-            li.nav__item
-              a.nav__link.nav__link--dark(href="#") О проекте
-            li.nav__item
-              a.nav__link.nav__link--dark(href="#") Доставка
-            li.nav__item
-              a.nav__link.nav__link--dark.nav__link--mobile-border(href="#") Политика конфиденциальности
-            li.nav__item
-              a.nav__link.nav__link--hidden(href="#") Английская версия
-        .nav__company ©  Artgallery, 2018
+mixin nav(CLassName, mod)
+  nav.nav(class= ClassName + " " + "nav" + "--" + mod)
+    include ../burger/burger
+    +burger('nav__burger js-burger')
+    ul.nav__list
+      li.nav__item(data-da="nav__drop-list, 0, 1023.7")
+        a.nav__link(href="catalog.html" class= "nav__link" + "--" + mod) Каталог
+      li.nav__item(data-da="nav__drop-list, 0, 1023.8")
+        a.nav__link(href="#" class= "nav__link" + "--" + mod) Художникам
+      li.nav__item(data-da="nav__drop-list, 0, 1023.9")
+        a.nav__link(href="#" class= "nav__link" + "--" + mod) Блог
+      li.nav__item.nav__item--more
+        a.nav__link.nav__link--drop(href="#" class= "nav__link" + "--" + mod) Ещё
+          include ../dropdown-icon/dropdown-icon
+          +dropdown-icon('nav__dropdown-icon', mod)
+        .nav__drop.js-drop
+          .container.nav__container
+            ul.nav__drop-list
+              li.nav__item
+                a.nav__link.nav__link--dark(href="#") О проекте
+              li.nav__item
+                a.nav__link.nav__link--dark(href="#") Доставка
+              li.nav__item
+                a.nav__link.nav__link--dark.nav__link--mobile-border(href="#") Политика конфиденциальности
+              li.nav__item
+                a.nav__link.nav__link--hidden(href="#") Английская версия
+          .nav__company ©  Artgallery, 2018

@@ -1,23 +1,25 @@
-header.header
-  .container
-    .header__inner
-      .header__left
-        include ../blocks/logo/logo
-        +logo('header__logo')
-        include ../blocks/nav/nav
-      .header__action
-        include ../blocks/account/account
-        +account('header__account header__action-item')
-        button.header__wishlist.header__action-item
-          include ../blocks/heart-icon/heart-icon
-          +heart-icon('header__heart-icon')
-          span.header__heart-icon-counter 85
-        button.header__basket.header__action-item
-          include ../blocks/basket-icon/basket-icon
-          +basket-icon('header__basket-icon')
-          span.header__basket-icon-counter 23
-        include ../blocks/search/search
-        +search('header__search header__action-item')
-        include ../blocks/lang/lang
-        +lang('header__lang header__action-item')
+mixin header(ClassName, mod) 
+  header.header(class= ClassName + " " + "header" + "--" + mod)
+    .container
+      .header__inner
+        .header__left
+          include ../blocks/logo/logo
+          +logo('header__logo', mod)
+          include ../blocks/nav/nav
+          +nav('header__nav', mod)
+        .header__action
+          include ../blocks/account/account
+          +account('header__account header__action-item', mod)
+          button.header__wishlist.header__action-item
+            include ../blocks/heart-icon/heart-icon
+            +heart-icon('header__heart-icon', mod)
+            span.header__heart-icon-counter 85
+          button.header__basket.header__action-item
+            include ../blocks/basket-icon/basket-icon
+            +basket-icon('header__basket-icon', mod)
+            span.header__basket-icon-counter 23
+          include ../blocks/search/search
+          +search('header__search header__action-item', mod)
+          include ../blocks/lang/lang
+          +lang('header__lang header__action-item', mod)
           

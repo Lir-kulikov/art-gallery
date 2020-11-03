@@ -1,0 +1,27 @@
+
+extends partials/layout.pug
+block vars
+  -var title='Каталог'
+  -var description = 'Картины!'
+  -var pageClass = 'page-catalog'
+  -var pageTheme = 'theme-light'
+block content
+  .catalog__top-img-wrapper
+    .catalog__top-img.lax(data-lax-translate-y="0 0, 500 150")
+      h2.catalog__title.title-lg Каталог картин
+  .breadcrumbs.catalog__breadcrumbs
+    a.breadcrumbs__back(href="index.html")
+      include blocks/long-arrow-icon/long-arrow-icon
+      +long-arrow-icon('breadcrumbs__long-arrow-icon')
+      | Назад
+  include blocks/filter/filter
+  +filter('catalog__filter')
+  include blocks/filter-cards/filter-cards
+  +filter-cards('catalog__filter-cards')
+  .catalog__product-cards
+    .container
+      include blocks/sort/sort
+      +sort('catalog__sort')
+      include blocks/grid-masonry/grid-masonry
+      +grid-masonry('catalog__grid-masonry js-gallery')
+      button.catalog__product-btn.btn Показать ещё

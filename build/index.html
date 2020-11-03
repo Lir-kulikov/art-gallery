@@ -3,103 +3,107 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>ArtGallery - </title>
+    <meta name="description" content="#{description}"/>
+    <title>ArtGallery - Главная</title>
     <link rel="stylesheet" href="css/main.min.css"/>
   </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__left"><a class="logo__link header__logo" href="#">
-                          <picture class="logo header__logo">
-                            <source srcset="img/AG.png" media="(max-width: 767px)"/><img src="img/logo.png" alt="logo"/>
-                          </picture></a>
-            <nav class="nav header__nav">
-                            <button class="burger nav__burger js-burger"><span class="burger__line"></span></button>
-              <ul class="nav__list">
-                <li class="nav__item" data-da="nav__drop-list, 0, 1023.8"><a class="nav__link" href="#">Каталог</a></li>
-                <li class="nav__item" data-da="nav__drop-list, 0, 1023.9"><a class="nav__link" href="#">Художникам</a></li>
-                <li class="nav__item" data-da="nav__drop-list, 0, 1024"><a class="nav__link" href="#">Блог</a></li>
-                <li class="nav__item nav__item--more"><a class="nav__link nav__link--drop" href="#">Ещё<img class="nav__dropdown-icon" src="img/dropdown.svg"/></a>
-                  <div class="nav__drop js-drop">
-                    <div class="container nav__container">
-                      <ul class="nav__drop-list">
-                        <li class="nav__item"><a class="nav__link nav__link--dark" href="#">О проекте</a></li>
-                        <li class="nav__item"><a class="nav__link nav__link--dark" href="#">Доставка</a></li>
-                        <li class="nav__item"><a class="nav__link nav__link--dark nav__link--mobile-border" href="#">Политика конфиденциальности</a></li>
-                        <li class="nav__item"><a class="nav__link nav__link--hidden" href="#">Английская версия</a></li>
-                      </ul>
-                    </div>
-                    <div class="nav__company">©  Artgallery, 2018</div>
-                  </div>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="header__action">
-                        <div class="account header__account header__action-item">
-                          <button class="account__btn js-account-opener">
-                                            <svg class="user-icon account__user-icon">
-                                              <use xlink:href="img/svg/sprite.svg#user"></use>
-                                            </svg><img class="account__avatar" src="img/avatar.png"/><span class="account__name">Александрелло</span>
-                          </button>
-                          <div class="account__drop js-account-drop">
-                            <ul class="account__menu-group">
-                              <li class="account__menu-item"><a class="account__menu-link" href="#">Мой профиль</a></li>
-                              <li class="account__menu-item"><a class="account__menu-link" href="#">Мои заказы</a></li>
-                              <li class="account__menu-item"><a class="account__menu-link" href="#">Сообщения</a></li>
-                            </ul>
-                            <ul class="account__menu-group">
-                              <li class="account__menu-item"><a class="account__menu-link" href="#">Настройки профиля</a></li>
-                              <li class="account__menu-item"><a class="account__menu-link" href="#">Мои работы</a></li>
-                            </ul>
-                            <button class="account__btn-close">
-                                                <svg class="logout-icon account__logout-icon">
-                                                  <use xlink:href="img/svg/sprite.svg#logout"></use>
-                                                </svg>Выйти
-                            </button>
-                          </div>
-                        </div>
-            <button class="header__wishlist header__action-item">
-                            <svg class="heart-icon header__heart-icon">
-                              <use xlink:href="img/svg/sprite.svg#heart"></use>
-                            </svg><span class="header__heart-icon-counter">85</span>
-            </button>
-            <button class="header__basket header__action-item">
-                            <svg class="basket-icon header__basket-icon">
-                              <use xlink:href="img/svg/sprite.svg#basket"></use>
-                            </svg><span class="header__basket-icon-counter">23</span>
-            </button>
-                        <div class="search header__search header__action-item">
-                          <button class="search__icon js-search-opener">
-                            <svg class="icon icon-search ">
-                              <use xlink:href="img/svg/sprite.svg#search"></use>
-                            </svg>
-                          </button>
-                          <div class="search__drop js-search-drop">
-                            <div class="search__field-wrapper">
-                              <input class="search__field js-search-focus" type="text" placeholder="Поиск..."/>
-                              <button class="search__close-btn js-search-close">
-                                <svg class="icon icon-close ">
-                                  <use xlink:href="img/svg/sprite.svg#close"></use>
-                                </svg>
+  <body class="page-index">
+        <header class="header page-index__header header--theme-dark">
+          <div class="container">
+            <div class="header__inner">
+              <div class="header__left"><a class="logo__link header__logo logo--theme-dark" href="index.html">
+                              <picture class="logo header__logo">
+                                <source srcset="img/AG.png" media="(max-width: 767px)"/><img src="img/logo.png" alt="logo"/>
+                              </picture></a>
+                            <nav class="nav page-index__header nav--theme-dark">
+                                            <button class="burger nav__burger js-burger"><span class="burger__line"></span></button>
+                              <ul class="nav__list">
+                                <li class="nav__item" data-da="nav__drop-list, 0, 1023.7"><a class="nav__link nav__link--theme-dark" href="catalog.html">Каталог</a></li>
+                                <li class="nav__item" data-da="nav__drop-list, 0, 1023.8"><a class="nav__link nav__link--theme-dark" href="#">Художникам</a></li>
+                                <li class="nav__item" data-da="nav__drop-list, 0, 1023.9"><a class="nav__link nav__link--theme-dark" href="#">Блог</a></li>
+                                <li class="nav__item nav__item--more"><a class="nav__link nav__link--drop nav__link--theme-dark" href="#">Ещё
+                                                        <svg class="dropdown-icon nav__dropdown-icon dropdown-icon--theme-dark">
+                                                          <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                                                        </svg></a>
+                                  <div class="nav__drop js-drop">
+                                    <div class="container nav__container">
+                                      <ul class="nav__drop-list">
+                                        <li class="nav__item"><a class="nav__link nav__link--dark" href="#">О проекте</a></li>
+                                        <li class="nav__item"><a class="nav__link nav__link--dark" href="#">Доставка</a></li>
+                                        <li class="nav__item"><a class="nav__link nav__link--dark nav__link--mobile-border" href="#">Политика конфиденциальности</a></li>
+                                        <li class="nav__item"><a class="nav__link nav__link--hidden" href="#">Английская версия</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="nav__company">©  Artgallery, 2018</div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </nav>
+              </div>
+              <div class="header__action">
+                            <div class="account header__account header__action-item account--theme-dark">
+                              <button class="account__btn js-account-opener">
+                                                <svg class="user-icon account__user-icon user-icon--theme-dark">
+                                                  <use xlink:href="img/svg/sprite.svg#user"></use>
+                                                </svg><img class="account__avatar" src="img/avatar.png"/><span class="account__name account__name--theme-dark">Александрелло</span>
                               </button>
-                              <button class="search__btn">
-                                <svg class="icon icon-search ">
-                                  <use xlink:href="img/svg/sprite.svg#search"></use>
-                                </svg>
-                              </button>
+                              <div class="account__drop js-account-drop">
+                                <ul class="account__menu-group">
+                                  <li class="account__menu-item"><a class="account__menu-link" href="#">Мой профиль</a></li>
+                                  <li class="account__menu-item"><a class="account__menu-link" href="#">Мои заказы</a></li>
+                                  <li class="account__menu-item"><a class="account__menu-link" href="#">Сообщения</a></li>
+                                </ul>
+                                <ul class="account__menu-group">
+                                  <li class="account__menu-item"><a class="account__menu-link" href="#">Настройки профиля</a></li>
+                                  <li class="account__menu-item"><a class="account__menu-link" href="#">Мои работы</a></li>
+                                </ul>
+                                <button class="account__btn-close">
+                                                    <svg class="logout-icon account__logout-icon">
+                                                      <use xlink:href="img/svg/sprite.svg#logout"></use>
+                                                    </svg>Выйти
+                                </button>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="lang header__lang header__action-item">
-                          <button class="lang__btn js-lang-opener">RU</button>
-                          <div class="lang__drop js-lang-drop"><a class="lang__link" href="#">EN</a></div>
-                        </div>
+                <button class="header__wishlist header__action-item">
+                                <svg class="heart-icon header__heart-icon heart-icon--theme-dark">
+                                  <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                </svg><span class="header__heart-icon-counter">85</span>
+                </button>
+                <button class="header__basket header__action-item">
+                                <svg class="basket-icon header__basket-icon basket-icon--theme-dark">
+                                  <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                </svg><span class="header__basket-icon-counter">23</span>
+                </button>
+                            <div class="search header__search header__action-item">
+                              <button class="search__icon js-search-opener">
+                                                <svg class="search-icon search__search-icon search-icon--theme-dark">
+                                                  <use xlink:href="img/svg/sprite.svg#search"></use>
+                                                </svg>
+                              </button>
+                              <div class="search__drop js-search-drop">
+                                <div class="search__field-wrapper">
+                                  <input class="search__field js-search-focus" type="text" placeholder="Поиск..."/>
+                                  <button class="search__close-btn js-search-close">
+                                    <svg class="icon icon-close ">
+                                      <use xlink:href="img/svg/sprite.svg#close"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="search__btn">
+                                                    <svg class="search-icon search__search-icon search-icon--theme-dark">
+                                                      <use xlink:href="img/svg/sprite.svg#search"></use>
+                                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="lang header__lang header__action-item lang--theme-dark">
+                              <button class="lang__btn js-lang-opener">RU</button>
+                              <div class="lang__drop js-lang-drop"><a class="lang__link" href="#">EN</a></div>
+                            </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </header>
+        </header>
     <section class="hero">
       <div class="swiper-container-hero hero__slider">
         <div class="swiper-wrapper">
@@ -169,159 +173,159 @@
       </div>
             <div class="section-line new-works__section-line"></div>
       <div class="container">
-        <div class="new-works__grid js-gallery">
-          <div class="new-works__grid-item-sizer js-sizer"></div>
-          <div class="new-works__grid-item-gutter js-gutter"></div>
-                    <div class="masonry-fixed-card new-works__grid-item-fixed-card">
-                      <div class="masonry-fixed-card__inner"><img class="masonry-fixed-card__img" src="img/masonry-card-fixed-1.png"/>
-                        <h3 class="masonry-fixed-card__title">Умный выбор по параметрам с примерами</h3><a class="masonry-fixed-card__btn">Подобрать</a>
-                      </div>
-                    </div>
-                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-1.jpg"/></a>
-                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
-                      </div>
-                      <div class="masonry-card__footer">
-                        <div class="masonry-card__price">927 750</div>
-                        <div class="masonry-card__old-price">727 750</div>
-                        <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
-                                          </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
-                                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-2.jpg"/></a>
-                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--new">Новинка</span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
-                      </div>
-                      <div class="masonry-card__footer">
-                        <div class="masonry-card__price">927 750</div>
-                        <div class="masonry-card__old-price">727 750</div>
-                        <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
-                                          </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
-                                          </svg>
-                        </div>
-                      </div>
-                    </div>
-          <div class="new-works__grid-item new-works__grid-item--empty js-item hidden-desktop-up hidden-mobile-down"></div>
-                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-3.jpg"/></a>
-                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--new">Новинка</span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
-                      </div>
-                      <div class="masonry-card__footer">
-                        <div class="masonry-card__price">927 750</div>
-                        <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
-                                          </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
-                                          </svg>
-                        </div>
-                      </div>
-                    </div>
-          <div class="new-works__grid-item new-works__grid-item--empty js-item hidden-tablet-down"></div>
-                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-4.jpg"/></a>
-                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре</a><a class="masonry-card__author" href="#">Говард Херш</a><span class="masonry-card__type">Картина,  80x60 см.</span>
-                      </div>
-                      <div class="masonry-card__footer">
-                        <div class="masonry-card__price">27 750</div>
-                        <div class="masonry-card__old-price"></div>
-                        <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
-                                          </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
-                                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-5.jpg"/></a>
-                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
-                      </div>
-                      <div class="masonry-card__footer">
-                        <div class="masonry-card__price">27 750</div>
-                        <div class="masonry-card__old-price"></div>
-                        <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
-                                          </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
-                                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-6.jpg"/></a>
-                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--sale">Скидка 20%</span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
-                      </div>
-                      <div class="masonry-card__footer">
-                        <div class="masonry-card__price">927 750</div>
-                        <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
-                                          </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
-                                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="masonry-card new-works__grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-7.jpg"/></a>
-                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--sale">Скидка 20%</span><a class="masonry-card__title" href="#">Растущее действие</a><a class="masonry-card__author" href="#">Рамина Роуз</a><span class="masonry-card__type">Картина,  80x60 см.</span>
-                      </div>
-                      <div class="masonry-card__footer">
-                        <div class="masonry-card__price">927 750</div>
-                        <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
-                                          </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
-                                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="masonry-card new-works__grid-item hidden-tablet-down"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-8.jpg"/></a>
-                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
-                      </div>
-                      <div class="masonry-card__footer">
-                        <div class="masonry-card__price">27 750</div>
-                        <div class="masonry-card__old-price"></div>
-                        <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
-                                          </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
-                                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="masonry-card new-works__grid-item hidden-tablet-down"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-9.jpg"/></a>
-                      <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
-                      </div>
-                      <div class="masonry-card__footer">
-                        <div class="masonry-card__price">27 750</div>
-                        <div class="masonry-card__old-price"></div>
-                        <div class="masonry-card__actions">
-                                          <svg class="heart-icon masonry-card__heart-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#heart"></use>
-                                          </svg>
-                                          <svg class="basket-icon masonry-card__basket-icon js-icon">
-                                            <use xlink:href="img/svg/sprite.svg#basket"></use>
-                                          </svg>
-                        </div>
-                      </div>
-                    </div>
-        </div>
-        <button class="new-works__btn">Смотреть все</button>
+                <div class="grid-masonry new-works__grid-masonry js-gallery-fixed">
+                  <div class="grid-masonry__item-sizer js-sizer"></div>
+                  <div class="grid-masonry__item-gutter js-gutter"></div>
+                            <div class="masonry-fixed-card grid-masonry__item-fixed-card">
+                              <div class="masonry-fixed-card__inner"><img class="masonry-fixed-card__img" src="img/masonry-card-fixed-1.png"/>
+                                <h3 class="masonry-fixed-card__title">Умный выбор по параметрам с примерами</h3><a class="masonry-fixed-card__btn">Подобрать</a>
+                              </div>
+                            </div>
+                            <div class="masonry-card grid-masonry__item js-grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-1.jpg"/></a>
+                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                              </div>
+                              <div class="masonry-card__footer">
+                                <div class="masonry-card__price">927 750</div>
+                                <div class="masonry-card__old-price">727 750</div>
+                                <div class="masonry-card__actions">
+                                                  <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                    <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                  </svg>
+                                                  <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--fixed">
+                                                    <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="masonry-card grid-masonry__item js-grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-2.jpg"/></a>
+                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--new">Новинка</span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                              </div>
+                              <div class="masonry-card__footer">
+                                <div class="masonry-card__price">927 750</div>
+                                <div class="masonry-card__old-price">727 750</div>
+                                <div class="masonry-card__actions">
+                                                  <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                    <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                  </svg>
+                                                  <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--fixed">
+                                                    <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                  <div class="grid-masonry__item grid-masonry__item--empty js-grid-item hidden-desktop-up hidden-mobile-down"></div>
+                            <div class="masonry-card grid-masonry__item js-grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-3.jpg"/></a>
+                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--new">Новинка</span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                              </div>
+                              <div class="masonry-card__footer">
+                                <div class="masonry-card__price">927 750</div>
+                                <div class="masonry-card__actions">
+                                                  <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                    <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                  </svg>
+                                                  <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--fixed">
+                                                    <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                  <div class="grid-masonry__item grid-masonry__item--empty js-item hidden-tablet-down"></div>
+                            <div class="masonry-card grid-masonry__item js-grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-4.jpg"/></a>
+                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре</a><a class="masonry-card__author" href="#">Говард Херш</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                              </div>
+                              <div class="masonry-card__footer">
+                                <div class="masonry-card__price">27 750</div>
+                                <div class="masonry-card__old-price"></div>
+                                <div class="masonry-card__actions">
+                                                  <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                    <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                  </svg>
+                                                  <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--fixed">
+                                                    <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="masonry-card grid-masonry__item js-grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-5.jpg"/></a>
+                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                              </div>
+                              <div class="masonry-card__footer">
+                                <div class="masonry-card__price">27 750</div>
+                                <div class="masonry-card__old-price"></div>
+                                <div class="masonry-card__actions">
+                                                  <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                    <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                  </svg>
+                                                  <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--fixed">
+                                                    <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="masonry-card grid-masonry__item js-grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-6.jpg"/></a>
+                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--sale">Скидка 20%</span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                              </div>
+                              <div class="masonry-card__footer">
+                                <div class="masonry-card__price">927 750</div>
+                                <div class="masonry-card__actions">
+                                                  <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                    <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                  </svg>
+                                                  <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--fixed">
+                                                    <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="masonry-card grid-masonry__item js-grid-item"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-7.jpg"/></a>
+                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--sale">Скидка 20%</span><a class="masonry-card__title" href="#">Растущее действие</a><a class="masonry-card__author" href="#">Рамина Роуз</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                              </div>
+                              <div class="masonry-card__footer">
+                                <div class="masonry-card__price">927 750</div>
+                                <div class="masonry-card__actions">
+                                                  <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                    <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                  </svg>
+                                                  <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--fixed">
+                                                    <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="masonry-card grid-masonry__item js-grid-item hidden-tablet-down"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-8.jpg"/></a>
+                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                              </div>
+                              <div class="masonry-card__footer">
+                                <div class="masonry-card__price">27 750</div>
+                                <div class="masonry-card__old-price"></div>
+                                <div class="masonry-card__actions">
+                                                  <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                    <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                  </svg>
+                                                  <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--fixed">
+                                                    <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="masonry-card grid-masonry__item js-grid-item hidden-tablet-down"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-9.jpg"/></a>
+                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Абстракция, Опус J202</a><a class="masonry-card__author" href="#">Соколов Виталий</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                              </div>
+                              <div class="masonry-card__footer">
+                                <div class="masonry-card__price">27 750</div>
+                                <div class="masonry-card__old-price"></div>
+                                <div class="masonry-card__actions">
+                                                  <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                    <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                  </svg>
+                                                  <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--fixed">
+                                                    <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                </div>
+        <button class="new-works__btn btn">Смотреть все</button>
       </div>
     </section>
     <section class="style-review">
@@ -526,6 +530,13 @@
         </div>
       </div>
     </div>
+        <div class="modal modal-video" id="modal-video" aria-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-modal-close="">
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+              <button class="modal__close" aria-label="Close modal" data-modal-close=""></button><iframe class="youtube-video" width="100%" height="100%" src="https://www.youtube.com/embed/h3RNElMbdUY?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src-video="https://www.youtube.com/embed/h3RNElMbdUY?autoplay=1"></iframe>
+            </div>
+          </div>
+        </div>
     <footer class="footer">
       <div class="container">
         <div class="footer__top">
@@ -605,13 +616,6 @@
         </div>
       </div>
     </footer>
-        <div class="modal modal-video" id="modal-video" aria-hidden="true">
-          <div class="modal__overlay" tabindex="-1" data-modal-close="">
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-              <button class="modal__close" aria-label="Close modal" data-modal-close=""></button><iframe class="youtube-video" width="100%" height="100%" src="https://www.youtube.com/embed/h3RNElMbdUY?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src-video="https://www.youtube.com/embed/h3RNElMbdUY?autoplay=1"></iframe>
-            </div>
-          </div>
-        </div>
     <script src="js/main.js"></script>
   </body>
 </html>

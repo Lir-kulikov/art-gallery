@@ -1,0 +1,53 @@
+.genre-card {
+  display: block;
+
+  &:hover {
+    .genre-card__img::after {
+      opacity: 1;
+    }
+
+    .genre-card__title {
+      background-color: var(--hover);
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 238px;
+    height: 148px;
+    object-fit: cover;
+
+    @include media('<desktop') {
+      width: 176px;
+      height: 109px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0 0 0 5px var(--hover);
+      content: '';
+      opacity: 0;
+      transition: opacity var(--transition) ease;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: var(--dark-2);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    transition: background-color var(--transition) ease;
+
+    @include media('<desktop') {
+      padding: 0 10px;
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.btn {
+  min-width: 218px;
+  padding: 12px 70px;
+  border: 1px;
+  color: var(--black);
+  cursor: pointer;
+  font-size: 17px;
+  letter-spacing: 0.85px;
+  transition: var(--transition) ease;
+
+  &:hover {
+    border-color: var(--black);
+    background-color: var(--black);
+    color: var(--white);
+  }
+}

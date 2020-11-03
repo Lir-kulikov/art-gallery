@@ -1,0 +1,30 @@
+mixin filter-cards(ClassName)
+  section.filter-cards(class= ClassName)
+    .container
+      .filter-cards__header
+        h2.filter-cards__title Популярные фильтры
+        .filter-cards__slider-btns
+          include ../slider-btn/slider-btn
+          +slider-btn('js-swiper-filter-prev', 'left')
+          +slider-btn('js-swiper-filter-next', 'right')
+      .filter-cards__slider.swiper-container-filter
+        .swiper-wrapper
+          .swiper-slide
+            include ../genre-card/genre-card
+            +genre-card('', {image: 'filter-1.png', title: 'Барроко'})
+          .swiper-slide
+            +genre-card('', {image: 'filter-2.png', title: 'Живопись'})
+          .swiper-slide
+            +genre-card('', {image: 'filter-3.png', title: 'Пейзаж'})
+          .swiper-slide
+            +genre-card('', {image: 'filter-4.png', title: 'Поп-арт'})
+          .swiper-slide
+            +genre-card('', {image: 'filter-5.png', title: 'Модерн'})
+          .swiper-slide
+            +genre-card('', {image: 'filter-2.png', title: 'Живопись'})
+          .swiper-slide
+            +genre-card('', {image: 'filter-3.png', title: 'Пейзаж'})
+          .swiper-slide
+            +genre-card('', {image: 'filter-4.png', title: 'Поп-арт'})
+          .swiper-slide
+            +genre-card('', {image: 'filter-5.png', title: 'Модерн'})

@@ -1,0 +1,46 @@
+// .page-index {
+//   &__header {
+//     border-bottom: 1px solid #e4e4e4;
+//     background-color: var(--white);
+//   }
+
+//   .nav__link {
+//     color: var(--black);
+
+//     &:hover {
+//       color: var(--white);
+//     }
+
+//     &--drop {
+//       &::after {
+//         border-top: 1px solid #e4e4e4;
+//         border-left: 1px solid #e4e4e4;
+//       }
+//     }
+//   }
+
+//   .account__btn {
+//     color: var(--black);
+
+//     &:hover {
+//       color: var(--white);
+
+//       .user-icon {
+//         fill: var(--white);
+//       }
+//     }
+
+//     .user-icon {
+//       fill: var(--black);
+//       transition: fill var(--transition) ease;
+//     }
+//   }
+
+//   .heart-icon {
+//     stroke: var(--black);
+//   }
+
+//   .basket-icon {
+//     stroke: var(--black);
+//   }
+// }

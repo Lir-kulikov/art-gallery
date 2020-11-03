@@ -1,10 +1,10 @@
-mixin account(ClassName)
-  .account(class= ClassName)
+mixin account(ClassName, mod)
+  .account(class= ClassName + " " + "account" + "--" + mod)
     button.account__btn.js-account-opener
       include ../user-icon/user-icon
       +user-icon('account__user-icon')
       img.account__avatar(src="img/avatar.png")
-      span.account__name Александрелло
+      span.account__name(class= "account__name--" + mod) Александрелло
     .account__drop.js-account-drop
       ul.account__menu-group
         li.account__menu-item

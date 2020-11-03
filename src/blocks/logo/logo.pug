@@ -1,5 +1,10 @@
-mixin logo(ClassName)
-  a.logo__link(href="#" class= ClassName)
-    picture.logo.header__logo
-      source(srcset="img/AG.png" media="(max-width: 767px)")
-      img(src="img/logo.png", alt="logo")
+mixin logo(ClassName, mod)
+  a.logo__link(href="index.html" class= ClassName + ' ' + 'logo'+'--'+mod)
+    if mod === 'theme-dark'
+      picture.logo.header__logo
+        source(srcset="img/AG.png" media="(max-width: 767px)")
+        img(src="img/logo.png", alt="logo")
+    else if mod === 'theme-light'
+      picture.logo.header__logo
+        source(srcset="img/AG.png" media="(max-width: 767px)")
+        img(src="img/logo-black.png", alt="logo")

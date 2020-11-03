@@ -60,4 +60,16 @@
       visibility: visible;
     }
   }
+
+  &--theme-light {
+    .lang__btn {
+      color: var(--black);
+    }
+  }
+
+  &--theme-dark {
+    .lang__btn {
+      color: var(--white);
+    }
+  }
 }

@@ -41,9 +41,7 @@ const mySwiperStyleReview = new Swiper('.swiper-container-style-review', {
 });
 
 const mySwiperNews = new Swiper('.swiper-container-news', {
-  // slidesPerView: 2,
   loop: false,
-  // spaceBetween: 42,
   speed: 700,
   autoHeight: true,
   navigation: {
@@ -61,3 +59,16 @@ const mySwiperNews = new Swiper('.swiper-container-news', {
     },
   }
 });
+
+const mySwiperFilterCards = new Swiper('.swiper-container-filter', {
+  loop: false,
+  slidesPerView: 'auto',
+  watchSlidesVisibility: true,
+  speed: 500,
+  autoHeight: true,
+  spaceBetween: 12,
+  navigation: {
+    nextEl: '.js-swiper-filter-next',
+    prevEl: '.js-swiper-filter-prev',
+  },
+})
