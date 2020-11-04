@@ -89,14 +89,6 @@ input[type=text]::-ms-clear {
 
 @font-face {
   font-display: swap;
-  font-family: "ProximaNova";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
   font-family: "PTRoubleSans";
   font-style: normal;
   font-weight: 400;
@@ -107,8 +99,8 @@ input[type=text]::-ms-clear {
   font-display: swap;
   font-family: "ProximaNova";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff");
+  font-weight: 300;
+  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
 }
 
 @font-face {
@@ -117,6 +109,14 @@ input[type=text]::-ms-clear {
   font-style: normal;
   font-weight: 600;
   src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff");
 }
 
 * {
@@ -176,7 +176,7 @@ body {
 
 .header {
   position: fixed;
-  z-index: 10;
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
@@ -524,6 +524,10 @@ body {
   padding: 8px 20px;
 }
 
+.nav__link--drop:hover .nav__dropdown-icon {
+  fill: var(--white);
+}
+
 @media (max-width: 1023px) {
   .nav__link--drop {
     display: none;
@@ -660,7 +664,12 @@ body {
   }
 }
 
-.nav--theme-light .nav__item--more:hover .nav__dropdown-icon {
+.nav--theme-light .nav__item--more:hover .nav__link--drop {
+  background-color: var(--dark-opacity);
+  color: var(--white);
+}
+
+.nav--theme-light .nav__item--more:hover .nav__link--drop .dropdown-icon {
   fill: var(--white);
 }
 
@@ -671,6 +680,28 @@ body {
 .nav--theme-light .nav__link--drop::after {
   border-top: 1px solid #ededed;
   border-left: 1px solid #ededed;
+}
+
+.nav__drop-list {
+  margin-left: -30px;
+}
+
+@media (max-width: 1279px) {
+  .nav__drop-list {
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav__drop-list {
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .nav__drop-list .nav__link {
+    padding: 8px 20px;
+  }
 }
 
 .account {
@@ -1200,23 +1231,18 @@ body {
   position: absolute;
   top: 80px;
   left: 0;
+  overflow: hidden;
   width: 100%;
-  height: 0;
+  max-height: 0;
   padding: 0;
   background-color: #9febeb;
-  opacity: 0;
-  transform: translateY(-300%);
+  transition: max-height var(--transition) ease, padding var(--transition) ease;
 }
 
 .search__drop.is-open {
-  height: auto;
+  overflow: visible;
+  max-height: 400px;
   padding: 35px;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.search__drop.is-open .search__field-wrapper {
-  transform: translateY(0);
 }
 
 @media (max-width: 767px) {
@@ -1237,7 +1263,6 @@ body {
   max-width: 900px;
   justify-content: center;
   margin: 0 auto;
-  transform: translateY(-300%);
 }
 
 .search__field {
@@ -1324,38 +1349,6 @@ body {
   .search__btn .search-icon {
     width: 16px;
     height: 16px;
-  }
-}
-
-@-webkit-keyframes smooth-open {
-  0% {
-    height: 0;
-    padding: 0;
-    opacity: 0;
-  }
-  50% {
-    height: auto;
-    padding: 35px;
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes smooth-open {
-  0% {
-    height: 0;
-    padding: 0;
-    opacity: 0;
-  }
-  50% {
-    height: auto;
-    padding: 35px;
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -1720,6 +1713,7 @@ body {
   overflow: hidden;
   border: 1px solid --gray;
   background-color: var(--white);
+  text-align: left;
   transition: box-shadow var(--transition) ease;
 }
 
@@ -3627,6 +3621,7 @@ body {
 .catalog__sort {
   display: inline-flex;
   align-items: center;
+  margin-right: 0;
   margin-bottom: 20px;
   margin-left: auto;
   font-size: 14px;
@@ -3642,6 +3637,10 @@ body {
 .catalog__sort .sort__label {
   margin-right: 20px;
   color: var(--dark-2);
+}
+
+.catalog__grid-masonry .grid-masonry__item--empty {
+  display: none;
 }
 
 .catalog__product-btn {
@@ -3774,6 +3773,7 @@ body {
 
 .filter__btn {
   display: inline-flex;
+  min-width: 200px;
   align-items: center;
   padding: 10px 13px 10px 30px;
   border: 1px solid #e4e4e4;
@@ -3785,23 +3785,26 @@ body {
 
 .filter__btn--show {
   position: relative;
+  bottom: 10px;
   margin-left: auto;
   background-color: var(--white);
-}
-
-.filter__btn--show span {
-  transition: opacity 0.3s linear;
+  transition: bottom 0.4s ease-in;
 }
 
 .filter__btn--show::after {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30px;
   content: attr(data-value);
   opacity: 0;
-  transform: translateX(-52%) translateY(-50%);
+  transform: translateY(-50%);
   transition: opacity 0.3s linear;
   white-space: nowrap;
+}
+
+.filter__btn--show.is-active {
+  bottom: 0;
+  transition: bottom 0.2s linear;
 }
 
 .filter__btn--show.is-active span {
@@ -3819,7 +3822,7 @@ body {
 .filter__btn .dropdown-icon {
   width: 14px;
   height: 9px;
-  margin-left: 10px;
+  margin-left: 23px;
   fill: var(--black);
   transition: transform var(--transition) ease;
 }
@@ -3878,6 +3881,7 @@ body {
 
 .filter__tabs-nav-item .dropdown-icon {
   margin-left: 5px;
+  transition: transform var(--transition) ease;
 }
 
 .filter__tabs-nav-item:hover {
@@ -3886,6 +3890,10 @@ body {
 
 .filter__tabs-nav-item.is-active {
   background-color: #f6f6f6;
+}
+
+.filter__tabs-nav-item.is-active .dropdown-icon {
+  transform: rotate(180deg);
 }
 
 .filter__tabs-content {
@@ -3987,6 +3995,7 @@ body {
 }
 
 .filter__author-select-wrapper .choices__list--dropdown {
+  z-index: 10;
   width: calc(100% + 2px);
   max-height: 330px;
   margin-left: -1px;
@@ -4168,10 +4177,6 @@ body {
   background-color: var(--black);
 }
 
-.ui-slider__range.noUi-state-drag .noUi-handle {
-  background-color: var(--black);
-}
-
 .ui-slider__range .noUi-handle {
   top: -8px;
   width: auto;
@@ -4192,6 +4197,10 @@ body {
 
 .ui-slider__range .noUi-handle::before, .ui-slider__range .noUi-handle::after {
   display: none;
+}
+
+.ui-slider__range .noUi-handle.noUi-active {
+  background-color: var(--black);
 }
 
 .ui-slider__range .noUi-pips {

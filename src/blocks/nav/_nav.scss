@@ -96,6 +96,12 @@
       align-items: center;
       padding: 8px 20px;
 
+      &:hover {
+        .nav__dropdown-icon {
+          fill: var(--white);
+        }
+      }
+
       @include media('<desktop-sm') {
         display: none;
       }
@@ -231,8 +237,13 @@
 
   &--theme-light {
     .nav__item--more:hover {
-      .nav__dropdown-icon {
-        fill: var(--white);
+      .nav__link--drop {
+        background-color: var(--dark-opacity);
+        color: var(--white);
+
+        .dropdown-icon {
+          fill: var(--white);
+        }
       }
     }
 
@@ -243,6 +254,24 @@
     .nav__link--drop::after {
       border-top: 1px solid #ededed;
       border-left: 1px solid #ededed;
+    }
+  }
+
+  &__drop-list {
+    margin-left: -30px;
+
+    @include media('<desktop') {
+      margin-left: -20px;
+    }
+
+    @include media('<tablet') {
+      margin-left: -20px;
+    }
+
+    .nav__link {
+      @include media('<desktop') {
+        padding: 8px 20px;
+      }
     }
   }
 }

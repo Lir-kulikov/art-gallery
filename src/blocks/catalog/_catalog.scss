@@ -85,8 +85,8 @@
 
   &__sort {
     display: inline-flex;
-    //min-width: 232px;
     align-items: center;
+    margin-right: 0;
     margin-bottom: 20px;
     margin-left: auto;
     font-size: 14px;
@@ -99,6 +99,12 @@
     .sort__label {
       margin-right: 20px;
       color: var(--dark-2);
+    }
+  }
+
+  &__grid-masonry {
+    .grid-masonry__item--empty {
+      display: none;
     }
   }
 
@@ -123,20 +129,10 @@
   background-color: var(--light-gray);
 
   &__back {
-    // position: relative;
     color: var(--dark-3);
     font-size: 13px;
     letter-spacing: 0.33px;
     text-decoration: none;
-
-    // &::before {
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 0;
-    //   content: '';
-    //   transform: translateY(-50%);
-    //   background-image: url('../img/');
-    // }
   }
 
   &__long-arrow-icon {

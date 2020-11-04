@@ -1,5 +1,6 @@
 mixin filter(ClassName)
   .filter(class= ClassName)
+    .filter__header
     .filter__main
       .container
         .filter__main-inner
@@ -13,7 +14,7 @@ mixin filter(ClassName)
               .filter__item-title Цена
               .ui-slider__range.js-ui-slider-price(data-min="0" data-max="99999")
                 span.ui-slider__min.js-ui-slider-min
-                span.ui-slider__max.js-ui-slider-max
+                span.ui-slider__max.js-ui-slider-max max
 
           .filter__item.ui-slider.ui-slider--type-size
             .filter__item-title Размер

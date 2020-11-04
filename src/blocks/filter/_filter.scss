@@ -95,6 +95,7 @@
 
   &__btn {
     display: inline-flex;
+    min-width: 200px;
     align-items: center;
     padding: 10px 13px 10px 30px;
     border: 1px solid #e4e4e4;
@@ -103,31 +104,28 @@
     font-size: 14px;
     transition: background-color var(--transition) ease, color var(--transition) ease, border-color var(--transition) ease;
 
-    &.filter__item {
-
-    }
-
     &--show {
       position: relative;
+      bottom: 10px;
       margin-left: auto;
       background-color: var(--white);
-
-      span {
-        transition: opacity 0.3s linear;
-      }
+      transition: bottom 0.4s ease-in;
 
       &::after {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 30px;
         content: attr(data-value);
         opacity: 0;
-        transform: translateX(-52%) translateY(-50%);
+        transform: translateY(-50%);
         transition: opacity 0.3s linear;
         white-space: nowrap;
       }
 
       &.is-active {
+        bottom: 0;
+        transition: bottom 0.2s linear;
+
         span {
           opacity: 0;
         }
@@ -145,7 +143,7 @@
     .dropdown-icon {
       width: 14px;
       height: 9px;
-      margin-left: 10px;
+      margin-left: 23px;
       fill: var(--black);
       transition: transform var(--transition) ease;
     }
@@ -205,6 +203,7 @@
 
     .dropdown-icon {
       margin-left: 5px;
+      transition: transform var(--transition) ease;
     }
 
     &:hover {
@@ -213,6 +212,10 @@
 
     &.is-active {
       background-color: #f6f6f6;
+
+      .dropdown-icon {
+        transform: rotate(180deg);
+      }
     }
   }
 
@@ -311,6 +314,7 @@
       }
 
       &__list--dropdown {
+        z-index: 10;
         width: calc(100% + 2px);
         max-height: 330px;
         margin-left: -1px;
@@ -492,12 +496,6 @@
       background-color: var(--black);
     }
 
-    &.noUi-state-drag {
-      .noUi-handle {
-        background-color: var(--black);
-      }
-    }
-
     .noUi-handle {
       top: -8px;
       width: auto;
@@ -518,6 +516,10 @@
       &::before,
       &::after {
         display: none;
+      }
+
+      &.noUi-active {
+        background-color: var(--black);
       }
     }
 
