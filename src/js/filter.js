@@ -3,7 +3,8 @@ import Choices from 'choices.js';
 
 const priceSlider = document.querySelector('.js-ui-slider-price');
 const sizeSlider = document.querySelector('.js-ui-slider-size');
-const inputNumber = document.querySelectorAll('.js-ui-slider-field');
+const priceFields = document.querySelectorAll('.js-slider-price-value');
+const sizeFields = document.querySelectorAll('.js-slider-size-value');
 const sliderMin = document.querySelector('.js-ui-slider-min');
 const sliderMax = document.querySelector('.js-ui-slider-max');
 
@@ -87,28 +88,30 @@ if(document.querySelector('#js-filter-select')) {
       });
       
       //синхронизация ui-slider-price и инпутов
-    
-      const setValuesSlider = (values, handler) => {
-        priceSlider.noUiSlider.on('update', (values, handler) => {
-      
-          let priceSliderValues = priceSlider.noUiSlider.get();
-      
-          for(let i = 0; i < priceSliderValues.length; i++) {
-            inputNumber[i].value = Math.round(priceSliderValues[i]);
+      const setValuesSlider = (slider, inputs) => {
+        slider.noUiSlider.on('update', () => {
+          let sliderValues = slider.noUiSlider.get();
+          for(let i = 0; i < sliderValues.length; i++) {
+            inputs[i].value = Math.round(sliderValues[i]);
           }
-      
         });
-      
-        for(let i = 0; i < inputNumber.length; i++) {
-          inputNumber[i].addEventListener('change', () => {
-            priceSlider.noUiSlider.set([inputNumber[0].value, inputNumber[1].value])
-          })
-        }
+      }
+
+      for(let i = 0; i < priceFields.length; i++) {
+        priceFields[i].addEventListener('change', () => {
+          priceSlider.noUiSlider.set([priceFields[0].value, priceFields[1].value])
+        })
+      }
+
+      setValuesSlider(priceSlider, priceFields)
+      setValuesSlider(sizeSlider, sizeFields)
+
+      for (let input of sizeFields) {
+        console.log(input.value)
       }
     
       // установка мин и макс значений у ui-slider-price
       
-      setValuesSlider()
       sliderMin.innerHTML = priceSlider.getAttribute('data-min');
       //sliderMax.innerHTML = priceSlider.getAttribute('data-max');
     
@@ -158,6 +161,7 @@ if(document.querySelector('#js-filter-select')) {
           }
         }
       })
+
     });
   }
 

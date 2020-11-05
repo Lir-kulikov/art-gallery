@@ -113,24 +113,34 @@
                 <svg class="long-arrow-icon breadcrumbs__long-arrow-icon">
                   <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
                 </svg>Назад</a></div>
-        <div class="filter catalog__filter">
-          <div class="filter__header"></div>
+        <form class="filter js-filter-form catalog__filter" action="" name="filter">
+          <div class="container">
+            <div class="filter__header">
+                        <svg class="settings-icon filter__settings-icon">
+                          <use xlink:href="img/svg/sprite.svg#settings"></use>
+                        </svg>Фильтр
+                        <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
+                          <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                        </svg>
+            </div>
+          </div>
           <div class="filter__main">
             <div class="container">
               <div class="filter__main-inner">
                 <div class="filter__item ui-slider ui-slider--type-price">
-                  <div class="ui-slider__fields">
-                    <input class="ui-slider__field js-ui-slider-field" type="number"/><span class="ui-slider__field-separator"></span>
-                    <input class="ui-slider__field js-ui-slider-field" type="number"/>
-                  </div>
-                  <div class="ui-slider__range-wrapper">
-                    <div class="filter__item-title">Цена</div>
-                    <div class="ui-slider__range js-ui-slider-price" data-min="0" data-max="99999"><span class="ui-slider__min js-ui-slider-min"></span><span class="ui-slider__max js-ui-slider-max">max</span></div>
+                  <div class="ui-slider__range-wrapper"><span class="filter__item-title">Цена</span>
+                    <div class="ui-slider__range js-ui-slider-price" data-min="0" data-max="99999">
+                      <div class="ui-slider__fields">
+                        <input class="ui-slider__field js-slider-price-value" type="number"/><span class="ui-slider__field-separator"></span>
+                        <input class="ui-slider__field js-slider-price-value" type="number"/>
+                      </div><span class="ui-slider__min js-ui-slider-min"></span><span class="ui-slider__max js-ui-slider-max">max</span>
+                    </div>
                   </div>
                 </div>
-                <div class="filter__item ui-slider ui-slider--type-size">
-                  <div class="filter__item-title">Размер</div>
+                <div class="filter__item ui-slider ui-slider--type-size"><span class="filter__item-title">Размер</span>
                   <div class="ui-slider__range js-ui-slider-size"></div>
+                  <input class="ui-slider__size-value js-slider-size-value" type="number"/>
+                  <input class="ui-slider__size-value js-slider-size-value" type="number"/>
                 </div>
                 <div class="filter__item filter__type">
                   <div class="filter__item-title">Ориентация</div>
@@ -149,7 +159,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="filter__btn filter__item js-filter-reset">Сбросить фильтр
+                <button class="filter__btn filter__item js-filter-reset" type="button">Сбросить фильтр
                                 <svg class="reset-icon filter__reset-icon">
                                   <use xlink:href="img/svg/sprite.svg#reset"></use>
                                 </svg>
@@ -159,10 +169,10 @@
           </div>
           <div class="filter__more">
             <div class="filter__btn-wrapper">
-              <button class="filter__btn filter__btn--show js-filter-show-btn" data-value="Свернуть фильтр"><span>Показать фильтр</span>
-                            <svg class="dropdown-icon undefined dropdown-icon--undefined">
-                              <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                            </svg>
+              <button class="filter__btn filter__btn--show js-filter-show-btn" data-value="Свернуть фильтр" type="button"><span>Показать фильтр</span>
+                          <svg class="dropdown-icon undefined dropdown-icon--undefined">
+                            <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                          </svg>
               </button>
             </div>
             <div class="filter__tabs js-show-filters">
@@ -170,34 +180,34 @@
                 <div class="filter__tabs-nav">
                   <ul class="filter__tabs-nav-list">
                     <li class="filter__tabs-nav-item js-tab-nav is-active" data-tab-name="js-tab-1">Автор
-                                  <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                    <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                  </svg>
+                                <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
+                                  <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                                </svg>
                     </li>
                     <li class="filter__tabs-nav-item js-tab-nav" data-tab-name="js-tab-2">Жанр
-                                  <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                    <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                  </svg>
+                                <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
+                                  <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                                </svg>
                     </li>
                     <li class="filter__tabs-nav-item js-tab-nav" data-tab-name="js-tab-3">Цвет
-                                  <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                    <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                  </svg>
+                                <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
+                                  <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                                </svg>
                     </li>
                     <li class="filter__tabs-nav-item js-tab-nav" data-tab-name="js-tab-4">Тема
-                                  <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                    <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                  </svg>
+                                <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
+                                  <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                                </svg>
                     </li>
                     <li class="filter__tabs-nav-item js-tab-nav" data-tab-name="js-tab-5">Материал
-                                  <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                    <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                  </svg>
+                                <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
+                                  <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                                </svg>
                     </li>
                     <li class="filter__tabs-nav-item js-tab-nav" data-tab-name="js-tab-6">Стиль
-                                  <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                    <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                  </svg>
+                                <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
+                                  <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                                </svg>
                     </li>
                   </ul>
                 </div>
@@ -231,10 +241,82 @@
                       <div class="filter__author-autocomplete js-autocomplete"></div>
                     </div>
                   </div>
-                  <div class="filter__tab js-tab js-tab-2">Жанр</div>
-                  <div class="filter__tab js-tab js-tab-3">Цвет</div>
-                  <div class="filter__tab js-tab js-tab-4">Тема</div>
-                  <div class="filter__tab js-tab js-tab-5">Материал</div>
+                  <div class="filter__tab js-tab js-tab-2">
+                    <div class="filter__style">
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Первый"/>
+                        <label class="filter__style-label" for="Первый">Первый</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Второй"/>
+                        <label class="filter__style-label" for="Второй">Второй</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Третий"/>
+                        <label class="filter__style-label" for="Третий">Третий</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Четвертый"/>
+                        <label class="filter__style-label" for="Четвертый">Четвертый</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Пятый"/>
+                        <label class="filter__style-label" for="Пятый">Пятый</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Шестой"/>
+                        <label class="filter__style-label" for="Шестой">Шестой</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__tab js-tab js-tab-3">
+                    <div class="filter__style">
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="radio" id="синий"/>
+                        <label class="filter__style-label" for="синий">синий</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="radio" id="желтый"/>
+                        <label class="filter__style-label" for="желтый">желтый</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="radio" id="серый"/>
+                        <label class="filter__style-label" for="серый">серый</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__tab js-tab js-tab-4">
+                    <div class="filter__style">
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="radio" id="Погода"/>
+                        <label class="filter__style-label" for="Погода">Погода</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="radio" id="Вода"/>
+                        <label class="filter__style-label" for="Вода">Вода</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="radio" id="Люди"/>
+                        <label class="filter__style-label" for="Люди">Люди</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__tab js-tab js-tab-5">
+                    <div class="filter__style">
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="radio" id="красный"/>
+                        <label class="filter__style-label" for="красный">красный</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="radio" id="черный"/>
+                        <label class="filter__style-label" for="черный">черный</label>
+                      </div>
+                      <div class="filter__style-tag">
+                        <input class="filter__style-input js-filter-style-input" type="radio" id="белый"/>
+                        <label class="filter__style-label" for="белый">белый</label>
+                      </div>
+                    </div>
+                  </div>
                   <div class="filter__tab js-tab js-tab-6">
                     <div class="filter__style">
                       <div class="filter__style-tag">
@@ -275,7 +357,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </form>
         <section class="filter-cards catalog__filter-cards">
           <div class="container">
             <div class="filter-cards__header">

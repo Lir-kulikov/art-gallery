@@ -1,24 +1,32 @@
 mixin filter(ClassName)
-  .filter(class= ClassName)
-    .filter__header
+  form.filter.js-filter-form(class= ClassName action="" name="filter")
+    .container
+      .filter__header
+        include ../settings-icon/settings-icon
+        +settings-icon('filter__settings-icon')
+        | Фильтр
+        include ../dropdown-icon/dropdown-icon
+        +dropdown-icon('filter__dropdown-icon')
     .filter__main
       .container
         .filter__main-inner
 
           .filter__item.ui-slider.ui-slider--type-price
-            .ui-slider__fields
-              input.ui-slider__field.js-ui-slider-field(type="number")
-              span.ui-slider__field-separator
-              input.ui-slider__field.js-ui-slider-field(type="number")
             .ui-slider__range-wrapper
-              .filter__item-title Цена
+              span.filter__item-title Цена
               .ui-slider__range.js-ui-slider-price(data-min="0" data-max="99999")
+                .ui-slider__fields
+                  input.ui-slider__field.js-slider-price-value(type="number")
+                  span.ui-slider__field-separator
+                  input.ui-slider__field.js-slider-price-value(type="number")
                 span.ui-slider__min.js-ui-slider-min
                 span.ui-slider__max.js-ui-slider-max max
 
           .filter__item.ui-slider.ui-slider--type-size
-            .filter__item-title Размер
+            span.filter__item-title Размер
             .ui-slider__range.js-ui-slider-size
+            input.ui-slider__size-value.js-slider-size-value(type="number")
+            input.ui-slider__size-value.js-slider-size-value(type="number")
 
           .filter__item.filter__type
             .filter__item-title Ориентация
@@ -32,15 +40,14 @@ mixin filter(ClassName)
               .filter__checkbox
                 input.filter__checkbox-input(type="checkbox" id="filter-checkbox-horizontal" name="filter-checkbox-horizontal")
                 label.filter__checkbox-label(for="filter-checkbox-horizontal")
-          button.filter__btn.filter__item.js-filter-reset
+          button.filter__btn.filter__item.js-filter-reset(type="button")
             | Сбросить фильтр
             include ../reset-icon/reset-icon
             +reset-icon('filter__reset-icon')
     .filter__more
       .filter__btn-wrapper
-        button.filter__btn.filter__btn--show.js-filter-show-btn(data-value="Свернуть фильтр")
+        button.filter__btn.filter__btn--show.js-filter-show-btn(data-value="Свернуть фильтр" type="button")
           span Показать фильтр
-          include ../dropdown-icon/dropdown-icon
           +dropdown-icon
       .filter__tabs.js-show-filters
         .container
@@ -89,11 +96,59 @@ mixin filter(ClassName)
                       option.filter__author-select-opt Венвенист Трамп
                 .filter__author-autocomplete.js-autocomplete
 
-            .filter__tab.js-tab.js-tab-2 Жанр
-
-            .filter__tab.js-tab.js-tab-3 Цвет
-            .filter__tab.js-tab.js-tab-4 Тема
-            .filter__tab.js-tab.js-tab-5 Материал
+            .filter__tab.js-tab.js-tab-2
+              .filter__style
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Первый")
+                  label.filter__style-label(for="Первый") Первый
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Второй")
+                  label.filter__style-label(for="Второй") Второй
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Третий")
+                  label.filter__style-label(for="Третий") Третий
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Четвертый")
+                  label.filter__style-label(for="Четвертый") Четвертый
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Пятый")
+                  label.filter__style-label(for="Пятый") Пятый
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="checkbox" id="Шестой")
+                  label.filter__style-label(for="Шестой") Шестой
+            .filter__tab.js-tab.js-tab-3
+              .filter__style
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="radio" id="синий")
+                  label.filter__style-label(for="синий") синий
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="radio" id="желтый")
+                  label.filter__style-label(for="желтый") желтый
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="radio" id="серый")
+                  label.filter__style-label(for="серый") серый
+            .filter__tab.js-tab.js-tab-4
+              .filter__style
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="radio" id="Погода")
+                  label.filter__style-label(for="Погода") Погода
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="radio" id="Вода")
+                  label.filter__style-label(for="Вода") Вода
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="radio" id="Люди")
+                  label.filter__style-label(for="Люди") Люди
+            .filter__tab.js-tab.js-tab-5
+              .filter__style
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="radio" id="красный")
+                  label.filter__style-label(for="красный") красный
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="radio" id="черный")
+                  label.filter__style-label(for="черный") черный
+                .filter__style-tag
+                  input.filter__style-input.js-filter-style-input(type="radio" id="белый")
+                  label.filter__style-label(for="белый") белый
             .filter__tab.js-tab.js-tab-6
               .filter__style
                 .filter__style-tag
