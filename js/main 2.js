@@ -131,3 +131,4 @@
   !*** ./src/js/tabs.js ***!
   \************************/
 /*! no static exports found */function(module,exports){eval("var tab = function tab() {\n  var tabNav = document.querySelectorAll('.js-tab-nav');\n  var tabContent = document.querySelectorAll('.js-tab');\n  var tabName;\n  tabNav.forEach(function (item) {\n    item.addEventListener('click', selectTabNav);\n  });\n\n  function selectTabNav() {\n    tabNav.forEach(function (item) {\n      item.classList.remove('is-active');\n    });\n    this.classList.add('is-active');\n    tabName = this.getAttribute('data-tab-name');\n    selectTabContent(tabName);\n  }\n\n  function selectTabContent(tabName) {\n    tabContent.forEach(function (item) {\n      item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active');\n    });\n  }\n};\n\ntab();\n\n//# sourceURL=webpack:///./src/js/tabs.js?")}});
+//# sourceMappingURL=main.js.map
