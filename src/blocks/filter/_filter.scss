@@ -3,8 +3,6 @@
 }
 
 .filter {
-  border-bottom: 1px solid var(--line);
-
   &__main {
     margin-top: 50px;
     margin-bottom: 40px;
@@ -487,7 +485,7 @@
         border-radius: 0;
 
         @include media('<tablet') {
-          width: calc(100% + 40px);
+          width: calc(100% + 38px);
           padding-left: 25px;
           margin-left: -20px;
         }
@@ -620,8 +618,9 @@
     @include media('<tablet') {
       display: flex;
       align-items: center;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      //border-bottom: 1px solid var(--line);
       color: var(--black);
       font-size: 15px;
       font-weight: 600;
@@ -629,7 +628,7 @@
       transition: margin var(--transition) ease;
 
       &.is-open {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
 
       &.is-open .filter__dropdown-icon {
