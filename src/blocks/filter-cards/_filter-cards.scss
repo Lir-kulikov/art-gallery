@@ -8,12 +8,32 @@
     @include media('<desktop-sm') {
       margin-bottom: 10px;
     }
+
+    @include media('<tablet') {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__section-line {
+    display: none;
+
+    @include media('<tablet') {
+      display: block;
+      width: calc(100% + 40px);
+      margin: 0 -20px 20px;
+      margin-top: 5px;
+    }
   }
 
   &__title {
     color: var(--dark-2);
     font-size: 24px;
     font-weight: 300;
+
+    @include media('<tablet') {
+      font-size: 18px;
+    }
   }
 
   .slider-btn {
@@ -37,10 +57,31 @@
         }
       }
     }
+
+    @include media('<tablet') {
+      width: 15px;
+      height: 20px;
+      padding: 0;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  &__slider-btns {
+    @include media('<tablet') {
+      position: absolute;
+      z-index: 10;
+      top: calc(50% - 11px);
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
   }
 }
 
 .swiper-container-filter {
+  position: relative;
   overflow: hidden;
 
   .swiper-slide {
@@ -52,6 +93,10 @@
 
     @include media('<desktop') {
       width: 176px;
+    }
+
+    @include media('<tablet') {
+      width: auto;
     }
   }
 }

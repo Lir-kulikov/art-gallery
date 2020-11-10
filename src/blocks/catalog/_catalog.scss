@@ -102,7 +102,11 @@
     }
 
     .choices {
-      max-width: 146px;
+      min-width: 277px;
+
+      @include media('<tablet') {
+        min-width: 146px;
+      }
 
       &__inner {
         min-width: auto;

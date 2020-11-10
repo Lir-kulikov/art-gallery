@@ -45,9 +45,12 @@
     }
 
     &--dropdown {
-      width: calc(100% + 2px);
-      margin-left: -1px;
+      width: 100%;
       border-radius: 0;
+
+      .choices__list {
+        max-height: 100%;
+      }
 
       .choices__item--selectable.is-highlighted {
         background-color: var(--hover);

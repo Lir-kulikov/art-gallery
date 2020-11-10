@@ -3,27 +3,22 @@
 }
 
 .filter {
-  border-bottom: 1px solid var(--line);
-
   &__main {
     margin-top: 50px;
     margin-bottom: 40px;
 
     @include media('<tablet') {
       overflow: hidden;
-      max-height: 0;
+      height: 0;
       padding: 0 10px;
       margin-top: 0;
       margin-right: auto;
-      margin-bottom: 0;
+      margin-bottom: 18px;
       margin-left: auto;
-      opacity: 0;
-      transition: max-height var(--transition) ease, margin var(--transition) ease, opacity 0.4s ease;
+      transition: height var(--transition) ease;
 
       &.is-open {
         overflow: visible;
-        margin-bottom: 18px;
-        opacity: 1;
       }
     }
   }
@@ -139,16 +134,14 @@
   &__more {
     position: relative;
 
+
     @include media('<tablet') {
-      // max-height: 0;
-      display: none;
       overflow: hidden;
-      transition: max-height var(--transition) ease;
+      height: 0;
+      transition: height var(--transition) ease;
 
       &.is-open {
-        display: block;
         overflow: visible;
-        // max-height: 5000px;
       }
     }
   }
@@ -180,6 +173,9 @@
 
       @include media('<tablet') {
         bottom: 0;
+        overflow: hidden;
+        height: 0;
+        border-bottom: none;
       }
 
       &::after {
@@ -199,7 +195,6 @@
 
         @include media('<tablet') {
           bottom: 0;
-          border-bottom: none;
         }
 
         span {
@@ -261,21 +256,24 @@
   }
 
   &__tabs {
-
     overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease-out;
 
-    &.is-open {
-      overflow: visible;
-      max-height: 4000px;
-      transition: max-height 0.5s ease-in;
+    @include media('>=tablet') {
+      max-height: 0;
+      transition: max-height var(--transition) ease-out;
+
+      &.is-open {
+        overflow: visible;
+        max-height: 4000;
+        transition: max-height var(--transition) ease-in;
+      }
     }
 
     @include media('<tablet') {
-      &.is-open {
-        border-top: 1px solid #c2c2c2;
-      }
+      height: 0px;
+      max-height: auto;
+      border-top: 1px solid #c2c2c2;
+      transition: height var(--transition) ease;
     }
   }
 
@@ -352,15 +350,20 @@
 
     @include media('<tablet') {
       overflow: hidden;
-      max-height: 0;
+      height: 0;
       padding: 0;
-      opacity: 0;
-      transition: max-height var(--transition) ease, opacity var(--transition) ease;
+      //opacity: 0;
+      transition: height var(--transition) ease, opacity var(--transition) ease;
 
-      &.is-open {
-        overflow: visible;
-        opacity: 1;
-      }
+      // &.is-open {
+      //   overflow: visible;
+      //   //opacity: 1;
+
+      //   .filter__tab-body-inner {
+      //     overflow: visible;
+      //   }
+      //   //overflow: visible;
+      // }
     }
   }
 
@@ -368,6 +371,7 @@
     padding: 7px 0;
 
     @include media('<tablet') {
+      overflow: hidden;
       padding: 0 0 7px 0;
     }
   }
@@ -381,7 +385,6 @@
   }
 
   &__author-text {
-    position: relative;
     margin-right: 12px;
     color: var(--dark-3);
     font-size: 16px;
@@ -389,20 +392,6 @@
 
     @include media('<desktop') {
       margin-bottom: 10px;
-    }
-
-    @include media('<tablet') {
-      max-height: 20px;
-      color: rgba(0, 0, 0, 0);
-
-      &::after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: var(--dark-3);
-        content: attr(data-mobile-text);
-        font-size: 15px;
-      }
     }
   }
   //select
@@ -437,7 +426,7 @@
       &::after {
         position: absolute;
         top: 20px;
-        right: 14px;
+        right: 15px;
         width: 10px;
         height: 6px;
         background-image: url('../img/dropdown.svg');
@@ -482,15 +471,10 @@
 
       &__list--dropdown {
         z-index: 10;
-        min-height: 330px;
+        width: calc(100% + 2px);
         max-height: 330px;
+        margin-left: -1px;
         border-radius: 0;
-
-        @include media('<tablet') {
-          width: calc(100% + 40px);
-          padding-left: 25px;
-          margin-left: -20px;
-        }
 
         //custom-scroll
 
@@ -621,16 +605,11 @@
       display: flex;
       align-items: center;
       margin-top: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       color: var(--black);
       font-size: 15px;
       font-weight: 600;
       letter-spacing: 0.44px;
-      transition: margin var(--transition) ease;
-
-      &.is-open {
-        margin-bottom: 20px;
-      }
 
       &.is-open .filter__dropdown-icon {
         transform: rotate(180deg);
@@ -659,19 +638,6 @@
       font-size: 14px;
       font-weight: 600;
       letter-spacing: 0.35px;
-    }
-  }
-
-  &__submit {
-    display: none;
-
-    @include media('<tablet') {
-      display: block;
-      padding: 10px 30px;
-      border: 1px solid transparent;
-      margin-top: 15px;
-      background-color: rgba($color: #000000, $alpha: 0.8);
-      color: var(--white);
     }
   }
 }
@@ -879,72 +845,6 @@
     top: 0;
     left: 0;
     visibility: hidden;
-  }
-}
-
-.ps {
-  padding-right: 30px;
-  overflow-anchor: none;
-  -ms-overflow-style: none;
-  touch-action: auto;
-
-  @include media('<tablet') {
-    padding-right: 20px;
-  }
-
-  &__rail-y {
-    position: absolute;
-    right: 10px !important;
-    bottom: 0;
-    left: auto !important;
-    width: 20px;
-    padding: 20px 0;
-    //height: calc(100% - 40px) !important;
-    background: rgba($color: #cccccc, $alpha: 0.2);
-    transform: scaleY(0.8);
-
-    @include media('<tablet') {
-      right: 0 !important;
-      transform: scaleY(0.86);
-    }
-
-    &::before,
-    &::after {
-      position: absolute;
-      right: 0;
-      width: 20px;
-      height: 20px;
-      background-color: #e7e6e6;
-      background-image: url('../img/dropdown.svg');
-      background-position: 5px 8px;
-      background-repeat: no-repeat;
-      background-size: 10px;
-      content: '';
-      transform: scaleY(1.25);
-
-      &:hover {
-        background-color: #cbcdce;
-      }
-    }
-
-    &::before {
-      top: -23px;
-    }
-
-    &::after {
-      bottom: -23px;
-      transform: scaleY(1.25) rotate(180deg);
-    }
-  }
-
-  &__thumb-y {
-    position: absolute;
-    width: 100%;
-    background-color: var(--line);
-  }
-
-  &__rail-x {
-    display: none !important;
   }
 }
 

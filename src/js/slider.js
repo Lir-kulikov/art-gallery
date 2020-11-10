@@ -62,7 +62,6 @@ const mySwiperNews = new Swiper('.swiper-container-news', {
 
 const mySwiperFilterCards = new Swiper('.swiper-container-filter', {
   loop: false,
-  slidesPerView: 'auto',
   watchSlidesVisibility: true,
   speed: 500,
   autoHeight: true,
@@ -71,4 +70,15 @@ const mySwiperFilterCards = new Swiper('.swiper-container-filter', {
     nextEl: '.js-swiper-filter-next',
     prevEl: '.js-swiper-filter-prev',
   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 'auto',
+    },
+  }
 })
+window.addEventListener('resize', () => {
+  mySwiperFilterCards.updateSlides()
+});

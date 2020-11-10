@@ -260,6 +260,10 @@
   &__drop-list {
     margin-left: -30px;
 
+    .nav__link--theme-dark {
+      color: var(--black);
+    }
+
     @include media('<desktop') {
       margin-left: -20px;
     }

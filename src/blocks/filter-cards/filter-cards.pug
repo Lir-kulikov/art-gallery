@@ -3,7 +3,9 @@ mixin filter-cards(ClassName)
     .container
       .filter-cards__header
         h2.filter-cards__title Популярные фильтры
-        .filter-cards__slider-btns
+        include ../section-line/section-line
+        +section-line('filter-cards__section-line')
+        .filter-cards__slider-btns(data-da="swiper-container-filter,1,767")
           include ../slider-btn/slider-btn
           +slider-btn('js-swiper-filter-prev', 'left')
           +slider-btn('js-swiper-filter-next', 'right')

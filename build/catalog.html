@@ -115,7 +115,7 @@
                 </svg>Назад</a></div>
         <form class="filter js-filter-form catalog__filter" action="" name="filter">
           <div class="container">
-            <div class="filter__header">
+            <div class="filter__header js-filter-header">
                         <svg class="settings-icon filter__settings-icon">
                           <use xlink:href="img/svg/sprite.svg#settings"></use>
                         </svg>Фильтр
@@ -124,42 +124,42 @@
                         </svg>
             </div>
           </div>
-          <div class="filter__main">
+          <div class="filter__main js-filter-main">
             <div class="container">
               <div class="filter__main-inner">
                 <div class="filter__item ui-slider ui-slider--type-price">
                   <div class="ui-slider__range-wrapper"><span class="filter__item-title">Цена</span>
                     <div class="ui-slider__range js-ui-slider-price" data-min="0" data-max="99999">
                       <div class="ui-slider__fields">
-                        <input class="ui-slider__field js-slider-price-value" type="number"/><span class="ui-slider__field-separator"></span>
-                        <input class="ui-slider__field js-slider-price-value" type="number"/>
+                        <input class="ui-slider__field js-slider-price-value" type="number" name="first-price-value"/><span class="ui-slider__field-separator"></span>
+                        <input class="ui-slider__field js-slider-price-value" type="number" name="second-price-value"/>
                       </div><span class="ui-slider__min js-ui-slider-min"></span><span class="ui-slider__max js-ui-slider-max">max</span>
                     </div>
                   </div>
                 </div>
                 <div class="filter__item ui-slider ui-slider--type-size"><span class="filter__item-title">Размер</span>
-                  <div class="ui-slider__range js-ui-slider-size"></div>
-                  <input class="ui-slider__size-value js-slider-size-value" type="number"/>
-                  <input class="ui-slider__size-value js-slider-size-value" type="number"/>
+                  <div class="ui-slider__range js-ui-slider-size" data-steps="S, M, L, XL, XXL"></div>
+                  <input class="ui-slider__size-value js-slider-size-value" type="number" name="first-size-value"/>
+                  <input class="ui-slider__size-value js-slider-size-value" type="number" name="second-size-value"/>
                 </div>
                 <div class="filter__item filter__type">
                   <div class="filter__item-title">Ориентация</div>
                   <div class="filter__checkbox-wrapper">
                     <div class="filter__checkbox">
-                      <input class="filter__checkbox-input" type="checkbox" id="filter-checkbox-square" name="filter-checkbox-square"/>
+                      <input class="filter__checkbox-input" type="checkbox" id="filter-checkbox-square" name="filter-checkbox-type"/>
                       <label class="filter__checkbox-label" for="filter-checkbox-square"></label>
                     </div>
                     <div class="filter__checkbox">
-                      <input class="filter__checkbox-input" type="checkbox" id="filter-checkbox-vertical" name="filter-checkbox-vertical"/>
+                      <input class="filter__checkbox-input" type="checkbox" id="filter-checkbox-vertical" name="filter-checkbox-type"/>
                       <label class="filter__checkbox-label" for="filter-checkbox-vertical"></label>
                     </div>
                     <div class="filter__checkbox">
-                      <input class="filter__checkbox-input" type="checkbox" id="filter-checkbox-horizontal" name="filter-checkbox-horizontal"/>
+                      <input class="filter__checkbox-input" type="checkbox" id="filter-checkbox-horizontal" name="filter-checkbox-type"/>
                       <label class="filter__checkbox-label" for="filter-checkbox-horizontal"></label>
                     </div>
                   </div>
                 </div>
-                <button class="filter__btn filter__item js-filter-reset" type="button">Сбросить фильтр
+                <button class="filter__btn filter__item js-filter-reset" type="button" name="btn-reset">Сбросить фильтр
                                 <svg class="reset-icon filter__reset-icon">
                                   <use xlink:href="img/svg/sprite.svg#reset"></use>
                                 </svg>
@@ -167,7 +167,7 @@
               </div>
             </div>
           </div>
-          <div class="filter__more">
+          <div class="filter__more js-filter-more">
             <div class="filter__btn-wrapper">
               <button class="filter__btn filter__btn--show js-filter-show-btn" data-value="Свернуть фильтр" type="button"><span>Показать фильтр</span>
                           <svg class="dropdown-icon undefined dropdown-icon--undefined">
@@ -213,156 +213,176 @@
                 </div>
               </div>
               <div class="filter__tabs-content">
-                <div class="container">
+                <div class="container container--mobile-hidden">
                   <div class="filter__tab js-tab js-tab-1 is-active">
-                    <div class="filter__author">
-                      <div class="filter__author-select-wrapper"> <span class="filter__author-text">Начните вводить имя или фамилию автора</span>
-                        <select class="filter__author-select" id="js-filter-select" multiple="multiple">
-                          <optgroup class="filter__author-select-group" label="А">
-                            <option class="filter__author-select-opt">Абулафия Крайнова</option>
-                            <option class="filter__author-select-opt">Арменинов Тримедул</option>
-                            <option class="filter__author-select-opt">Асадуллин Нефедов</option>
-                            <option class="filter__author-select-opt">Абулафия Крайнова</option>
-                          </optgroup>
-                          <optgroup class="filter__author-select-group" label="Б">
-                            <option class="filter__author-select-opt">Бабурин Константин</option>
-                            <option class="filter__author-select-opt">Бабуркин Вениамин</option>
-                            <option class="filter__author-select-opt">Бердюгин Бетюг</option>
-                            <option class="filter__author-select-opt">Бенвенист Трамп</option>
-                          </optgroup>
-                          <optgroup class="filter__author-select-group" label="В">
-                            <option class="filter__author-select-opt">Вабурин Константин</option>
-                            <option class="filter__author-select-opt">Вабуркин Вениамин</option>
-                            <option class="filter__author-select-opt">Вердюгин Бетюг</option>
-                            <option class="filter__author-select-opt">Венвенист Трамп</option>
-                          </optgroup>
-                        </select>
+                    <div class="filter__accordion-header js-accordion-header">Автор</div>
+                    <div class="filter__author filter__tab-body">
+                      <div class="filter__tab-body-inner">
+                        <div class="filter__author-select-wrapper"> <span class="filter__author-text" data-mobile-text="Начните вводить имя или фамилию">Начните вводить имя или фамилию автора</span>
+                          <select class="filter__author-select" id="js-filter-select" multiple="multiple">
+                            <optgroup class="filter__author-select-group" label="А">
+                              <option class="filter__author-select-opt">Абулафия Крайнова</option>
+                              <option class="filter__author-select-opt">Арменинов Тримедул</option>
+                              <option class="filter__author-select-opt">Асадуллин Нефедов</option>
+                              <option class="filter__author-select-opt">Абулафия Крайнова</option>
+                            </optgroup>
+                            <optgroup class="filter__author-select-group" label="Б">
+                              <option class="filter__author-select-opt">Бабурин Константин</option>
+                              <option class="filter__author-select-opt">Бабуркин Вениамин</option>
+                              <option class="filter__author-select-opt">Бердюгин Бетюг</option>
+                              <option class="filter__author-select-opt">Бенвенист Трамп</option>
+                            </optgroup>
+                            <optgroup class="filter__author-select-group" label="В">
+                              <option class="filter__author-select-opt">Вабурин Константин</option>
+                              <option class="filter__author-select-opt">Вабуркин Вениамин</option>
+                              <option class="filter__author-select-opt">Вердюгин Бетюг</option>
+                              <option class="filter__author-select-opt">Венвенист Трамп</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                        <div class="filter__author-autocomplete js-autocomplete"></div>
                       </div>
-                      <div class="filter__author-autocomplete js-autocomplete"></div>
                     </div>
                   </div>
                   <div class="filter__tab js-tab js-tab-2">
-                    <div class="filter__style">
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Первый"/>
-                        <label class="filter__style-label" for="Первый">Первый</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Второй"/>
-                        <label class="filter__style-label" for="Второй">Второй</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Третий"/>
-                        <label class="filter__style-label" for="Третий">Третий</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Четвертый"/>
-                        <label class="filter__style-label" for="Четвертый">Четвертый</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Пятый"/>
-                        <label class="filter__style-label" for="Пятый">Пятый</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Шестой"/>
-                        <label class="filter__style-label" for="Шестой">Шестой</label>
+                    <div class="filter__accordion-header js-accordion-header">Жанр</div>
+                    <div class="filter__style filter__tab-body">
+                      <div class="filter__tab-body-inner">
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Первый" name="filter-genre"/>
+                          <label class="filter__style-label" for="Первый">Первый</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Второй" name="filter-genre"/>
+                          <label class="filter__style-label" for="Второй">Второй</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Третий" name="filter-genre"/>
+                          <label class="filter__style-label" for="Третий">Третий</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Четвертый" name="filter-genre"/>
+                          <label class="filter__style-label" for="Четвертый">Четвертый</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Пятый" name="filter-genre"/>
+                          <label class="filter__style-label" for="Пятый">Пятый</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Шестой" name="filter-genre"/>
+                          <label class="filter__style-label" for="Шестой">Шестой</label>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="filter__tab js-tab js-tab-3">
-                    <div class="filter__style">
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="radio" id="синий"/>
-                        <label class="filter__style-label" for="синий">синий</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="radio" id="желтый"/>
-                        <label class="filter__style-label" for="желтый">желтый</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="radio" id="серый"/>
-                        <label class="filter__style-label" for="серый">серый</label>
+                    <div class="filter__accordion-header js-accordion-header">Цвет</div>
+                    <div class="filter__style filter__tab-body">
+                      <div class="filter__tab-body-inner">
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="radio" id="синий" name="filter-color"/>
+                          <label class="filter__style-label" for="синий">синий</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="radio" id="желтый" name="filter-color"/>
+                          <label class="filter__style-label" for="желтый">желтый</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="radio" id="серый" name="filter-color"/>
+                          <label class="filter__style-label" for="серый">серый</label>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="filter__tab js-tab js-tab-4">
-                    <div class="filter__style">
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="radio" id="Погода"/>
-                        <label class="filter__style-label" for="Погода">Погода</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="radio" id="Вода"/>
-                        <label class="filter__style-label" for="Вода">Вода</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="radio" id="Люди"/>
-                        <label class="filter__style-label" for="Люди">Люди</label>
+                    <div class="filter__accordion-header js-accordion-header">Тема</div>
+                    <div class="filter__style filter__tab-body">
+                      <div class="filter__tab-body-inner">
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="radio" id="Погода" name="filter-theme"/>
+                          <label class="filter__style-label" for="Погода">Погода</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="radio" id="Вода" name="filter-theme"/>
+                          <label class="filter__style-label" for="Вода">Вода</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="radio" id="Люди" name="filter-theme"/>
+                          <label class="filter__style-label" for="Люди">Люди</label>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="filter__tab js-tab js-tab-5">
-                    <div class="filter__style">
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="radio" id="красный"/>
-                        <label class="filter__style-label" for="красный">красный</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="radio" id="черный"/>
-                        <label class="filter__style-label" for="черный">черный</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="radio" id="белый"/>
-                        <label class="filter__style-label" for="белый">белый</label>
+                    <div class="filter__accordion-header js-accordion-header">Материал</div>
+                    <div class="filter__style filter__tab-body">
+                      <div class="filter__tab-body-inner">
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="radio" id="красный" name="filter-material"/>
+                          <label class="filter__style-label" for="красный">красный</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="radio" id="черный" name="filter-material"/>
+                          <label class="filter__style-label" for="черный">черный</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="radio" id="белый" name="filter-material"/>
+                          <label class="filter__style-label" for="белый">белый</label>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="filter__tab js-tab js-tab-6">
-                    <div class="filter__style">
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Вортицизм"/>
-                        <label class="filter__style-label" for="Вортицизм">Вортицизм</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Модернизм"/>
-                        <label class="filter__style-label" for="Модернизм">Модернизм</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Авангардизм"/>
-                        <label class="filter__style-label" for="Авангардизм">Авангардизм</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Реализм"/>
-                        <label class="filter__style-label" for="Реализм">Реализм</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Конструктивизм"/>
-                        <label class="filter__style-label" for="Конструктивизм">Конструктивизм</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Готика"/>
-                        <label class="filter__style-label" for="Готика">Готика</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Классицизм"/>
-                        <label class="filter__style-label" for="Классицизм">Классицизм</label>
-                      </div>
-                      <div class="filter__style-tag">
-                        <input class="filter__style-input js-filter-style-input" type="checkbox" id="Поп-арт"/>
-                        <label class="filter__style-label" for="Поп-арт">Поп-арт</label>
+                    <div class="filter__accordion-header js-accordion-header">Стиль</div>
+                    <div class="filter__style filter__tab-body">
+                      <div class="filter__tab-body-inner">
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Вортицизм" name="filter-style"/>
+                          <label class="filter__style-label" for="Вортицизм">Вортицизм</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Модернизм" name="filter-style"/>
+                          <label class="filter__style-label" for="Модернизм">Модернизм</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Авангардизм" name="filter-style"/>
+                          <label class="filter__style-label" for="Авангардизм">Авангардизм</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Реализм" name="filter-style"/>
+                          <label class="filter__style-label" for="Реализм">Реализм</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Конструктивизм" name="filter-style"/>
+                          <label class="filter__style-label" for="Конструктивизм">Конструктивизм</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Готика" name="filter-style"/>
+                          <label class="filter__style-label" for="Готика">Готика</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Классицизм" name="filter-style"/>
+                          <label class="filter__style-label" for="Классицизм">Классицизм</label>
+                        </div>
+                        <div class="filter__style-tag">
+                          <input class="filter__style-input js-filter-style-input" type="checkbox" id="Поп-арт" name="filter-style"/>
+                          <label class="filter__style-label" for="Поп-арт">Поп-арт</label>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <button class="filter__btn filter__submit" type="submit">Показать картины</button>
           </div>
         </form>
         <section class="filter-cards catalog__filter-cards">
           <div class="container">
             <div class="filter-cards__header">
               <h2 class="filter-cards__title">Популярные фильтры</h2>
-              <div class="filter-cards__slider-btns">
+                        <div class="section-line filter-cards__section-line"></div>
+              <div class="filter-cards__slider-btns" data-da="swiper-container-filter,1,767">
                             <button class="slider-btn slider-btn--left js-swiper-filter-prev">
                               <svg class="slider-btn__icon">
                                 <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
