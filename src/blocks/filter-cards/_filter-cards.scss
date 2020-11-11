@@ -85,18 +85,14 @@
   overflow: hidden;
 
   .swiper-slide {
-    height: auto;
-  }
-
-  .swiper-wrapper {
-    width: 238px;
+    width: calc(20% - 12px);
 
     @include media('<desktop') {
-      width: 176px;
+      width: calc(25% - 12px);
     }
 
     @include media('<tablet') {
-      width: auto;
+      padding: 0 25px;
     }
   }
 }

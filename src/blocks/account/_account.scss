@@ -3,6 +3,7 @@
   //width: min-content;
 
   &__name {
+    margin-left: 10px;
     transition: color var(--transition) ease;
 
     @include media('<desktop') {
@@ -60,7 +61,7 @@
   &__user-icon {
     display: block;
     flex-shrink: 0;
-    margin-right: 10px;
+    //margin-right: 10px;
 
     @include media('>desktop-sm', '<desktop') {
       margin-right: 0;
@@ -76,7 +77,6 @@
 
     @include media('<desktop-sm') {
       display: block;
-      margin-right: 10px;
     }
 
     @include media('<tablet') {

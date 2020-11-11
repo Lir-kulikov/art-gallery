@@ -13,7 +13,7 @@ mixin filter(ClassName)
 
           .filter__item.ui-slider.ui-slider--type-price
             .ui-slider__range-wrapper
-              span.filter__item-title Цена
+              span.filter__item-title.filter__item-title--tablet-top(data-tablet-text="Цена") Цена
               .ui-slider__range.js-ui-slider-price(data-min="0" data-max="99999")
                 .ui-slider__fields
                   input.ui-slider__field.js-slider-price-value(type="number" name="first-price-value")

@@ -8,8 +8,9 @@ html(lang="ru")
     title ArtGallery - #{title}
     link(rel="stylesheet" href="css/main.min.css")
   body(class= pageClass)
-    include header
-    +header(pageClass + '__header', pageTheme)
-    block content
-    include footer
-    script(src='js/main.js')
+    .overflow-limiter
+      include header
+      +header(pageClass + '__header', pageTheme)
+      block content
+      include footer
+      script(src='js/main.js')

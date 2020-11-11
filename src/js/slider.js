@@ -75,10 +75,42 @@ const mySwiperFilterCards = new Swiper('.swiper-container-filter', {
       slidesPerView: 1,
     },
     768: {
-      slidesPerView: 'auto',
+      slidesPerView: 4,
     },
+    1280: {
+      slidesPerView: 5,
+    }
   }
 })
 window.addEventListener('resize', () => {
   mySwiperFilterCards.updateSlides()
 });
+
+// const sliders = mySwiperFilterCards.slides;
+// window.addEventListener('resize', () => {
+
+//   if (document.body.clientWidth >= 1280) {
+//     mySwiperFilterCards.params.slidesPerView = 'auto';
+//     for(let slide of sliders) {
+//       slide.style.width = 238 + "px";
+//       slide.style.height = 148 + "px";
+//     }
+//    }
+
+//   if (document.body.clientWidth < 1280 && document.body.clientWidth > 767) {
+//     mySwiperFilterCards.params.slidesPerView = 'auto';
+//     for(let slide of sliders) {
+//       slide.style.width = 176 + "px";
+//       slide.style.height = 109 + "px";
+//     }
+//    }
+
+//    if (document.body.clientWidth < 768) {
+//     mySwiperFilterCards.params.slidesPerView = 1;
+//     // for(let slide of sliders) {
+//     //   slide.style.width = 80 + "%";
+//     //   slide.style.height = 60 + "vw";
+//     // }
+//    }
+   
+// })
