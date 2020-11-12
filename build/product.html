@@ -1,0 +1,312 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="#{description}"/>
+    <title>ArtGallery - Карточка товара</title>
+    <link rel="stylesheet" href="css/main.min.css"/>
+  </head>
+  <body class="page-product">
+    <div class="overflow-limiter">
+            <header class="header page-product__header header--theme-light">
+              <div class="container">
+                <div class="header__inner">
+                  <div class="header__left"><a class="logo__link header__logo logo--theme-light" href="index.html">
+                                    <picture class="logo header__logo">
+                                      <source srcset="img/AG.png" media="(max-width: 767px)"/><img src="img/logo-black.png" alt="logo"/>
+                                    </picture></a>
+                                  <nav class="nav page-product__header nav--theme-light">
+                                                    <button class="burger nav__burger js-burger"><span class="burger__line"></span></button>
+                                    <ul class="nav__list">
+                                      <li class="nav__item" data-da="nav__drop-list, 0, 1023.7"><a class="nav__link nav__link--theme-light" href="catalog.html">Каталог</a></li>
+                                      <li class="nav__item" data-da="nav__drop-list, 0, 1023.8"><a class="nav__link nav__link--theme-light" href="#">Художникам</a></li>
+                                      <li class="nav__item" data-da="nav__drop-list, 0, 1023.9"><a class="nav__link nav__link--theme-light" href="#">Блог</a></li>
+                                      <li class="nav__item nav__item--more"><a class="nav__link nav__link--drop nav__link--theme-light" href="#">Ещё
+                                                                <svg class="dropdown-icon nav__dropdown-icon dropdown-icon--theme-light">
+                                                                  <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                                                                </svg></a>
+                                        <div class="nav__drop js-drop">
+                                          <div class="container nav__container">
+                                            <ul class="nav__drop-list">
+                                              <li class="nav__item"><a class="nav__link nav__link--dark" href="#">О проекте</a></li>
+                                              <li class="nav__item"><a class="nav__link nav__link--dark" href="#">Доставка</a></li>
+                                              <li class="nav__item"><a class="nav__link nav__link--dark nav__link--mobile-border" href="#">Политика конфиденциальности</a></li>
+                                              <li class="nav__item"><a class="nav__link nav__link--hidden" href="#">Английская версия</a></li>
+                                            </ul>
+                                          </div>
+                                          <div class="nav__company">©  Artgallery, 2018</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </nav>
+                  </div>
+                  <div class="header__action">
+                                  <div class="account header__account header__action-item account--theme-light">
+                                    <button class="account__btn js-account-opener">
+                                                        <svg class="user-icon account__user-icon user-icon--theme-light">
+                                                          <use xlink:href="img/svg/sprite.svg#user"></use>
+                                                        </svg><img class="account__avatar" src="img/avatar.png"/><span class="account__name account__name--theme-light">Александрелло</span>
+                                    </button>
+                                    <div class="account__drop js-account-drop">
+                                      <ul class="account__menu-group">
+                                        <li class="account__menu-item"><a class="account__menu-link" href="#">Мой профиль</a></li>
+                                        <li class="account__menu-item"><a class="account__menu-link" href="#">Мои заказы</a></li>
+                                        <li class="account__menu-item"><a class="account__menu-link" href="#">Сообщения</a></li>
+                                      </ul>
+                                      <ul class="account__menu-group">
+                                        <li class="account__menu-item"><a class="account__menu-link" href="#">Настройки профиля</a></li>
+                                        <li class="account__menu-item"><a class="account__menu-link" href="#">Мои работы</a></li>
+                                      </ul>
+                                      <button class="account__btn-close">
+                                                            <svg class="logout-icon account__logout-icon">
+                                                              <use xlink:href="img/svg/sprite.svg#logout"></use>
+                                                            </svg>Выйти
+                                      </button>
+                                    </div>
+                                  </div>
+                    <button class="header__wishlist header__action-item">
+                                      <svg class="heart-icon header__heart-icon heart-icon--theme-light">
+                                        <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                      </svg><span class="header__heart-icon-counter">85</span>
+                    </button>
+                    <button class="header__basket header__action-item">
+                                      <svg class="basket-icon header__basket-icon basket-icon--theme-light">
+                                        <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                      </svg><span class="header__basket-icon-counter">23</span>
+                    </button>
+                                  <div class="search header__search header__action-item">
+                                    <button class="search__icon js-search-opener">
+                                                        <svg class="search-icon search__search-icon search-icon--theme-light">
+                                                          <use xlink:href="img/svg/sprite.svg#search"></use>
+                                                        </svg>
+                                    </button>
+                                    <div class="search__drop js-search-drop">
+                                      <div class="search__field-wrapper">
+                                        <input class="search__field js-search-focus" type="text" placeholder="Поиск..."/>
+                                        <button class="search__close-btn js-search-close">
+                                          <svg class="icon icon-close ">
+                                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                                          </svg>
+                                        </button>
+                                        <button class="search__btn">
+                                                            <svg class="search-icon search__search-icon search-icon--theme-light">
+                                                              <use xlink:href="img/svg/sprite.svg#search"></use>
+                                                            </svg>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="lang header__lang header__action-item lang--theme-light">
+                                    <button class="lang__btn js-lang-opener">RU</button>
+                                    <div class="lang__drop js-lang-drop"><a class="lang__link" href="#">EN</a></div>
+                                  </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div class="breadcrumbs product__breadcrumbs">
+              <div class="container">
+                <div class="breadcrumbs__inner"><a class="breadcrumbs__back" href="index.html">
+                                  <svg class="long-arrow-icon breadcrumbs__long-arrow-icon">
+                                    <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                  </svg>Назад</a>
+                  <div class="breadcrumbs__nav"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link" href="#">Каталог</a><a class="breadcrumbs__link breadcrumbs__link--current">Название картины</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card product__product-card">
+              <div class="container">
+                <div class="product-card__inner">
+                  <div class="product-card__details"></div>
+                  <div class="product-card__info">
+                    <div class="product-card__main">
+                      <h1 class="product-card__title">Распоряжения о структуре очень длинное название картины</h1>
+                      <div class="product-card__top-row"><span class="product-card__art">Арт. HWV-165123</span>
+                        <button class="product-card__favorites">
+                                              <svg class="heart-icon product-card__heart-icon heart-icon--undefined">
+                                                <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                              </svg>В избранное
+                        </button>
+                      </div><a class="product-card__author" href="#">Диана Миллерелло</a>
+                      <div class="product-card__brief">
+                        <div class="product-card__brief-item"><span class="product-card__brief-name">Размер картины:</span><span class="product-card__brief-value">100 х 120 х 4 см</span></div>
+                        <div class="product-card__brief-item"><span class="product-card__brief-name">Стиль:</span><a class="product-card__brief-value product-card__brief-value--link" href="#">Пейзаж</a></div>
+                      </div>
+                      <div class="product-card__action">
+                        <div class="product-card__price">927 750<span class="product-card__old-price">727 750</span></div>
+                        <div class="product-card__buy-btn">Добавить в корзину</div>
+                      </div>
+                                      <div class="share product-card__share">
+                                        <ul class="share__list">
+                                          <li class="share__item"><a class="share__link" href="#" target="_blank">
+                                              <svg class="share__icon">
+                                                <use xlink:href="img/svg/sprite.svg#vk"></use>
+                                              </svg></a></li>
+                                          <li class="share__item"><a class="share__link" href="#" target="_blank">
+                                              <svg class="share__icon">
+                                                <use xlink:href="img/svg/sprite.svg#facebook"></use>
+                                              </svg></a></li>
+                                          <li class="share__item"><a class="share__link" href="#" target="_blank">
+                                              <svg class="share__icon">
+                                                <use xlink:href="img/svg/sprite.svg#odnoklassniki"></use>
+                                              </svg></a></li>
+                                          <li class="share__item"><a class="share__link" href="#" target="_blank">
+                                              <svg class="share__icon">
+                                                <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                                              </svg></a></li>
+                                        </ul>
+                                      </div>
+                    </div>
+                    <div class="product-card__specs">
+                      <div class="product-card__header">Параметры картины
+                                          <svg class="dropdown-icon product-card__dropdown-icon dropdown-icon--undefined">
+                                            <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                                          </svg>
+                      </div>
+                      <div class="product-card__body">
+                        <table class="product-card__table">
+                          <tr class="product-card__table-row">
+                            <td class="product-card__table-col">Год написания</td>
+                            <td class="product-card__table-col">2008</td>
+                          </tr>
+                          <tr class="product-card__table-row">
+                            <td class="product-card__table-col">Тема</td>
+                            <td class="product-card__table-col">Океан, Берег, Пляж</td>
+                          </tr>
+                          <tr class="product-card__table-row">
+                            <td class="product-card__table-col">Стиль</td>
+                            <td class="product-card__table-col">Современный пейзаж</td>
+                          </tr>
+                          <tr class="product-card__table-row">
+                            <td class="product-card__table-col">Материалы</td>
+                            <td class="product-card__table-col">Уголь, Чернила, Пастель</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="product-card__description">
+                      <div class="product-card__header">Описание картины
+                                          <svg class="dropdown-icon product-card__dropdown-icon dropdown-icon--undefined">
+                                            <use xlink:href="img/svg/sprite.svg#dropdown"></use>
+                                          </svg>
+                      </div>
+                      <div class="product-card__body">
+                        <div class="product-card__text">Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия. По своей сути рыбатекст является альтернативой традиционному lorem ipsum</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      <section class="similar-products">
+        <div class="container">
+          <h2 class="similar-products__title title-lg">Похожие работы</h2>
+        </div>
+                <div class="section-line product__section-line"></div>
+        <div class="similar-products__grid swiper-container-similar-products">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                            <div class="masonry-card similar-products__card"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-1.jpg"/></a>
+                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                              </div>
+                              <div class="masonry-card__footer">
+                                <div class="masonry-card__price">927 750</div>
+                                <div class="masonry-card__old-price">727 750</div>
+                                <div class="masonry-card__actions">
+                                                      <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                        <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                      </svg>
+                                                      <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--undefined">
+                                                        <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                      </svg>
+                                </div>
+                              </div>
+                            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__col footer__col--tablet-hidden">
+              <h3 class="footer__col-title">Об Artgallery</h3>
+              <ul class="footer__col-list">
+                <li class="footer__col-item"><a class="footer__col-link" href="#">О проекте</a></li>
+                <li class="footer__col-item"><a class="footer__col-link" href="#">Блог</a></li>
+                <li class="footer__col-item"><a class="footer__col-link" href="#">Авторы</a></li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--tablet-hidden">
+              <h3 class="footer__col-title">Покупателям</h3>
+              <ul class="footer__col-list">
+                <li class="footer__col-item"><a class="footer__col-link" href="#">Доставка</a></li>
+                <li class="footer__col-item"><a class="footer__col-link" href="#">Оплата</a></li>
+                <li class="footer__col-item"><a class="footer__col-link" href="#">Возврат</a></li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--tablet-hidden">
+              <h3 class="footer__col-title">Каталог</h3>
+              <ul class="footer__col-list">
+                <li class="footer__col-item"><a class="footer__col-link" href="#">Картины</a></li>
+                <li class="footer__col-item"><a class="footer__col-link" href="#">Коллажи</a></li>
+                <li class="footer__col-item"><a class="footer__col-link" href="#">Иллюстрации</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h3 class="footer__col-title">Контакты</h3>
+              <ul class="footer__col-list footer__col-list--contacts">
+                <li class="footer__col-item footer__col-item"><a class="footer__col-link footer__col-link" href="tel:+799912312344">
+                                        <svg class="phone-icon footer__phone-icon">
+                                          <use xlink:href="img/svg/sprite.svg#phone"></use>
+                                        </svg><span>+ 7 (999) 123-123-44</span></a></li>
+                <li class="footer__col-item"><a class="footer__col-link footer__col-link" href="mailto:info@domainname.ru">
+                                        <svg class="mail-icon footer__mail-icon">
+                                          <use xlink:href="img/svg/sprite.svg#mail"></use>
+                                        </svg><span class="footer__email">info@domainname.ru</span></a></li>
+                <li class="footer__col-item"><a class="footer__col-link footer__col-link--no-hover">
+                                        <svg class="location-icon footer__location-icon">
+                                          <use xlink:href="img/svg/sprite.svg#location"></use>
+                                        </svg><span class="footer__adress">г. Москва,<br> Преснесенская наб., 12</span></a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h3 class="footer__col-title">Мы в социальных сетях:</h3>
+                            <div class="social footer__social">
+                              <ul class="social__list">
+                                <li class="social__item"><a class="social__link" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                      <use xlink:href="img/svg/sprite.svg#vk"></use>
+                                    </svg></a></li>
+                                <li class="social__item"><a class="social__link" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                      <use xlink:href="img/svg/sprite.svg#facebook"></use>
+                                    </svg></a></li>
+                                <li class="social__item"><a class="social__link" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                      <use xlink:href="img/svg/sprite.svg#odnoklassniki"></use>
+                                    </svg></a></li>
+                                <li class="social__item"><a class="social__link" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                      <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+              <h3 class="footer__col-title">Платёжные системы</h3><img class="footer__pay-systems" src="img/pay-systems.png" data-da="footer__top, 0, 767"/>
+            </div>
+          </div>
+        </div>
+        <div class="footer__under">
+          <div class="container">
+            <div class="footer__under-inner">
+              <div class="footer__copy"><a class="footer__copy-item" href="#">Политика конфендициальности</a><a class="footer__copy-item" href="about.html">Условия и положения</a></div><span class="footer__company">©  Artgallery, 2018</span>
+              <div class="footer__creator"><img class="footer__creator-img" src="img/hawking-brothers.png"/><span class="footer__creator-text">Cайт создан </span><a class="footer__creator-link" href="#" data-mobile-text="Hawking Brothers">Разработка сайта</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="js/main.js"></script>
+    </div>
+  </body>
+</html>

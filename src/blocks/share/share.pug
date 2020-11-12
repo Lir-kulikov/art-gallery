@@ -1,0 +1,22 @@
+mixin share(Classname)
+  .share(class= Classname)
+    ul.share__list
+      li.share__item
+        a.share__link(href="#" target="_blank")
+          svg.share__icon
+            use(xlink:href="img/svg/sprite.svg#vk")
+
+      li.share__item
+        a.share__link(href="#" target="_blank")
+          svg.share__icon
+            use(xlink:href="img/svg/sprite.svg#facebook")
+
+      li.share__item
+        a.share__link(href="#" target="_blank")
+          svg.share__icon
+            use(xlink:href="img/svg/sprite.svg#odnoklassniki")
+
+      li.share__item
+        a.share__link(href="#" target="_blank")
+          svg.share__icon
+            use(xlink:href="img/svg/sprite.svg#instagram")

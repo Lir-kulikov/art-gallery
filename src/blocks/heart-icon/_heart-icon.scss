@@ -2,7 +2,7 @@
   width: 22px;
   height: 20px;
   fill: none;
-  transition: fill var(--transition) ease;
+  transition: fill var(--transition) ease, stroke var(--transition) ease;
 
   &--theme-light {
     stroke: var(--black);

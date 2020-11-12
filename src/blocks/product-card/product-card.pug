@@ -1,0 +1,54 @@
+mixin product-card(ClassName)
+  .product-card(class= ClassName)
+    .container
+      .product-card__inner
+        .product-card__details
+        .product-card__info
+          .product-card__main
+            h1.product-card__title Распоряжения о структуре очень длинное название картины
+            .product-card__top-row
+              span.product-card__art Арт. HWV-165123
+              button.product-card__favorites
+                include ../heart-icon/heart-icon
+                +heart-icon("product-card__heart-icon")
+                | В избранное
+            a.product-card__author(href="#") Диана Миллерелло
+            .product-card__brief
+              .product-card__brief-item
+                span.product-card__brief-name Размер картины:
+                span.product-card__brief-value 100 х 120 х 4 см
+              .product-card__brief-item
+                span.product-card__brief-name Стиль:
+                a.product-card__brief-value.product-card__brief-value--link(href="#") Пейзаж
+            .product-card__action
+              .product-card__price 927 750
+                span.product-card__old-price 727 750
+              .product-card__buy-btn Добавить в корзину
+            include ../share/share
+            +share("product-card__share")
+          .product-card__specs
+            .product-card__header
+              | Параметры картины
+              include ../dropdown-icon/dropdown-icon
+              +dropdown-icon("product-card__dropdown-icon")
+            .product-card__body
+              table.product-card__table
+                tr.product-card__table-row
+                  td.product-card__table-col Год написания
+                  td.product-card__table-col 2008
+                tr.product-card__table-row
+                  td.product-card__table-col Тема
+                  td.product-card__table-col Океан, Берег, Пляж
+                tr.product-card__table-row
+                  td.product-card__table-col Стиль
+                  td.product-card__table-col Современный пейзаж
+                tr.product-card__table-row
+                  td.product-card__table-col Материалы
+                  td.product-card__table-col Уголь, Чернила, Пастель
+          .product-card__description
+            .product-card__header
+              | Описание картины
+              include ../dropdown-icon/dropdown-icon
+              +dropdown-icon("product-card__dropdown-icon")
+            .product-card__body
+              .product-card__text Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия. По своей сути рыбатекст является альтернативой традиционному lorem ipsum

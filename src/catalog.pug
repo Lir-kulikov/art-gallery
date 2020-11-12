@@ -9,11 +9,8 @@ block content
   .catalog__top-img-wrapper
     .catalog__top-img.lax(data-lax-translate-y="0 0, 500 150")
       h2.catalog__title.title-lg Каталог картин
-  .breadcrumbs.catalog__breadcrumbs
-    a.breadcrumbs__back(href="index.html")
-      include blocks/long-arrow-icon/long-arrow-icon
-      +long-arrow-icon('breadcrumbs__long-arrow-icon')
-      | Назад
+  include blocks/breadcrumbs/breadcrumbs
+  +breadcrumbs("catalog__breadcrumbs", {})
   include blocks/filter/filter
   +filter('catalog__filter')
   include blocks/filter-cards/filter-cards

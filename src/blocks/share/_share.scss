@@ -1,0 +1,35 @@
+.share {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    transition: background-color var(--transition), border-color var(--transition);
+
+    &:hover {
+      border: 1px solid #333333;
+      background-color: #333333;
+
+      & .share__icon {
+        fill: var(--white);
+      }
+    }
+  }
+
+  &__icon {
+    width: 21px;
+    height: 21px;
+    fill: var(--dark-3);
+    transition: fill var(--transition) ease;
+  }
+}

@@ -1,0 +1,243 @@
+.product-card {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__details {
+    width: 645px;
+    height: 500px;
+    flex-shrink: 0;
+    margin-right: 40px;
+    background-color: lightgreen;
+  }
+
+  &__info {
+    flex-shrink: 1;
+  }
+
+  &__main {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  &__title {
+    margin-top: -5px;
+    margin-bottom: 20px;
+    color: var(--dark-2);
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.028em;
+    line-height: 1.066;
+  }
+
+  &__top-row {
+    display: flex;
+    margin-bottom: 12px;
+  }
+
+  &__art {
+    display: inline-block;
+    color: #999999;
+    font-size: 15px;
+    letter-spacing: 0.047em;
+  }
+
+  &__favorites {
+    display: inline-block;
+    margin-left: auto;
+    color: var(--dark-2);
+    cursor: pointer;
+    line-height: 5px;
+    transition: color var(--transition);
+    vertical-align: middle;
+
+    &:hover {
+      color: var(--hover);
+
+      .product-card__heart-icon {
+        stroke: var(--hover);
+      }
+    }
+  }
+
+  &__heart-icon {
+    margin-right: 7px;
+    stroke: var(--black);
+    vertical-align: middle;
+  }
+
+  &__author {
+    display: block;
+    margin-bottom: 13px;
+    color: #333333;
+    font-size: 17px;
+    letter-spacing: 0.026em;
+    text-decoration: underline;
+    transition: color var(--transition);
+
+    &:hover {
+      color: var(--hover);
+    }
+  }
+
+  &__brief {
+    margin-bottom: 21px;
+  }
+
+  &__brief-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__brief-name {
+    margin-right: 5px;
+    color: var(--dark-3);
+    font-size: 15px;
+    letter-spacing: 0.024em;
+  }
+
+  &__brief-value {
+    color: #333333;
+    font-size: 15px;
+    letter-spacing: 0.024em;
+
+    &--link {
+      transition: color var(--transition);
+
+      &:hover {
+        color: var(--hover);
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
+
+  &__price {
+    position: relative;
+    color: var(--dark-2);
+    font-size: 30px;
+    letter-spacing: 0.026em;
+
+    &::after {
+      content: ' 7';
+      font-family: 'PTRoubleSans', sans-serif;
+      font-size: 24px;
+    }
+  }
+
+  &__old-price {
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+    color: var(--dark-3);
+    font-size: 19px;
+    text-decoration: line-through;
+  }
+
+  &__buy-btn {
+    display: block;
+    min-width: 388px;
+    padding: 15px;
+    border: 4px solid var(--hover);
+    background-color: var(--hover);
+    box-shadow: inset 0 0 0 1px rgba(#ffffff, 0.61);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: opacity var(--transition), box-shadow var(--transition), border-color var(--transition);
+
+    &:hover {
+      border: 4px solid rgba(#ffffff, 0.2);
+      box-shadow: inset 0 0 0 1px rgba(#ffffff, 1);
+      opacity: 0.85;
+    }
+  }
+
+  &__share {
+    .share__list {
+      justify-content: flex-end;
+    }
+  }
+
+  &__specs {
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    color: #333333;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 0.028em;
+  }
+
+  &__description {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  &__body {
+    padding-top: 5px;
+  }
+
+  &__table {
+    width: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+    white-space: nowrap;
+  }
+
+  &__table-row {
+
+    width: 100%;
+    width: 190px;
+
+    &:nth-child(odd) {
+      background-color: #f7f7f7;
+    }
+  }
+
+  &__table-col {
+    overflow: hidden;
+    padding: 3px 13px;
+    color: var(--dark-2);
+    font-size: 15px;
+    letter-spacing: 0.024em;
+    line-height: 1.9;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:first-child {
+      width: 185px;
+    }
+  }
+
+  &__text {
+    margin-top: 12px;
+    margin-right: 10px;
+    margin-left: 12px;
+    color: var(--black);
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    line-height: 1.68;
+  }
+}

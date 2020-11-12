@@ -1,0 +1,33 @@
+extends partials/layout.pug
+block vars
+  -var title='Карточка товара'
+  -var description = 'Картина'
+  -var pageClass = 'page-product'
+  -var pageTheme = 'theme-light'
+block content
+  include blocks/breadcrumbs/breadcrumbs
+  +breadcrumbs("product__breadcrumbs", {
+    one: "Главная",
+    two: "Каталог",
+    three: "Название картины"
+  })
+  include blocks/product-card/product-card
+  +product-card("product__product-card")
+  section.similar-products
+    .container
+      h2.similar-products__title.title-lg Похожие работы
+    include blocks/section-line/section-line
+    +section-line("product__section-line")
+    .similar-products__grid.swiper-container-similar-products
+      .swiper-wrapper
+        .swiper-slide
+          include blocks/masonry-card/masonry-card
+          +masonry-card('similar-products__card', {
+          img: 'masonry-card-1.jpg',
+          title: 'Распоряжения о структуре тут длинное название картины',
+          author: 'Екатерина Александровна Преображенская',
+          price: '927 750'}, {
+          }, {
+          oldPriceValue: '727 750'})
+      
+  

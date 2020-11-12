@@ -1,0 +1,12 @@
+mixin breadcrumbs(ClassName, content)
+  .breadcrumbs(class= ClassName)
+    .container
+      .breadcrumbs__inner
+        a.breadcrumbs__back(href="index.html")
+          include ../long-arrow-icon/long-arrow-icon
+          +long-arrow-icon('breadcrumbs__long-arrow-icon')
+          | Назад
+        .breadcrumbs__nav
+          a.breadcrumbs__link(href="#")= content.one
+          a.breadcrumbs__link(href="#")= content.two
+          a.breadcrumbs__link.breadcrumbs__link--current= content.three
