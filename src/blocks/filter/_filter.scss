@@ -400,6 +400,7 @@
     letter-spacing: 0.4px;
 
     @include media('<desktop') {
+      align-self: flex-start;
       margin-bottom: 10px;
     }
 

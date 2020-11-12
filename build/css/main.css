@@ -39,7 +39,6 @@ body {
   text-rendering: optimizeSpeed;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
   text-size-adjust: none;
 }
 
@@ -88,6 +87,14 @@ input[type=text]::-ms-clear {
 
 @font-face {
   font-display: swap;
+  font-family: "PTRoubleSans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/PTRoubleSans-Regular.woff2") format("woff2"), url("../fonts/PTRoubleSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
   font-family: "ProximaNova";
   font-style: normal;
   font-weight: 300;
@@ -100,14 +107,6 @@ input[type=text]::-ms-clear {
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "PTRoubleSans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/PTRoubleSans-Regular.woff2") format("woff2"), url("../fonts/PTRoubleSans-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -4117,6 +4116,7 @@ body {
 
 @media (max-width: 1279px) {
   .filter__author-text {
+    align-self: flex-start;
     margin-bottom: 10px;
   }
 }
