@@ -21,6 +21,12 @@
 
   &__item {
     color: var(--black);
+
+    &--selectable {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   &__inner {
@@ -60,6 +66,14 @@
       &.is-active {
         box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.59);
       }
+    }
+  }
+}
+
+.sort {
+  .choices {
+    @include media('<tablet') {
+      width: 146px;
     }
   }
 }

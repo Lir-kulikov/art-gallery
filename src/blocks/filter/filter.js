@@ -2,7 +2,7 @@ import noUiSlider from 'nouislider';
 import Choices from 'choices.js';
 import {
   scrollHeightAnim
-} from './scrollHeightAnim.js';
+} from '../../js/scrollHeightAnim.js';
 
 import PerfectScrollbar from 'perfect-scrollbar';
 
@@ -221,9 +221,11 @@ if (document.querySelector('#js-filter-select')) {
           //scrollHeightAnim(showFilters);
           scrollHeightAnim(filterMain);
           if (showFilters.classList.contains('is-open')) {
-            showFilters.style.maxHeight = showFilters.scrollHeight + 100 + 'px';
-          } else {
-            elem.style.maxHeight = 0;
+            let h = 0;
+            for (let item2 of accordionHeaders) {
+              h += item2.nextElementSibling.scrollHeight;
+            }
+            showFilters.style.maxHeight = h + "px";
           }
         });
       }

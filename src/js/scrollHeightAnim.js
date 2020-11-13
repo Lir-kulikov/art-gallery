@@ -7,20 +7,27 @@ export const scrollHeightAnim = (elem) => {
 }
 
 export const setHeight = (showBtn, elBlock) => {
-  elBlock.style.height = "0px";
+  if (elBlock.style.height !== "0px") {
+    showBtn.classList.add('is-open');
+    elBlock.classList.add('is-open');
+  }
   showBtn.addEventListener("click", () => {
-    if (elBlock.style.height === "0px") {
+    if (elBlock.style.height === "0px" || !elBlock.style.height === "0px") {
       elBlock.style.height = `${ elBlock.scrollHeight }px`
+      showBtn.classList.add('is-open');
+      elBlock.classList.add('is-open');
     } else {
       elBlock.style.height = `${ elBlock.scrollHeight }px`;
-        window.getComputedStyle(elBlock, null).getPropertyValue("height");
-        elBlock.style.height = "0";
+      window.getComputedStyle(elBlock, null).getPropertyValue("height");
+      elBlock.style.height = "0";
+      showBtn.classList.remove('is-open');
+      elBlock.classList.remove('is-open');
     }
-
-    elBlock.addEventListener("transitionend", () => {
-      if (elBlock.style.height !== "0px") {
-          elBlock.style.height = "auto"
-      }
   });
-});
+
+  elBlock.addEventListener("transitionend", () => {
+    if (elBlock.style.height !== "0px") {
+      elBlock.style.height = "auto"
+    }
+  });
 }

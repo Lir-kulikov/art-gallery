@@ -14,20 +14,68 @@ block content
   include blocks/product-card/product-card
   +product-card("product__product-card")
   section.similar-products
-    .container
+    .container.similar-products__wrapper
       h2.similar-products__title.title-lg Похожие работы
+      .similar-products__slider-buttons
+        include blocks/slider-btn/slider-btn
+        +slider-btn('similar-products__slider-btn js-swiper-similar-prev', 'left')
+        +slider-btn('similar-products__slider-btn js-swiper-similar-next', 'right')
     include blocks/section-line/section-line
-    +section-line("product__section-line")
-    .similar-products__grid.swiper-container-similar-products
-      .swiper-wrapper
-        .swiper-slide
-          include blocks/masonry-card/masonry-card
-          +masonry-card('similar-products__card', {
-          img: 'masonry-card-1.jpg',
-          title: 'Распоряжения о структуре тут длинное название картины',
-          author: 'Екатерина Александровна Преображенская',
-          price: '927 750'}, {
-          }, {
-          oldPriceValue: '727 750'})
-      
-  
+    +section-line("similar-products__section-line")
+    .container
+      .similar-products__grid.swiper-container-similar-products
+        .swiper-wrapper
+          .swiper-slide
+            include blocks/masonry-card/masonry-card
+            +masonry-card('similar-products__card', {
+            img: 'masonry-card-6.jpg',
+            title: 'Распоряжения о структуре тут длинное название картины',
+            author: 'Екатерина Александровна Преображенская',
+            price: '927 750'}, {
+            }, {
+            oldPriceValue: '727 750'})
+          .swiper-slide
+            include blocks/masonry-card/masonry-card
+            +masonry-card('similar-products__card', {
+            img: 'masonry-card-5.jpg',
+            title: 'Распоряжения о структуре тут длинное название картины',
+            author: 'Екатерина Александровна Преображенская',
+            price: '927 750'}, {
+            }, {
+            oldPriceValue: '727 750'})
+          .swiper-slide
+            include blocks/masonry-card/masonry-card
+            +masonry-card('similar-products__card', {
+            img: 'masonry-card-4.jpg',
+            title: 'Распоряжения о структуре тут длинное название картины',
+            author: 'Екатерина Александровна Преображенская',
+            price: '927 750'}, {
+            }, {
+            oldPriceValue: '727 750'})
+          .swiper-slide
+            include blocks/masonry-card/masonry-card
+            +masonry-card('similar-products__card', {
+            img: 'masonry-card-1.jpg',
+            title: 'Распоряжения о структуре тут длинное название картины',
+            author: 'Екатерина Александровна Преображенская',
+            price: '927 750'}, {
+            }, {
+            oldPriceValue: '727 750'})
+          .swiper-slide
+            include blocks/masonry-card/masonry-card
+            +masonry-card('similar-products__card', {
+            img: 'masonry-card-2.jpg',
+            title: 'Распоряжения о структуре тут длинное название картины',
+            author: 'Екатерина Александровна Преображенская',
+            price: '927 750'}, {
+            }, {
+            oldPriceValue: '727 750'})
+          .swiper-slide
+            include blocks/masonry-card/masonry-card
+            +masonry-card('similar-products__card', {
+            img: 'masonry-card-3.jpg',
+            title: 'Распоряжения о структуре тут длинное название картины',
+            author: 'Екатерина Александровна Преображенская',
+            price: '927 750'}, {
+            }, {
+            oldPriceValue: '727 750'})

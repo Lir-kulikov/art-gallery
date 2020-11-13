@@ -8,7 +8,7 @@ mixin product-card(ClassName)
             h1.product-card__title Распоряжения о структуре очень длинное название картины
             .product-card__top-row
               span.product-card__art Арт. HWV-165123
-              button.product-card__favorites
+              button.product-card__favorites.js-icon
                 include ../heart-icon/heart-icon
                 +heart-icon("product-card__heart-icon")
                 | В избранное
@@ -27,11 +27,11 @@ mixin product-card(ClassName)
             include ../share/share
             +share("product-card__share")
           .product-card__specs
-            .product-card__header
+            .product-card__header.js-anim-toggle-btn
               | Параметры картины
               include ../dropdown-icon/dropdown-icon
               +dropdown-icon("product-card__dropdown-icon")
-            .product-card__body
+            .product-card__body.js-anim-toggle-block
               table.product-card__table
                 tr.product-card__table-row
                   td.product-card__table-col Год написания
@@ -46,9 +46,9 @@ mixin product-card(ClassName)
                   td.product-card__table-col Материалы
                   td.product-card__table-col Уголь, Чернила, Пастель
           .product-card__description
-            .product-card__header
+            .product-card__header.js-anim-toggle-btn
               | Описание картины
               include ../dropdown-icon/dropdown-icon
               +dropdown-icon("product-card__dropdown-icon")
-            .product-card__body
+            .product-card__body.js-anim-toggle-block
               .product-card__text Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия. По своей сути рыбатекст является альтернативой традиционному lorem ipsum

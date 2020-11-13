@@ -16,7 +16,6 @@ const mySwiper = new Swiper('.swiper-container-hero', {
 });
 
 const mySwiperStyleReview = new Swiper('.swiper-container-style-review', {
-  //slidesPerView: 2,
   loop: true,
   speed: 700,
   autoHeight: true,
@@ -82,6 +81,16 @@ const mySwiperFilterCards = new Swiper('.swiper-container-filter', {
     }
   }
 })
-// window.addEventListener('resize', () => {
-//   mySwiperFilterCards.updateSlides()
-// });
+
+const mySwiperSimilarProducts = new Swiper('.swiper-container-similar-products', {
+  loop: true,
+  speed: 500,
+  slidesPerView: 4,
+  autoHeight: true,
+  spaceBetween: 45,
+  navigation: {
+    nextEl: '.js-swiper-similar-next',
+    prevEl: '.js-swiper-similar-prev',
+  },
+})
+

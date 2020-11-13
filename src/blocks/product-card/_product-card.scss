@@ -177,6 +177,10 @@
     border-bottom: 1px solid var(--line);
   }
 
+  &__dropdown-icon {
+    transition: transform 0.3s;
+  }
+
   &__header {
     display: flex;
     align-items: center;
@@ -188,6 +192,12 @@
     cursor: pointer;
     font-size: 18px;
     letter-spacing: 0.028em;
+
+    &.is-open {
+      .product-card__dropdown-icon {
+        transform: rotate(180deg);
+      }
+    }
   }
 
   &__description {
@@ -196,7 +206,9 @@
   }
 
   &__body {
+    overflow: hidden;
     padding-top: 5px;
+    transition: height var(--transition);
   }
 
   &__table {

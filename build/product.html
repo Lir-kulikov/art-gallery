@@ -123,7 +123,7 @@
                     <div class="product-card__main">
                       <h1 class="product-card__title">Распоряжения о структуре очень длинное название картины</h1>
                       <div class="product-card__top-row"><span class="product-card__art">Арт. HWV-165123</span>
-                        <button class="product-card__favorites">
+                        <button class="product-card__favorites js-icon">
                                               <svg class="heart-icon product-card__heart-icon heart-icon--undefined">
                                                 <use xlink:href="img/svg/sprite.svg#heart"></use>
                                               </svg>В избранное
@@ -159,12 +159,12 @@
                                       </div>
                     </div>
                     <div class="product-card__specs">
-                      <div class="product-card__header">Параметры картины
+                      <div class="product-card__header js-anim-toggle-btn">Параметры картины
                                           <svg class="dropdown-icon product-card__dropdown-icon dropdown-icon--undefined">
                                             <use xlink:href="img/svg/sprite.svg#dropdown"></use>
                                           </svg>
                       </div>
-                      <div class="product-card__body">
+                      <div class="product-card__body js-anim-toggle-block">
                         <table class="product-card__table">
                           <tr class="product-card__table-row">
                             <td class="product-card__table-col">Год написания</td>
@@ -186,12 +186,12 @@
                       </div>
                     </div>
                     <div class="product-card__description">
-                      <div class="product-card__header">Описание картины
+                      <div class="product-card__header js-anim-toggle-btn">Описание картины
                                           <svg class="dropdown-icon product-card__dropdown-icon dropdown-icon--undefined">
                                             <use xlink:href="img/svg/sprite.svg#dropdown"></use>
                                           </svg>
                       </div>
-                      <div class="product-card__body">
+                      <div class="product-card__body js-anim-toggle-block">
                         <div class="product-card__text">Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия. По своей сути рыбатекст является альтернативой традиционному lorem ipsum</div>
                       </div>
                     </div>
@@ -200,29 +200,133 @@
               </div>
             </div>
       <section class="similar-products">
-        <div class="container">
+        <div class="container similar-products__wrapper">
           <h2 class="similar-products__title title-lg">Похожие работы</h2>
+          <div class="similar-products__slider-buttons">
+                        <button class="slider-btn slider-btn--left similar-products__slider-btn js-swiper-similar-prev">
+                          <svg class="slider-btn__icon">
+                            <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+                          </svg>
+                        </button>
+                        <button class="slider-btn slider-btn--right similar-products__slider-btn js-swiper-similar-next">
+                          <svg class="slider-btn__icon">
+                            <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </button>
+          </div>
         </div>
-                <div class="section-line product__section-line"></div>
-        <div class="similar-products__grid swiper-container-similar-products">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                            <div class="masonry-card similar-products__card"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-1.jpg"/></a>
-                              <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
-                              </div>
-                              <div class="masonry-card__footer">
-                                <div class="masonry-card__price">927 750</div>
-                                <div class="masonry-card__old-price">727 750</div>
-                                <div class="masonry-card__actions">
-                                                      <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
-                                                        <use xlink:href="img/svg/sprite.svg#heart"></use>
-                                                      </svg>
-                                                      <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--undefined">
-                                                        <use xlink:href="img/svg/sprite.svg#basket"></use>
-                                                      </svg>
+                <div class="section-line similar-products__section-line"></div>
+        <div class="container">
+          <div class="similar-products__grid swiper-container-similar-products">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                                <div class="masonry-card similar-products__card"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-6.jpg"/></a>
+                                  <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                                  </div>
+                                  <div class="masonry-card__footer">
+                                    <div class="masonry-card__price">927 750</div>
+                                    <div class="masonry-card__old-price">727 750</div>
+                                    <div class="masonry-card__actions">
+                                                            <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                            </svg>
+                                                            <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                            </svg>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>
+              </div>
+              <div class="swiper-slide">
+                                <div class="masonry-card similar-products__card"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-5.jpg"/></a>
+                                  <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                                  </div>
+                                  <div class="masonry-card__footer">
+                                    <div class="masonry-card__price">927 750</div>
+                                    <div class="masonry-card__old-price">727 750</div>
+                                    <div class="masonry-card__actions">
+                                                            <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                            </svg>
+                                                            <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                            </svg>
+                                    </div>
+                                  </div>
+                                </div>
+              </div>
+              <div class="swiper-slide">
+                                <div class="masonry-card similar-products__card"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-4.jpg"/></a>
+                                  <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                                  </div>
+                                  <div class="masonry-card__footer">
+                                    <div class="masonry-card__price">927 750</div>
+                                    <div class="masonry-card__old-price">727 750</div>
+                                    <div class="masonry-card__actions">
+                                                            <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                            </svg>
+                                                            <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                            </svg>
+                                    </div>
+                                  </div>
+                                </div>
+              </div>
+              <div class="swiper-slide">
+                                <div class="masonry-card similar-products__card"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-1.jpg"/></a>
+                                  <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                                  </div>
+                                  <div class="masonry-card__footer">
+                                    <div class="masonry-card__price">927 750</div>
+                                    <div class="masonry-card__old-price">727 750</div>
+                                    <div class="masonry-card__actions">
+                                                            <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                            </svg>
+                                                            <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                            </svg>
+                                    </div>
+                                  </div>
+                                </div>
+              </div>
+              <div class="swiper-slide">
+                                <div class="masonry-card similar-products__card"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-2.jpg"/></a>
+                                  <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                                  </div>
+                                  <div class="masonry-card__footer">
+                                    <div class="masonry-card__price">927 750</div>
+                                    <div class="masonry-card__old-price">727 750</div>
+                                    <div class="masonry-card__actions">
+                                                            <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                            </svg>
+                                                            <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                            </svg>
+                                    </div>
+                                  </div>
+                                </div>
+              </div>
+              <div class="swiper-slide">
+                                <div class="masonry-card similar-products__card"><a class="masonry-card__img-wrapper" href="#"><img class="masonry-card__img" src="img/masonry-card-3.jpg"/></a>
+                                  <div class="masonry-card__info"><span class="card-sticker masonry-card__card-sticker card-sticker--undefined"></span><a class="masonry-card__title" href="#">Распоряжения о структуре тут длинное название картины</a><a class="masonry-card__author" href="#">Екатерина Александровна Преображенская</a><span class="masonry-card__type">Картина,  80x60 см.</span>
+                                  </div>
+                                  <div class="masonry-card__footer">
+                                    <div class="masonry-card__price">927 750</div>
+                                    <div class="masonry-card__old-price">727 750</div>
+                                    <div class="masonry-card__actions">
+                                                            <svg class="heart-icon masonry-card__heart-icon js-icon heart-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                                            </svg>
+                                                            <svg class="basket-icon masonry-card__basket-icon js-icon basket-icon--undefined">
+                                                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                                                            </svg>
+                                    </div>
+                                  </div>
+                                </div>
+              </div>
             </div>
           </div>
         </div>
