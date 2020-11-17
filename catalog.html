@@ -110,10 +110,16 @@
           <h2 class="catalog__title title-lg">Каталог картин</h2>
         </div>
       </div>
-      <div class="breadcrumbs catalog__breadcrumbs"><a class="breadcrumbs__back" href="index.html">
-                    <svg class="long-arrow-icon breadcrumbs__long-arrow-icon">
-                      <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
-                    </svg>Назад</a></div>
+            <div class="breadcrumbs catalog__breadcrumbs">
+              <div class="container">
+                <div class="breadcrumbs__inner"><a class="breadcrumbs__back" href="index.html">
+                                  <svg class="long-arrow-icon breadcrumbs__long-arrow-icon">
+                                    <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                  </svg>Назад</a>
+                  <div class="breadcrumbs__nav"><a class="breadcrumbs__link" href="#"></a><a class="breadcrumbs__link" href="#"></a><a class="breadcrumbs__link breadcrumbs__link--current"></a></div>
+                </div>
+              </div>
+            </div>
             <form class="filter js-filter-form catalog__filter" action="" name="filter">
               <div class="container">
                 <div class="filter__header js-filter-header">
@@ -641,7 +647,7 @@
                                         <svg class="mail-icon footer__mail-icon">
                                           <use xlink:href="img/svg/sprite.svg#mail"></use>
                                         </svg><span class="footer__email">info@domainname.ru</span></a></li>
-                <li class="footer__col-item"><a class="footer__col-link footer__col-link">
+                <li class="footer__col-item"><a class="footer__col-link footer__col-link--no-hover">
                                         <svg class="location-icon footer__location-icon">
                                           <use xlink:href="img/svg/sprite.svg#location"></use>
                                         </svg><span class="footer__adress">г. Москва,<br> Преснесенская наб., 12</span></a></li>
