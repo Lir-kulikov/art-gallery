@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "choices.js": "^9.0.1",
+    "glightbox": "^3.0.5",
     "imagesloaded": "^4.1.4",
     "lax.js": "^1.2.5",
     "masonry-layout": "^4.2.2",
@@ -53,6 +54,7 @@
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.0",
     "node-sass": "^4.14.1",
+    "pixel-glass": "^1.0.13",
     "stylelint": "^13.7.1",
     "stylelint-config-htmlacademy": "^0.1.4",
     "stylelint-config-idiomatic-order": "^8.1.0",

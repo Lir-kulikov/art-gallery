@@ -2,10 +2,23 @@
   &__breadcrumbs {
     margin-top: 81px;
     margin-bottom: 50px;
+
+    @include media('<desktop') {
+      margin-bottom: 37px;
+    }
+
+    @include media('<tablet') {
+      margin-top: 52px;
+      margin-bottom: 27px;
+    }
   }
 
   &__product-card {
     padding-bottom: 70px;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+    }
   }
 }
 
@@ -14,12 +27,25 @@
   padding-bottom: 70px;
   background-color: var(--light-gray);
 
+  @include media('<desktop') {
+    padding-top: 25px;
+  }
+
+  @include media('<tablet') {
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }
+
   &__title {
     margin-bottom: 11px;
   }
 
   &__section-line {
     margin-bottom: 32px;
+
+    @include media('<tablet') {
+      margin-bottom: 20px;
+    }
   }
 
   &__card {
@@ -41,14 +67,45 @@
     }
 
     @include media('<tablet') {
-      top: 60px;
-      right: 50%;
-      transform: translateX(50%);
+      top: 0;
+      right: 0;
+      left: 10px;
+      display: flex;
+      width: calc(100% - 20px);
+      justify-content: space-between;
+    }
+  }
+
+  &__slider-btn {
+    @include media('<tablet') {
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+
+      &.slider-btn--left {
+        right: auto;
+        left: 0;
+      }
+
+      &.slider-btn--right {
+        right: 0;
+      }
     }
   }
 }
 
 .swiper-container-similar-products {
   overflow: hidden;
-}
 
+  @include media('<desktop') {
+    overflow: visible;
+  }
+
+  @include media('<tablet') {
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    width: 276px;
+  }
+}

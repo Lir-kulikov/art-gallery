@@ -9,7 +9,8 @@
 @import '../../node_modules/swiper/swiper-bundle.css';
 @import '../../node_modules/choices.js/public/assets/styles/choices.min.css';
 @import '../../node_modules/nouislider/distribute/nouislider.min.css';
-//global
+@import '../../node_modules/glightbox/dist/css/glightbox.min.css';
+
 
 * {
   outline: none;
@@ -93,4 +94,7 @@ body {
 @import '../blocks/product/_product';
 @import '../blocks/product-card/_product-card';
 @import '../blocks/share/_share';
+@import '../blocks/download-icon/_download-icon';
+@import '../blocks/like-icon/_like-icon';
+@import '../blocks/eye-close-icon/_eye-close-icon';
 

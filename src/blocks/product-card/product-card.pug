@@ -3,9 +3,45 @@ mixin product-card(ClassName)
     .container
       .product-card__inner
         .product-card__details
+          .product-card__gallery(data-da="product-card__main,3,767")
+            .product-card__thumbs.swiper-container-thumbs
+              .swiper-wrapper
+                .swiper-slide
+                  .product-card__thumb(style='background-image: url(../img/product-1.jpg)')
+                .swiper-slide
+                  .product-card__thumb(style='background-image: url(../img/product-2.jpg)')
+                .swiper-slide
+                  .product-card__thumb(style='background-image: url(../img/product-3.jpg)')
+            .product-card__slider.swiper-container-product
+              .swiper-wrapper
+                a.swiper-slide.js-lightbox(href="img/product-1.jpg")
+                  .product-card__img(style='background-image: url(../img/product-1.jpg)')
+                a.swiper-slide.js-lightbox(href="img/product-2.jpg")
+                  .product-card__img(style='background-image: url(../img/product-2.jpg)')
+                a.swiper-slide.js-lightbox(href="img/product-3.jpg")
+                  .product-card__img(style='background-image: url(../img/product-3.jpg)')
+              button.js-swiper-product-next
+                include ../long-arrow-icon/long-arrow-icon
+                +long-arrow-icon
+              button.js-swiper-product-prev
+                +long-arrow-icon
+          .product-card__actions
+            .product-card__actions-row
+              button.product-card__action-item
+                include ../like-icon/like-icon
+                +like-icon("product-card__action-icon")
+                span.product-card__action-text Понравилось (875)
+              a.product-card__action-item.product-card__action-item--tablet-min-content(href="#" download)
+                include ../download-icon/download-icon
+                +download-icon("product-card__action-icon")
+                span.product-card__action-text Цифровая копия
+            button.product-card__action-item
+              include ../eye-close-icon/eye-close-icon
+              +eye-close-icon("product-card__action-icon")
+              span.product-card__action-text Больше не показывать картину
         .product-card__info
           .product-card__main
-            h1.product-card__title Распоряжения о структуре очень длинное название картины
+            h1.product-card__title Распоряжения о структуре очень длинное название
             .product-card__top-row
               span.product-card__art Арт. HWV-165123
               button.product-card__favorites.js-icon
@@ -20,10 +56,23 @@ mixin product-card(ClassName)
               .product-card__brief-item
                 span.product-card__brief-name Стиль:
                 a.product-card__brief-value.product-card__brief-value--link(href="#") Пейзаж
-            .product-card__action
+            .product-card__row
               .product-card__price 927 750
                 span.product-card__old-price 727 750
-              .product-card__buy-btn Добавить в корзину
+              .product-card__buy-btn <span class="tablet-hidden">Добавить</span> в корзину
+            .product-card__action-mobile
+              button.product-card__mobile-btn
+                +like-icon("product-card__action-mobile-icon")
+                span.product-card__action-mobile-text Понравилось
+              button.product-card__mobile-btn
+                +heart-icon("product-card__action-mobile-icon")
+                span.product-card__action-mobile-text В избранное
+              button.product-card__mobile-btn
+                +eye-close-icon("product-card__action-mobile-icon")
+                span.product-card__action-mobile-text Не показывать
+              a.product-card__mobile-btn(href="#" download)
+                +download-icon("product-card__action-mobile-icon")
+                span.product-card__action-mobile-text Скачать копию
             include ../share/share
             +share("product-card__share")
           .product-card__specs

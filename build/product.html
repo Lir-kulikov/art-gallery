@@ -118,10 +118,59 @@
             <div class="product-card product__product-card">
               <div class="container">
                 <div class="product-card__inner">
-                  <div class="product-card__details"></div>
+                  <div class="product-card__details">
+                    <div class="product-card__gallery" data-da="product-card__main,3,767">
+                      <div class="product-card__thumbs swiper-container-thumbs">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="product-card__thumb" style="background-image: url(../img/product-1.jpg)"></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="product-card__thumb" style="background-image: url(../img/product-2.jpg)"></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="product-card__thumb" style="background-image: url(../img/product-3.jpg)"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-card__slider swiper-container-product">
+                        <div class="swiper-wrapper"><a class="swiper-slide js-lightbox" href="img/product-1.jpg">
+                            <div class="product-card__img" style="background-image: url(../img/product-1.jpg)"></div></a><a class="swiper-slide js-lightbox" href="img/product-2.jpg">
+                            <div class="product-card__img" style="background-image: url(../img/product-2.jpg)"></div></a><a class="swiper-slide js-lightbox" href="img/product-3.jpg">
+                            <div class="product-card__img" style="background-image: url(../img/product-3.jpg)"></div></a></div>
+                        <button class="js-swiper-product-next">
+                                              <svg class="long-arrow-icon">
+                                                <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                              </svg>
+                        </button>
+                        <button class="js-swiper-product-prev">
+                                              <svg class="long-arrow-icon">
+                                                <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                              </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product-card__actions">
+                      <div class="product-card__actions-row">
+                        <button class="product-card__action-item">
+                                              <svg class="like-icon product-card__action-icon">
+                                                <use xlink:href="img/svg/sprite.svg#like"></use>
+                                              </svg><span class="product-card__action-text">Понравилось (875)</span>
+                        </button><a class="product-card__action-item product-card__action-item--tablet-min-content" href="#" download="download">
+                                              <svg class="download-icon product-card__action-icon">
+                                                <use xlink:href="img/svg/sprite.svg#download"></use>
+                                              </svg><span class="product-card__action-text">Цифровая копия</span></a>
+                      </div>
+                      <button class="product-card__action-item">
+                                          <svg class="eye-close-icon product-card__action-icon">
+                                            <use xlink:href="img/svg/sprite.svg#eye-close"></use>
+                                          </svg><span class="product-card__action-text">Больше не показывать картину</span>
+                      </button>
+                    </div>
+                  </div>
                   <div class="product-card__info">
                     <div class="product-card__main">
-                      <h1 class="product-card__title">Распоряжения о структуре очень длинное название картины</h1>
+                      <h1 class="product-card__title">Распоряжения о структуре очень длинное название</h1>
                       <div class="product-card__top-row"><span class="product-card__art">Арт. HWV-165123</span>
                         <button class="product-card__favorites js-icon">
                                               <svg class="heart-icon product-card__heart-icon heart-icon--undefined">
@@ -133,9 +182,29 @@
                         <div class="product-card__brief-item"><span class="product-card__brief-name">Размер картины:</span><span class="product-card__brief-value">100 х 120 х 4 см</span></div>
                         <div class="product-card__brief-item"><span class="product-card__brief-name">Стиль:</span><a class="product-card__brief-value product-card__brief-value--link" href="#">Пейзаж</a></div>
                       </div>
-                      <div class="product-card__action">
+                      <div class="product-card__row">
                         <div class="product-card__price">927 750<span class="product-card__old-price">727 750</span></div>
-                        <div class="product-card__buy-btn">Добавить в корзину</div>
+                        <div class="product-card__buy-btn"><span class="tablet-hidden">Добавить</span> в корзину</div>
+                      </div>
+                      <div class="product-card__action-mobile">
+                        <button class="product-card__mobile-btn">
+                                              <svg class="like-icon product-card__action-mobile-icon">
+                                                <use xlink:href="img/svg/sprite.svg#like"></use>
+                                              </svg><span class="product-card__action-mobile-text">Понравилось</span>
+                        </button>
+                        <button class="product-card__mobile-btn">
+                                              <svg class="heart-icon product-card__action-mobile-icon heart-icon--undefined">
+                                                <use xlink:href="img/svg/sprite.svg#heart"></use>
+                                              </svg><span class="product-card__action-mobile-text">В избранное</span>
+                        </button>
+                        <button class="product-card__mobile-btn">
+                                            <svg class="eye-close-icon product-card__action-mobile-icon">
+                                              <use xlink:href="img/svg/sprite.svg#eye-close"></use>
+                                            </svg><span class="product-card__action-mobile-text">Не показывать</span>
+                        </button><a class="product-card__mobile-btn" href="#" download="download">
+                                              <svg class="download-icon product-card__action-mobile-icon">
+                                                <use xlink:href="img/svg/sprite.svg#download"></use>
+                                              </svg><span class="product-card__action-mobile-text">Скачать копию</span></a>
                       </div>
                                       <div class="share product-card__share">
                                         <ul class="share__list">
