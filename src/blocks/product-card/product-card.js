@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     touchFollowAxis: true,
     loop: true,
     dragToleranceY: 1000,
-    dragToleranceX: 20,
+    //dragToleranceX: 20,
   });
   lightbox.removeSlide(4);
   lightbox.removeSlide(0);

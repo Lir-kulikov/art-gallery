@@ -5959,10 +5959,6 @@ body {
   max-height: 90vh;
 }
 
-.gslide-image img {
-  height: 100%;
-}
-
 .share__list {
   display: flex;
 }
