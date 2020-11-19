@@ -41,10 +41,16 @@
           visibility: visible;
         }
 
-        .nav__link::after {
+        .nav__link--drop::after {
           bottom: -105%;
           opacity: 1;
+          pointer-events: auto;
           transition: ease-in 0.3s;
+          visibility: visible;
+        }
+
+        .nav__link--drop::before {
+          pointer-events: auto;
         }
       }
     }
@@ -113,6 +119,7 @@
         width: 110px;
         height: 24px;
         content: '';
+        pointer-events: none;
       }
 
       &::after {
@@ -124,6 +131,7 @@
         background-color: var(--white);
         content: '';
         opacity: 0;
+        pointer-events: none;
         transform: rotate(45deg) translateX(-50%);
         transition: ease 0.1s;
       }

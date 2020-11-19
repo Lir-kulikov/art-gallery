@@ -99,10 +99,12 @@
 
   @include media('<desktop') {
     overflow: visible;
+    //margin-left: calc(-276px / 2 + 45px / 2);
   }
 
   @include media('<tablet') {
     overflow: hidden;
+    padding-left: 0;
   }
 
   .swiper-slide {

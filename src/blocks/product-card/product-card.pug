@@ -15,11 +15,11 @@ mixin product-card(ClassName)
             .product-card__slider.swiper-container-product
               .swiper-wrapper
                 a.swiper-slide.js-lightbox(href="img/product-1.jpg")
-                  .product-card__img(style='background-image: url(../img/product-1.jpg)')
+                  img.product-card__img(src="img/product-1.jpg")
                 a.swiper-slide.js-lightbox(href="img/product-2.jpg")
-                  .product-card__img(style='background-image: url(../img/product-2.jpg)')
+                  img.product-card__img(src="img/product-2.jpg")
                 a.swiper-slide.js-lightbox(href="img/product-3.jpg")
-                  .product-card__img(style='background-image: url(../img/product-3.jpg)')
+                  img.product-card__img(src="img/product-3.jpg")
               button.js-swiper-product-next
                 include ../long-arrow-icon/long-arrow-icon
                 +long-arrow-icon
@@ -41,13 +41,13 @@ mixin product-card(ClassName)
               span.product-card__action-text Больше не показывать картину
         .product-card__info
           .product-card__main
-            h1.product-card__title Распоряжения о структуре очень длинное название
+            h1.product-card__title Распоряжения о структуре очень длинное название картины
             .product-card__top-row
               span.product-card__art Арт. HWV-165123
-              button.product-card__favorites.js-icon
+              button.product-card__favorites.js-icon(data-active="В избранном" data-default="В избранное")
                 include ../heart-icon/heart-icon
                 +heart-icon("product-card__heart-icon")
-                | В избранное
+                span.product-card__favorites-text В избранное
             a.product-card__author(href="#") Диана Миллерелло
             .product-card__brief
               .product-card__brief-item
@@ -64,7 +64,7 @@ mixin product-card(ClassName)
               button.product-card__mobile-btn
                 +like-icon("product-card__action-mobile-icon")
                 span.product-card__action-mobile-text Понравилось
-              button.product-card__mobile-btn
+              button.product-card__mobile-btn.js-icon
                 +heart-icon("product-card__action-mobile-icon")
                 span.product-card__action-mobile-text В избранное
               button.product-card__mobile-btn
