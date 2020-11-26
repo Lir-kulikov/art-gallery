@@ -89,6 +89,14 @@ input[type=text]::-ms-clear {
 
 @font-face {
   font-display: swap;
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
   font-family: "PTRoubleSans";
   font-style: normal;
   font-weight: 400;
@@ -99,24 +107,16 @@ input[type=text]::-ms-clear {
   font-display: swap;
   font-family: "ProximaNova";
   font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "ProximaNova";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "ProximaNova";
-  font-style: normal;
   font-weight: 300;
   src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff");
 }
 
 * {
@@ -3922,6 +3922,7 @@ body {
   width: 16px;
   height: 16px;
   border: 2px solid var(--hover);
+  cursor: pointer;
 }
 
 .form-reg__check-input {
@@ -4008,6 +4009,7 @@ body {
   height: 16px;
   border: 2px solid var(--hover);
   border-radius: 50%;
+  cursor: pointer;
   transform: translateY(-50%);
 }
 
