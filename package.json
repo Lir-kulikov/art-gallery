@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "choices.js": "^9.0.1",
+    "formbouncerjs": "^1.4.6",
     "glightbox": "^3.0.5",
     "imagesloaded": "^4.1.4",
     "lax.js": "^1.2.5",

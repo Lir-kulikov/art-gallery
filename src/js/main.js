@@ -6,6 +6,7 @@ import './dynamicAdapt.js'
 import './tabs.js'
 import './iconsCounter.js'
 import './lightbox.js'
+import './formValidation'
 
 import '../blocks/filter/filter.js'
 import '../blocks/nav/nav.js'

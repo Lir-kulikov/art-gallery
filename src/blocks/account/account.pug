@@ -1,6 +1,6 @@
 mixin account(ClassName, mod)
   .account(class= ClassName + " " + "account" + "--" + mod)
-    button.account__btn.js-account-opener
+    button.account__btn.js-account-opener(data-modal-open="modal-autorize")
       include ../user-icon/user-icon
       +user-icon('account__user-icon')
       img.account__avatar(src="img/avatar.png")

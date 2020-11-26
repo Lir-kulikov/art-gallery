@@ -3,9 +3,12 @@ import {setHeight} from '../../js/scrollHeightAnim.js';
 import GLightbox from 'glightbox';
 import Imagesloaded from 'imagesloaded';
 
-document.addEventListener('DOMContentLoaded', () => {
+if (document.querySelector('.product-card')) {
 
-  // в избранном / ое
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+     // в избранном / ое
 
   const setFavortext = () => {
     const favorText = document.querySelector('.product-card__favorites.js-icon');
@@ -18,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  
   setFavortext();
 
   //аккордион
@@ -106,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const mySwiperProduct = new Swiper('.swiper-container-product', {
     loop: true,
     spaceBetween: 20,
-    //loopedSlides: 4,
     autoHeight: true,
     navigation: {
       nextEl: '.js-swiper-product-next',
@@ -116,32 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
       swiper: mySwiperThumbs
     }
   });
-
-  // function next() {
-  //   if (data[mySwiperProduct.realIndex + 1]) {
-  //     mySwiperProduct.slideNext(500)
-  //   } else {
-  //     mySwiperProduct.slideToLoop(0)
-  //   }
-  // }
-  
-  // function prev() {
-  //   if (data[mySwiperProduct.realIndex - 1]) {
-  //     mySwiperProduct.slidePrev(500)
-  //   } else {
-  //     mySwiperProduct.slideToLoop(data.length - 1)
-  //   }
-  // }
-
-  // next();
-  // prev();
-  // mySwiperProduct.on('init', () => {
-  //   if (mySwiperProduct.originalParams.loop && mySwiperProduct.loopedSlides < mySwiperProduct.originalParams.slidesPerView) {
-  //     mySwiperProduct.params.slidesPerView = mySwiperProduct.loopedSlides;
-  //     mySwiperProduct.destroy(false, false);
-  //     mySwiperProduct.init();
-  //     }
-  // })
   
   mySwiperProduct.on('resize', function () {
     mySwiperThumbs.update();
@@ -166,5 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
   lightbox.on('slide_changed', () => {
     mySwiperProduct.slideTo(lightbox.getActiveSlideIndex() + 1);
   })
-});
+
+  });
+
+    
+}
 

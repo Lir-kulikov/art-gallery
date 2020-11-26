@@ -43,7 +43,7 @@
                   </div>
                   <div class="header__action">
                                   <div class="account header__account header__action-item account--theme-dark">
-                                    <button class="account__btn js-account-opener">
+                                    <button class="account__btn js-account-opener" data-modal-open="modal-autorize">
                                                         <svg class="user-icon account__user-icon user-icon--theme-dark">
                                                           <use xlink:href="img/svg/sprite.svg#user"></use>
                                                         </svg><img class="account__avatar" src="img/avatar.png"/><span class="account__name account__name--theme-dark">Александрелло</span>
@@ -531,13 +531,6 @@
           </div>
         </div>
       </div>
-            <div class="modal modal-video" id="modal-video" aria-hidden="true">
-              <div class="modal__overlay" tabindex="-1" data-modal-close="">
-                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                  <button class="modal__close" aria-label="Close modal" data-modal-close=""></button><iframe class="youtube-video" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src-video="https://www.youtube.com/embed/h3RNElMbdUY?autoplay=1"></iframe>
-                </div>
-              </div>
-            </div>
       <footer class="footer">
         <div class="container">
           <div class="footer__top">
@@ -617,6 +610,177 @@
           </div>
         </div>
       </footer>
+            <div class="modal modal-video" id="modal-video" aria-hidden="true">
+              <div class="modal__overlay" tabindex="-1" data-modal-close="modal-video-close">
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="Видео">
+                  <button class="modal-video__close" aria-label="Close modal" data-modal-close="modal-video-close"></button><iframe class="youtube-video" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src-video="https://www.youtube.com/embed/h3RNElMbdUY?autoplay=1"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="modal modal-autorize" id="modal-autorize" aria-hidden="true">
+              <div class="modal__overlay" tabindex="-1" data-modal-close="modal-autorize-close">
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="Авторизация">
+                  <button class="modal__close" aria-label="Close modal" data-modal-close="modal-autorize-close" name="close-modal" type="button"></button>
+                  <div class="modal-autorize__header">
+                    <h2 class="modal-autorize__title title-lg">Авторизация</h2>
+                    <div class="modal__question"><span class="modal__question-text modal__question-text--mobile-hidden">Еще нет аккаунта?</span>
+                      <button class="modal__question-btn dashed js-next-modal" data-da="modal__question--da, 1, 650" type="button" name="registr" data-modal-open="modal-reg">Регистрация</button>
+                    </div>
+                  </div>
+                  <div class="modal-autorize__body">
+                    <div class="modal-autorize__social">
+                      <div class="modal-autorize__social-title">С помощью социальных сетей</div>
+                      <div class="social-large">
+                        <ul class="social-large__list">
+                          <li class="social-large__item"><a class="social-large__link" href="#" target="_blank">
+                              <svg class="social-large__icon">
+                                <use xlink:href="img/svg/sprite.svg#vk"></use>
+                              </svg><span class="social-large__text">VKontakte</span></a></li>
+                          <li class="social-large__item"><a class="social-large__link" href="#" target="_blank">
+                              <svg class="social-large__icon">
+                                <use xlink:href="img/svg/sprite.svg#facebook"></use>
+                              </svg><span class="social-large__text">Facebook</span></a></li>
+                          <li class="social-large__item"><a class="social-large__link" href="#" target="_blank">
+                              <svg class="social-large__icon">
+                                <use xlink:href="img/svg/sprite.svg#odnoklassniki"></use>
+                              </svg><span class="social-large__text">Odnoklassniki</span></a></li>
+                          <li class="social-large__item"><a class="social-large__link" href="#" target="_blank">
+                              <svg class="social-large__icon">
+                                <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                              </svg><span class="social-large__text">Instagram</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <form class="modal-autorize__form form-autorize" method="POST">
+                      <ul class="modal-autorize__list">
+                        <li class="form-autorize__item">
+                          <label class="form-autorize__label modal-label" for="autorize-email">E-mail</label>
+                          <input class="form-autorize__field modal-field" type="email" name="autorize-email" id="autorize-email" required="required"/>
+                        </li>
+                        <li class="form-autorize__item">
+                          <label class="form-autorize__label modal-label" for="autorize-password">Пароль</label>
+                          <input class="form-autorize__field modal-field" type="password" name="autorize-password" id="autorize-password" minlength="6" required="required"/>
+                        </li>
+                      </ul>
+                      <button class="modal-autorize__btn btn-blue js-modal-submit" type="submit" name="autorize-submit">авторизоваться</button>
+                      <div class="modal__question modal__question--da"><span class="modal__question-text modal__question-text--mobile-hidden">Забыли пароль?</span>
+                        <button class="modal__question-btn dashed js-next-modal" type="button" name="restore" data-modal-open="modal-res">Восстановить пароль</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal modal-reg" id="modal-reg" aria-hidden="true">
+              <div class="modal__overlay" tabindex="-1" data-modal-close="modal-reg-close">
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="Регистрация">
+                  <button class="modal__close" aria-label="Close modal" data-modal-close="modal-reg-close" name="close-modal" type="button"></button>
+                  <div class="modal-reg__header">
+                    <h2 class="modal-reg__title title-lg">Регистрация</h2>
+                    <div class="modal-reg__header-row"><span class="modal-reg__header-anons">Это бесплатно и займет не более 3 минут</span>
+                      <div class="modal__question"><span class="modal__question-text">Уже зарегистрированы?</span>
+                        <button class="modal__question-btn dashed js-next-modal" type="button" name="registr" data-modal-open="modal-autorize">Авторизоваться</button>
+                      </div>
+                    </div>
+                  </div>
+                  <form class="modal-reg__body form-reg" method="POST">
+                    <div class="form-reg__body-top">
+                      <div class="form-reg__radio-wrapper">
+                        <label class="radio" for="registr-radio-1">
+                          <input class="radio__input" type="radio" name="registr-radio" id="registr-radio-1" checked="checked"/><span class="radio__box"></span>Я художник
+                        </label>
+                        <label class="radio" for="registr-radio-2">
+                          <input class="radio__input" type="radio" name="registr-radio" id="registr-radio-2"/><span class="radio__box"></span>Я покупатель
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-reg__body-main">
+                      <div class="form-reg__social">
+                        <div class="modal__title-sm">С помощью социальных сетей</div>
+                        <div class="social-large">
+                          <ul class="social-large__list">
+                            <li class="social-large__item"><a class="social-large__link" href="#" target="_blank">
+                                <svg class="social-large__icon">
+                                  <use xlink:href="img/svg/sprite.svg#vk"></use>
+                                </svg><span class="social-large__text">VKontakte</span></a></li>
+                            <li class="social-large__item"><a class="social-large__link" href="#" target="_blank">
+                                <svg class="social-large__icon">
+                                  <use xlink:href="img/svg/sprite.svg#facebook"></use>
+                                </svg><span class="social-large__text">Facebook</span></a></li>
+                            <li class="social-large__item"><a class="social-large__link" href="#" target="_blank">
+                                <svg class="social-large__icon">
+                                  <use xlink:href="img/svg/sprite.svg#odnoklassniki"></use>
+                                </svg><span class="social-large__text">Odnoklassniki</span></a></li>
+                            <li class="social-large__item"><a class="social-large__link" href="#" target="_blank">
+                                <svg class="social-large__icon">
+                                  <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                                </svg><span class="social-large__text">Instagram</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form-reg__fields">
+                        <div class="modal__title-sm modal__title-sm--mobile-hidden">С помощью E-mail</div>
+                        <div class="form-reg__row">
+                          <div class="form-reg__item form-reg__item--on-row">
+                            <label class="form-reg__label modal-label" for="reg-firstname">Имя</label>
+                            <input class="form-reg__field modal-field" type="text" name="reg-firstname" id="reg-firstname" required="required"/>
+                          </div>
+                          <div class="form-reg__item form-reg__item--on-row">
+                            <label class="form-reg__label modal-label" for="reg-lastname">Фамилия</label>
+                            <input class="form-reg__field modal-field" type="text" name="reg-lastname" id="reg-lastname" required="required"/>
+                          </div>
+                        </div>
+                        <div class="form-reg__item">
+                          <label class="form-reg__label modal-label" for="reg-email">E-mail</label>
+                          <input class="form-reg__field modal-field" type="email" name="reg-email" id="reg-email" required="required"/>
+                        </div>
+                        <div class="form-reg__item">
+                          <label class="form-reg__label modal-label" for="reg-password">Пароль</label>
+                          <input class="form-reg__field modal-field" type="password" name="reg-password" id="reg-password" minlength="6" required="required"/>
+                        </div>
+                        <label class="form-reg__check" for="reg-checkbox">
+                          <input class="form-reg__check-input" id="reg-checkbox" name="reg-checkbox" type="checkbox" required="required"/>Я согласен с <span class="form-reg__check-box"></span><a class="dashed form-reg__check-link" href="#" target="_blank">пользовательским соглашением</a>
+                        </label>
+                        <button class="modal-reg__btn btn-blue js-modal-submit" type="submit" name="reg-submit">зарегистрироваться</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="modal modal-res" id="modal-res" aria-hidden="true">
+              <div class="modal__overlay" tabindex="-1" data-modal-close="modal-res-close">
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="Восстановить пароль">
+                  <button class="modal__close" aria-label="Закрыть окно" data-modal-close="modal-res-close" name="close-modal" type="button"></button>
+                  <div class="modal-res__header">
+                    <h2 class="modal-res__title title-lg">Восстановить пароль</h2>
+                  </div>
+                  <form class="modal-res__body form-res" method="POST">
+                    <div class="form-res__item">
+                      <label class="form-res__label modal-label" for="res-email">Введите свой e-mail</label>
+                      <input class="form-res__field modal-field" type="email" name="res-email" id="res-email" required="required"/>
+                    </div>
+                    <button class="modal-res__btn btn-blue js-modal-submit" type="submit" name="res-submit">Восстановить пароль</button>
+                    <div class="modal__question"><span class="modal__question-text">Вспомнили пароль?</span>
+                      <button class="modal__question-btn dashed js-next-modal" type="button" name="res-autorize" data-modal-open="modal-autorize">Авторизоваться</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="modal modal-succes" id="modal-succes" aria-hidden="true">
+              <div class="modal__overlay" tabindex="-1" data-modal-close="modal-succes-close">
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="Успешно">
+                  <button class="modal__close" aria-label="Закрыть окно" data-modal-close="modal-res-close" name="close-modal" type="button"></button>
+                  <div class="modal-succes__header"> 
+                    <h2 class="modal-res__title title-lg">Успех!</h2>
+                  </div>
+                  <div class="modal-succes__body">
+                    <p class="modal-succes__text">Мы отправили на ваш e-mail инструкцию по сбросу пароля</p><img class="modal-succes__img" src="img/succes.png"/>
+                  </div>
+                </div>
+              </div>
+            </div>
       <script src="js/main.js"></script>
     </div>
   </body>

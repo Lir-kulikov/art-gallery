@@ -1,6 +1,148 @@
 mixin modal
   #modal-video.modal.modal-video(aria-hidden='true')
-    .modal__overlay(tabindex='-1' data-modal-close='')
-      .modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
-        button.modal__close(aria-label='Close modal' data-modal-close='')
+    .modal__overlay(tabindex='-1' data-modal-close='modal-video-close')
+      .modal__container(role='dialog' aria-modal='true' aria-labelledby='Видео')
+        button.modal-video__close(aria-label='Close modal' data-modal-close='modal-video-close')
         <iframe class="youtube-video" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src-video="https://www.youtube.com/embed/h3RNElMbdUY?autoplay=1"></iframe>
+
+  #modal-autorize.modal.modal-autorize(aria-hidden='true')
+    .modal__overlay(tabindex='-1' data-modal-close='modal-autorize-close')
+      .modal__container(role='dialog' aria-modal='true' aria-labelledby='Авторизация')
+        button.modal__close(aria-label='Close modal' data-modal-close='modal-autorize-close' name="close-modal" type="button")
+        .modal-autorize__header
+          h2.modal-autorize__title.title-lg Авторизация
+          .modal__question
+            span.modal__question-text.modal__question-text--mobile-hidden Еще нет аккаунта?
+            button.modal__question-btn.dashed.js-next-modal(data-da="modal__question--da, 1, 650" type="button" name="registr" data-modal-open="modal-reg") Регистрация
+        .modal-autorize__body
+          .modal-autorize__social
+            .modal-autorize__social-title С помощью социальных сетей
+            .social-large
+              ul.social-large__list
+                li.social-large__item
+                  a.social-large__link(href="#" target="_blank")
+                    svg.social-large__icon
+                      use(xlink:href="img/svg/sprite.svg#vk")
+                    span.social-large__text VKontakte
+                li.social-large__item
+                  a.social-large__link(href="#" target="_blank")
+                    svg.social-large__icon
+                      use(xlink:href="img/svg/sprite.svg#facebook")
+                    span.social-large__text Facebook
+                li.social-large__item
+                  a.social-large__link(href="#" target="_blank")
+                    svg.social-large__icon
+                      use(xlink:href="img/svg/sprite.svg#odnoklassniki")
+                    span.social-large__text Odnoklassniki
+                li.social-large__item
+                  a.social-large__link(href="#" target="_blank")
+                    svg.social-large__icon
+                      use(xlink:href="img/svg/sprite.svg#instagram")
+                    span.social-large__text Instagram
+          form.modal-autorize__form.form-autorize(method="POST")
+            ul.modal-autorize__list
+              li.form-autorize__item
+                label.form-autorize__label.modal-label(for="autorize-email") E-mail
+                input.form-autorize__field.modal-field(type="email" name="autorize-email" id="autorize-email" required)
+              li.form-autorize__item
+                label.form-autorize__label.modal-label(for="autorize-password") Пароль
+                input.form-autorize__field.modal-field(type="password" name="autorize-password" id="autorize-password" minlength="6" required)
+            button.modal-autorize__btn.btn-blue.js-modal-submit(type="submit" name="autorize-submit") авторизоваться
+            .modal__question.modal__question--da
+              span.modal__question-text.modal__question-text--mobile-hidden Забыли пароль?
+              button.modal__question-btn.dashed.js-next-modal(type="button" name="restore" data-modal-open="modal-res") Восстановить пароль
+  #modal-reg.modal.modal-reg(aria-hidden='true')
+    .modal__overlay(tabindex='-1' data-modal-close='modal-reg-close')
+      .modal__container(role='dialog' aria-modal='true' aria-labelledby='Регистрация')
+        button.modal__close(aria-label='Close modal' data-modal-close='modal-reg-close' name="close-modal" type="button")
+        .modal-reg__header
+          h2.modal-reg__title.title-lg Регистрация
+          .modal-reg__header-row
+            span.modal-reg__header-anons Это бесплатно и займет не более 3 минут
+            .modal__question
+              span.modal__question-text Уже зарегистрированы?
+              button.modal__question-btn.dashed.js-next-modal(type="button" name="registr" data-modal-open="modal-autorize") Авторизоваться
+        form.modal-reg__body.form-reg(method="POST")
+          .form-reg__body-top
+            .form-reg__radio-wrapper
+              label.radio(for="registr-radio-1")
+                input.radio__input(type="radio" name="registr-radio" id="registr-radio-1" checked)
+                span.radio__box
+                | Я художник
+              label.radio(for="registr-radio-2")
+                input.radio__input(type="radio" name="registr-radio" id="registr-radio-2")
+                span.radio__box
+                | Я покупатель
+          .form-reg__body-main
+            .form-reg__social
+              .modal__title-sm С помощью социальных сетей
+              .social-large
+                ul.social-large__list
+                  li.social-large__item
+                    a.social-large__link(href="#" target="_blank")
+                      svg.social-large__icon
+                        use(xlink:href="img/svg/sprite.svg#vk")
+                      span.social-large__text VKontakte
+                  li.social-large__item
+                    a.social-large__link(href="#" target="_blank")
+                      svg.social-large__icon
+                        use(xlink:href="img/svg/sprite.svg#facebook")
+                      span.social-large__text Facebook
+                  li.social-large__item
+                    a.social-large__link(href="#" target="_blank")
+                      svg.social-large__icon
+                        use(xlink:href="img/svg/sprite.svg#odnoklassniki")
+                      span.social-large__text Odnoklassniki
+                  li.social-large__item
+                    a.social-large__link(href="#" target="_blank")
+                      svg.social-large__icon
+                        use(xlink:href="img/svg/sprite.svg#instagram")
+                      span.social-large__text Instagram
+            .form-reg__fields
+              .modal__title-sm.modal__title-sm--mobile-hidden С помощью E-mail
+              .form-reg__row
+                .form-reg__item.form-reg__item--on-row
+                  label.form-reg__label.modal-label(for="reg-firstname") Имя
+                  input.form-reg__field.modal-field(type="text" name="reg-firstname" id="reg-firstname" required)
+                .form-reg__item.form-reg__item--on-row
+                  label.form-reg__label.modal-label(for="reg-lastname") Фамилия
+                  input.form-reg__field.modal-field(type="text" name="reg-lastname" id="reg-lastname" required)
+              .form-reg__item
+                label.form-reg__label.modal-label(for="reg-email") E-mail
+                input.form-reg__field.modal-field(type="email" name="reg-email" id="reg-email" required)
+              .form-reg__item
+                label.form-reg__label.modal-label(for="reg-password") Пароль
+                input.form-reg__field.modal-field(type="password" name="reg-password" id="reg-password" minlength="6" required)
+              label.form-reg__check(for="reg-checkbox")
+                input.form-reg__check-input(id="reg-checkbox" name="reg-checkbox" type="checkbox" required)
+                | Я согласен с 
+                span.form-reg__check-box
+                a.dashed.form-reg__check-link(href="#" target="_blank") пользовательским соглашением
+              button.modal-reg__btn.btn-blue.js-modal-submit(type="submit" name="reg-submit") зарегистрироваться
+  #modal-res.modal.modal-res(aria-hidden='true')
+    .modal__overlay(tabindex='-1' data-modal-close='modal-res-close')
+      .modal__container(role='dialog' aria-modal='true' aria-labelledby='Восстановить пароль')
+        button.modal__close(aria-label='Закрыть окно' data-modal-close='modal-res-close' name="close-modal" type="button")
+        .modal-res__header
+          h2.modal-res__title.title-lg Восстановить пароль
+        form.modal-res__body.form-res(method="POST")
+          .form-res__item
+            label.form-res__label.modal-label(for="res-email") Введите свой e-mail
+            input.form-res__field.modal-field(type="email" name="res-email" id="res-email" required)
+          button.modal-res__btn.btn-blue.js-modal-submit(type="submit" name="res-submit") Восстановить пароль
+          .modal__question
+            span.modal__question-text Вспомнили пароль?
+            button.modal__question-btn.dashed.js-next-modal(type="button" name="res-autorize" data-modal-open="modal-autorize") Авторизоваться
+  #modal-succes.modal.modal-succes(aria-hidden='true')
+    .modal__overlay(tabindex='-1' data-modal-close='modal-succes-close')
+      .modal__container(role='dialog' aria-modal='true' aria-labelledby='Успешно')
+        button.modal__close(aria-label='Закрыть окно' data-modal-close='modal-res-close' name="close-modal" type="button")
+        .modal-succes__header 
+          h2.modal-res__title.title-lg Успех!
+        .modal-succes__body
+          p.modal-succes__text Мы отправили на ваш e-mail инструкцию по сбросу пароля
+          img.modal-succes__img(src="img/succes.png")
+          
+
+
+
