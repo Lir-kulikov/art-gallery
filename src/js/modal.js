@@ -9,7 +9,7 @@ MicroModal.init({
   disableScroll: true,
   disableFocus: false,
   awaitCloseAnimation: true,
-  //awaitOpenAnimation: true,
+  awaitOpenAnimation: true,
   debugMode: true,
 });
 
@@ -49,5 +49,3 @@ for (let item of triggerNextModal) {
     item.closest('.modal').classList.remove('is-open');
   })
 }
-
-

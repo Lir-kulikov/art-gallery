@@ -1,24 +1,45 @@
 mixin account(ClassName, mod)
   .account(class= ClassName + " " + "account" + "--" + mod)
-    button.account__btn.js-account-opener(data-modal-open="modal-autorize")
-      include ../user-icon/user-icon
-      +user-icon('account__user-icon')
-      img.account__avatar(src="img/avatar.png")
-      span.account__name(class= "account__name--" + mod) Александрелло
-    .account__drop.js-account-drop
-      ul.account__menu-group
-        li.account__menu-item
-          a.account__menu-link(href="#") Мой профиль
-        li.account__menu-item
-          a.account__menu-link(href="#") Мои заказы
-        li.account__menu-item
-          a.account__menu-link(href="#") Сообщения
-      ul.account__menu-group
-        li.account__menu-item
-          a.account__menu-link(href="#") Настройки профиля
-        li.account__menu-item
-          a.account__menu-link(href="#") Мои работы
-      button.account__btn-close
-        include ../logout-icon/logout-icon
-        +logout-icon('account__logout-icon')
-        | Выйти
+    if pageTheme == 'theme-light'
+      button.account__btn.js-account-opener
+        include ../user-icon/user-icon
+        +user-icon('account__user-icon')
+        span.account__name(class= "account__name--" + mod) Александрелло
+      .account__drop.js-account-drop
+        ul.account__menu-group
+          li.account__menu-item
+            a.account__menu-link(href="#") Мой профиль
+          li.account__menu-item
+            a.account__menu-link(href="#") Мои заказы
+          li.account__menu-item
+            a.account__menu-link(href="#") Сообщения
+        ul.account__menu-group
+          li.account__menu-item
+            a.account__menu-link(href="#") Настройки профиля
+          li.account__menu-item
+            a.account__menu-link(href="#") Мои работы
+        button.account__btn-close
+          include ../logout-icon/logout-icon
+          +logout-icon('account__logout-icon')
+          | Выйти
+    if pageTheme == 'theme-dark'
+      button.account__btn(data-modal-open="modal-autorize")
+        img.account__avatar(src="img/avatar.png")
+        span.account__name(class= "account__name--" + mod) Александрелло
+      .account__drop.js-account-drop
+        ul.account__menu-group
+          li.account__menu-item
+            a.account__menu-link(href="#") Мой профиль
+          li.account__menu-item
+            a.account__menu-link(href="#") Мои заказы
+          li.account__menu-item
+            a.account__menu-link(href="#") Сообщения
+        ul.account__menu-group
+          li.account__menu-item
+            a.account__menu-link(href="#") Настройки профиля
+          li.account__menu-item
+            a.account__menu-link(href="#") Мои работы
+        button.account__btn-close
+          include ../logout-icon/logout-icon
+          +logout-icon('account__logout-icon')
+          | Выйти

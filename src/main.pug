@@ -1,0 +1,12 @@
+extends partials/layout.pug
+block vars
+  -var title='Главная'
+  -var description = 'Картины!'
+  -var pageClass = 'page-index'
+  -var pageTheme = 'theme-dark'
+block content
+  include blocks/hero/hero
+  include blocks/start/start
+  include blocks/new-works/new-works
+  include blocks/style-review/style-review
+  include blocks/news/news

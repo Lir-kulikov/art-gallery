@@ -4,26 +4,26 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="#{description}"/>
-    <title>ArtGallery - Каталог</title>
+    <title>ArtGallery - Главная</title>
     <link rel="stylesheet" href="css/main.min.css"/>
   </head>
-  <body class="page-catalog">
+  <body class="page-index">
     <div class="overflow-limiter">
-            <header class="header page-catalog__header header--theme-light">
+            <header class="header page-index__header header--theme-dark">
               <div class="container">
                 <div class="header__inner">
-                  <div class="header__left"><a class="logo__link header__logo logo--theme-light" href="index.html">
+                  <div class="header__left"><a class="logo__link header__logo logo--theme-dark" href="index.html">
                                     <picture class="logo header__logo">
-                                      <source srcset="img/AG.png" media="(max-width: 767px)"/><img src="img/logo-black.png" alt="logo"/>
+                                      <source srcset="img/AG.png" media="(max-width: 767px)"/><img src="img/logo.png" alt="logo"/>
                                     </picture></a>
-                                  <nav class="nav page-catalog__header nav--theme-light">
+                                  <nav class="nav page-index__header nav--theme-dark">
                                                     <button class="burger nav__burger js-burger"><span class="burger__line"></span></button>
                                     <ul class="nav__list">
-                                      <li class="nav__item" data-da="nav__drop-list, 0, 1023.7"><a class="nav__link nav__link--theme-light" href="catalog.html">Каталог</a></li>
-                                      <li class="nav__item" data-da="nav__drop-list, 0, 1023.8"><a class="nav__link nav__link--theme-light" href="#">Художникам</a></li>
-                                      <li class="nav__item" data-da="nav__drop-list, 0, 1023.9"><a class="nav__link nav__link--theme-light" href="#">Блог</a></li>
-                                      <li class="nav__item nav__item--more"><a class="nav__link nav__link--drop nav__link--theme-light" href="#">Ещё
-                                                                <svg class="dropdown-icon nav__dropdown-icon dropdown-icon--theme-light">
+                                      <li class="nav__item" data-da="nav__drop-list, 0, 1023.7"><a class="nav__link nav__link--theme-dark" href="catalog.html">Каталог</a></li>
+                                      <li class="nav__item" data-da="nav__drop-list, 0, 1023.8"><a class="nav__link nav__link--theme-dark" href="#">Художникам</a></li>
+                                      <li class="nav__item" data-da="nav__drop-list, 0, 1023.9"><a class="nav__link nav__link--theme-dark" href="#">Блог</a></li>
+                                      <li class="nav__item nav__item--more"><a class="nav__link nav__link--drop nav__link--theme-dark" href="#">Ещё
+                                                                <svg class="dropdown-icon nav__dropdown-icon dropdown-icon--theme-dark">
                                                                   <use xlink:href="img/svg/sprite.svg#dropdown"></use>
                                                                 </svg></a>
                                         <div class="nav__drop js-drop">
@@ -42,12 +42,8 @@
                                   </nav>
                   </div>
                   <div class="header__action">
-                                  <div class="account header__account header__action-item account--theme-light">
-                                    <button class="account__btn js-account-opener">
-                                                        <svg class="user-icon account__user-icon user-icon--theme-light">
-                                                          <use xlink:href="img/svg/sprite.svg#user"></use>
-                                                        </svg><span class="account__name account__name--theme-light">Александрелло</span>
-                                    </button>
+                                  <div class="account header__account header__action-item account--theme-dark">
+                                    <button class="account__btn" data-modal-open="modal-autorize"><img class="account__avatar" src="img/avatar.png"/><span class="account__name account__name--theme-dark">Александрелло</span></button>
                                     <div class="account__drop js-account-drop">
                                       <ul class="account__menu-group">
                                         <li class="account__menu-item"><a class="account__menu-link" href="#">Мой профиль</a></li>
@@ -66,18 +62,18 @@
                                     </div>
                                   </div>
                     <button class="header__wishlist header__action-item">
-                                      <svg class="heart-icon header__heart-icon heart-icon--theme-light">
+                                      <svg class="heart-icon header__heart-icon heart-icon--theme-dark">
                                         <use xlink:href="img/svg/sprite.svg#heart"></use>
                                       </svg><span class="header__heart-icon-counter">85</span>
                     </button>
                     <button class="header__basket header__action-item">
-                                      <svg class="basket-icon header__basket-icon basket-icon--theme-light">
+                                      <svg class="basket-icon header__basket-icon basket-icon--theme-dark">
                                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                                       </svg><span class="header__basket-icon-counter">23</span>
                     </button>
                                   <div class="search header__search header__action-item">
                                     <button class="search__icon js-search-opener">
-                                                        <svg class="search-icon search__search-icon search-icon--theme-light">
+                                                        <svg class="search-icon search__search-icon search-icon--theme-dark">
                                                           <use xlink:href="img/svg/sprite.svg#search"></use>
                                                         </svg>
                                     </button>
@@ -90,14 +86,14 @@
                                           </svg>
                                         </button>
                                         <button class="search__btn">
-                                                            <svg class="search-icon search__search-icon search-icon--theme-light">
+                                                            <svg class="search-icon search__search-icon search-icon--theme-dark">
                                                               <use xlink:href="img/svg/sprite.svg#search"></use>
                                                             </svg>
                                         </button>
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="lang header__lang header__action-item lang--theme-light">
+                                  <div class="lang header__lang header__action-item lang--theme-dark">
                                     <button class="lang__btn js-lang-opener">RU</button>
                                     <div class="lang__drop js-lang-drop"><a class="lang__link" href="#">EN</a></div>
                                   </div>
@@ -105,348 +101,65 @@
                 </div>
               </div>
             </header>
-      <div class="catalog__top-img-wrapper">
-        <div class="catalog__top-img lax" data-lax-translate-y="0 0, 500 150">
-          <h2 class="catalog__title title-lg">Каталог картин</h2>
-        </div>
-      </div>
-            <div class="breadcrumbs catalog__breadcrumbs">
+      <section class="hero">
+        <div class="swiper-container-hero hero__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide hero__slide" style="background-image: url(img/hero-slide-1.jpg);">
               <div class="container">
-                <div class="breadcrumbs__inner"><a class="breadcrumbs__back" href="index.html">
-                                  <svg class="long-arrow-icon breadcrumbs__long-arrow-icon">
-                                    <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
-                                  </svg>Назад</a>
-                  <div class="breadcrumbs__nav"><a class="breadcrumbs__link" href="#"></a><a class="breadcrumbs__link" href="#"></a><a class="breadcrumbs__link breadcrumbs__link--current"></a></div>
+                <div class="hero__body">
+                  <p class="hero__subtitle">Новое на этой неделе</p>
+                  <div class="hero__title">Лучшие фигуративные произведения</div>
+                  <p class="hero__text">Новые оригинальные работы, выбранные нашим эспертом</p><a class="hero__btn" href="#">Открыть</a>
                 </div>
               </div>
             </div>
-            <form class="filter js-filter-form catalog__filter" action="" name="filter">
+            <div class="swiper-slide hero__slide" style="background-image: url(img/hero-slide-2.jpg);">
               <div class="container">
-                <div class="filter__header js-filter-header">
-                              <svg class="settings-icon filter__settings-icon">
-                                <use xlink:href="img/svg/sprite.svg#settings"></use>
-                              </svg>Фильтр
-                              <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                              </svg>
+                <div class="hero__body">
+                  <p class="hero__subtitle">Новое на этой неделе</p>
+                  <div class="hero__title">Лучшие фигуративные произведения</div>
+                  <p class="hero__text">Новые оригинальные работы, выбранные нашим эспертом</p><a class="hero__btn" href="#">Открыть</a>
                 </div>
               </div>
-              <div class="filter__main js-filter-main">
-                <div class="container">
-                  <div class="filter__main-inner">
-                    <div class="filter__item ui-slider ui-slider--type-price">
-                      <div class="ui-slider__range-wrapper"><span class="filter__item-title filter__item-title--tablet-top" data-tablet-text="Цена">Цена</span>
-                        <div class="ui-slider__range js-ui-slider-price" data-min="0" data-max="99999">
-                          <div class="ui-slider__fields">
-                            <input class="ui-slider__field js-slider-price-value" type="number" name="first-price-value"/><span class="ui-slider__field-separator"></span>
-                            <input class="ui-slider__field js-slider-price-value" type="number" name="second-price-value"/>
-                          </div><span class="ui-slider__min js-ui-slider-min"></span><span class="ui-slider__max js-ui-slider-max">max</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="filter__item ui-slider ui-slider--type-size"><span class="filter__item-title">Размер</span>
-                      <div class="ui-slider__range js-ui-slider-size" data-steps="S, M, L, XL, XXL"></div>
-                      <input class="ui-slider__size-value js-slider-size-value" type="number" name="first-size-value"/>
-                      <input class="ui-slider__size-value js-slider-size-value" type="number" name="second-size-value"/>
-                    </div>
-                    <div class="filter__item filter__type">
-                      <div class="filter__item-title">Ориентация</div>
-                      <div class="filter__checkbox-wrapper">
-                        <div class="filter__checkbox">
-                          <input class="filter__checkbox-input" type="checkbox" id="filter-checkbox-square" name="filter-checkbox-type"/>
-                          <label class="filter__checkbox-label" for="filter-checkbox-square"></label>
-                        </div>
-                        <div class="filter__checkbox">
-                          <input class="filter__checkbox-input" type="checkbox" id="filter-checkbox-vertical" name="filter-checkbox-type"/>
-                          <label class="filter__checkbox-label" for="filter-checkbox-vertical"></label>
-                        </div>
-                        <div class="filter__checkbox">
-                          <input class="filter__checkbox-input" type="checkbox" id="filter-checkbox-horizontal" name="filter-checkbox-type"/>
-                          <label class="filter__checkbox-label" for="filter-checkbox-horizontal"></label>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="filter__btn filter__item js-filter-reset" type="button" name="btn-reset">Сбросить фильтр
-                                      <svg class="reset-icon filter__reset-icon">
-                                        <use xlink:href="img/svg/sprite.svg#reset"></use>
-                                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="filter__more js-filter-more">
-                <div class="filter__btn-wrapper">
-                  <button class="filter__btn filter__btn--show js-filter-show-btn" data-value="Свернуть фильтр" type="button"><span>Показать фильтр</span>
-                                <svg class="dropdown-icon undefined dropdown-icon--undefined">
-                                  <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                </svg>
-                  </button>
-                </div>
-                <div class="filter__tabs js-show-filters">
-                  <div class="container">
-                    <div class="filter__tabs-nav">
-                      <ul class="filter__tabs-nav-list">
-                        <li class="filter__tabs-nav-item js-tab-nav is-active" data-tab-name="js-tab-1">Автор
-                                      <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                        <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                      </svg>
-                        </li>
-                        <li class="filter__tabs-nav-item js-tab-nav" data-tab-name="js-tab-2">Жанр
-                                      <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                        <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                      </svg>
-                        </li>
-                        <li class="filter__tabs-nav-item js-tab-nav" data-tab-name="js-tab-3">Цвет
-                                      <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                        <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                      </svg>
-                        </li>
-                        <li class="filter__tabs-nav-item js-tab-nav" data-tab-name="js-tab-4">Тема
-                                      <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                        <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                      </svg>
-                        </li>
-                        <li class="filter__tabs-nav-item js-tab-nav" data-tab-name="js-tab-5">Материал
-                                      <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                        <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                      </svg>
-                        </li>
-                        <li class="filter__tabs-nav-item js-tab-nav" data-tab-name="js-tab-6">Стиль
-                                      <svg class="dropdown-icon filter__dropdown-icon dropdown-icon--undefined">
-                                        <use xlink:href="img/svg/sprite.svg#dropdown"></use>
-                                      </svg>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="filter__tabs-content">
-                    <div class="container container--mobile-hidden">
-                      <div class="filter__tab js-tab js-tab-1 is-active">
-                        <div class="filter__accordion-header js-accordion-header">Автор</div>
-                        <div class="filter__author filter__tab-body">
-                          <div class="filter__tab-body-inner">
-                            <div class="filter__author-select-wrapper"> <span class="filter__author-text" data-mobile-text="Начните вводить имя или фамилию">Начните вводить имя или фамилию автора</span>
-                              <select class="filter__author-select" id="js-filter-select" multiple="multiple">
-                                <optgroup class="filter__author-select-group" label="А">
-                                  <option class="filter__author-select-opt">Абулафия Крайнова</option>
-                                  <option class="filter__author-select-opt">Арменинов Тримедул</option>
-                                  <option class="filter__author-select-opt">Асадуллин Нефедов</option>
-                                  <option class="filter__author-select-opt">Абулафия Крайнова</option>
-                                </optgroup>
-                                <optgroup class="filter__author-select-group" label="Б">
-                                  <option class="filter__author-select-opt">Бабурин Константин</option>
-                                  <option class="filter__author-select-opt">Бабуркин Вениамин</option>
-                                  <option class="filter__author-select-opt">Бердюгин Бетюг</option>
-                                  <option class="filter__author-select-opt">Бенвенист Трамп</option>
-                                </optgroup>
-                                <optgroup class="filter__author-select-group" label="В">
-                                  <option class="filter__author-select-opt">Вабурин Константин</option>
-                                  <option class="filter__author-select-opt">Вабуркин Вениамин</option>
-                                  <option class="filter__author-select-opt">Вердюгин Бетюг</option>
-                                  <option class="filter__author-select-opt">Венвенист Трамп</option>
-                                </optgroup>
-                              </select>
-                            </div>
-                            <div class="filter__author-autocomplete js-autocomplete"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filter__tab js-tab js-tab-2">
-                        <div class="filter__accordion-header js-accordion-header">Жанр</div>
-                        <div class="filter__style filter__tab-body">
-                          <div class="filter__tab-body-inner">
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Первый" name="filter-genre"/>
-                              <label class="filter__style-label" for="Первый">Первый</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Второй" name="filter-genre"/>
-                              <label class="filter__style-label" for="Второй">Второй</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Третий" name="filter-genre"/>
-                              <label class="filter__style-label" for="Третий">Третий</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Четвертый" name="filter-genre"/>
-                              <label class="filter__style-label" for="Четвертый">Четвертый</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Пятый" name="filter-genre"/>
-                              <label class="filter__style-label" for="Пятый">Пятый</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Шестой" name="filter-genre"/>
-                              <label class="filter__style-label" for="Шестой">Шестой</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filter__tab js-tab js-tab-3">
-                        <div class="filter__accordion-header js-accordion-header">Цвет</div>
-                        <div class="filter__style filter__tab-body">
-                          <div class="filter__tab-body-inner">
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="radio" id="синий" name="filter-color"/>
-                              <label class="filter__style-label" for="синий">синий</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="radio" id="желтый" name="filter-color"/>
-                              <label class="filter__style-label" for="желтый">желтый</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="radio" id="серый" name="filter-color"/>
-                              <label class="filter__style-label" for="серый">серый</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filter__tab js-tab js-tab-4">
-                        <div class="filter__accordion-header js-accordion-header">Тема</div>
-                        <div class="filter__style filter__tab-body">
-                          <div class="filter__tab-body-inner">
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="radio" id="Погода" name="filter-theme"/>
-                              <label class="filter__style-label" for="Погода">Погода</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="radio" id="Вода" name="filter-theme"/>
-                              <label class="filter__style-label" for="Вода">Вода</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="radio" id="Люди" name="filter-theme"/>
-                              <label class="filter__style-label" for="Люди">Люди</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filter__tab js-tab js-tab-5">
-                        <div class="filter__accordion-header js-accordion-header">Материал</div>
-                        <div class="filter__style filter__tab-body">
-                          <div class="filter__tab-body-inner">
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="radio" id="красный" name="filter-material"/>
-                              <label class="filter__style-label" for="красный">красный</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="radio" id="черный" name="filter-material"/>
-                              <label class="filter__style-label" for="черный">черный</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="radio" id="белый" name="filter-material"/>
-                              <label class="filter__style-label" for="белый">белый</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filter__tab js-tab js-tab-6">
-                        <div class="filter__accordion-header js-accordion-header">Стиль</div>
-                        <div class="filter__style filter__tab-body">
-                          <div class="filter__tab-body-inner">
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Вортицизм" name="filter-style"/>
-                              <label class="filter__style-label" for="Вортицизм">Вортицизм</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Модернизм" name="filter-style"/>
-                              <label class="filter__style-label" for="Модернизм">Модернизм</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Авангардизм" name="filter-style"/>
-                              <label class="filter__style-label" for="Авангардизм">Авангардизм</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Реализм" name="filter-style"/>
-                              <label class="filter__style-label" for="Реализм">Реализм</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Конструктивизм" name="filter-style"/>
-                              <label class="filter__style-label" for="Конструктивизм">Конструктивизм</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Готика" name="filter-style"/>
-                              <label class="filter__style-label" for="Готика">Готика</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Классицизм" name="filter-style"/>
-                              <label class="filter__style-label" for="Классицизм">Классицизм</label>
-                            </div>
-                            <div class="filter__style-tag">
-                              <input class="filter__style-input js-filter-style-input" type="checkbox" id="Поп-арт" name="filter-style"/>
-                              <label class="filter__style-label" for="Поп-арт">Поп-арт</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="filter__btn filter__submit" type="submit">Показать картины</button>
-              </div>
-            </form>
-            <section class="filter-cards catalog__filter-cards">
+            </div>
+            <div class="swiper-slide hero__slide" style="background-image: url(img/hero-slide-1.jpg);">
               <div class="container">
-                <div class="filter-cards__header">
-                  <h2 class="filter-cards__title">Популярные фильтры</h2>
-                              <div class="section-line filter-cards__section-line"></div>
-                  <div class="filter-cards__slider-btns" data-da="swiper-container-filter,1,767">
-                                  <button class="slider-btn slider-btn--left js-swiper-filter-prev">
-                                    <svg class="slider-btn__icon">
-                                      <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-                                    </svg>
-                                  </button>
-                                  <button class="slider-btn slider-btn--right js-swiper-filter-next">
-                                    <svg class="slider-btn__icon">
-                                      <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-                                    </svg>
-                                  </button>
-                  </div>
-                </div>
-                <div class="filter-cards__slider swiper-container-filter">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a class="genre-card" href="#">
-                                        <div class="genre-card__img" style="background-image: url(../img/filter-1.png)"></div>
-                                        <div class="genre-card__title">Барроко</div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="genre-card" href="#">
-                                        <div class="genre-card__img" style="background-image: url(../img/filter-2.png)"></div>
-                                        <div class="genre-card__title">Живопись</div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="genre-card" href="#">
-                                        <div class="genre-card__img" style="background-image: url(../img/filter-3.png)"></div>
-                                        <div class="genre-card__title">Пейзаж</div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="genre-card" href="#">
-                                        <div class="genre-card__img" style="background-image: url(../img/filter-4.png)"></div>
-                                        <div class="genre-card__title">Поп-арт</div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="genre-card" href="#">
-                                        <div class="genre-card__img" style="background-image: url(../img/filter-5.png)"></div>
-                                        <div class="genre-card__title">Модерн</div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="genre-card" href="#">
-                                        <div class="genre-card__img" style="background-image: url(../img/filter-2.png)"></div>
-                                        <div class="genre-card__title">Живопись</div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="genre-card" href="#">
-                                        <div class="genre-card__img" style="background-image: url(../img/filter-3.png)"></div>
-                                        <div class="genre-card__title">Пейзаж</div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="genre-card" href="#">
-                                        <div class="genre-card__img" style="background-image: url(../img/filter-4.png)"></div>
-                                        <div class="genre-card__title">Поп-арт</div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="genre-card" href="#">
-                                        <div class="genre-card__img" style="background-image: url(../img/filter-5.png)"></div>
-                                        <div class="genre-card__title">Модерн</div></a>
-                    </div>
-                  </div>
+                <div class="hero__body">
+                  <p class="hero__subtitle">Новое на этой неделе</p>
+                  <div class="hero__title">Лучшие фигуративные произведения</div>
+                  <p class="hero__text">Новые оригинальные работы, выбранные нашим эспертом</p><a class="hero__btn" href="#">Открыть</a>
                 </div>
               </div>
-            </section>
-      <div class="catalog__product-cards">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="start">
         <div class="container">
-                    <div class="sort catalog__sort">
+          <div class="start__title title-lg">Не знаете с чего начать?</div>
+        </div>
+                <div class="section-line"></div>
+        <div class="container">
+          <div class="start__row">
+                        <div class="video-start start__video" data-modal-open="modal-video"><img class="video-start__img" src="img/video-start.jpg"/>
+                          <button class="video-start__btn">
+                            <svg class="icon icon-play ">
+                              <use xlink:href="img/svg/sprite.svg#play"></use>
+                            </svg>
+                          </button>
+                          <div class="video-start__overlay">
+                            <h3 class="video-start__title">Видеобзор нашего ресурса возможности для пользователя</h3>
+                          </div>
+                        </div>
+                        <div class="article-card start__card"><a class="article-card__img-link" href="#"><img class="article-card__img" src="img/start-card.jpg"/></a><a class="article-card__category" href="#">Выбор экспертов</a><a class="article-card__title" href="#">Обзор нашего экспетра Элеоноры Рубинштейн-Загорской</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="new-works">
+        <div class="container new-works__wrapper">
+          <h2 class="new-works__title title-lg">Новые работы</h2>
+                    <div class="sort new-works__sort">
                       <label class="sort__label">Сортировать по</label>
                       <select class="sort__select" id="choices-sort">
                         <option value="Дате добавления"></option>
@@ -454,7 +167,10 @@
                         <option value="Популярности"></option>
                       </select>
                     </div>
-                    <div class="grid-masonry catalog__grid-masonry js-gallery">
+        </div>
+                <div class="section-line new-works__section-line"></div>
+        <div class="container">
+                    <div class="grid-masonry new-works__grid-masonry js-gallery-fixed">
                       <div class="grid-masonry__item-sizer js-sizer"></div>
                       <div class="grid-masonry__item-gutter js-gutter"></div>
                                   <div class="masonry-fixed-card grid-masonry__item-fixed-card">
@@ -606,7 +322,209 @@
                                     </div>
                                   </div>
                     </div>
-          <button class="catalog__product-btn btn">Показать ещё</button>
+          <button class="new-works__btn btn">Смотреть все</button>
+        </div>
+      </section>
+      <section class="style-review">
+        <div class="container style-review__wrapper">
+          <h2 class="style-review__title title-lg">Обзор стилей</h2>
+          <div class="style-review__slider-buttons">
+                        <button class="slider-btn slider-btn--left style-review__slider-btn js-swiper-style-review-prev">
+                          <svg class="slider-btn__icon">
+                            <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+                          </svg>
+                        </button>
+                        <button class="slider-btn slider-btn--right style-review__slider-btn js-swiper-style-review-next">
+                          <svg class="slider-btn__icon">
+                            <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </button>
+          </div>
+        </div>
+                <div class="section-line style-review__section-line"></div>
+        <div class="container">
+          <div class="style-review__slider swiper-container-style-review">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide style-review__slide">
+                <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-1.jpg"/>
+                                      <div class="style-card__overlay">
+                                        <div class="style-card__title">Современное НЮ</div>
+                                        <div class="style-card__category">Новое изобразительное искусство</div>
+                                      </div></a>
+                </div>
+                <div class="style-review__slide-row">
+                  <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-2.jpg"/>
+                                        <div class="style-card__overlay">
+                                          <div class="style-card__title">Вдохновение Уорхолом</div>
+                                          <div class="style-card__category">Новый Поп Арт</div>
+                                        </div></a>
+                  </div>
+                  <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-3.jpg"/>
+                                        <div class="style-card__overlay">
+                                          <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                          <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                        </div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide style-review__slide">
+                <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-4.jpg"/>
+                                      <div class="style-card__overlay">
+                                        <div class="style-card__title">Современное НЮ</div>
+                                        <div class="style-card__category">Новое изобразительное искусство</div>
+                                      </div></a>
+                </div>
+                <div class="style-review__slide-row">
+                  <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-5.jpg"/>
+                                        <div class="style-card__overlay">
+                                          <div class="style-card__title">Вдохновение Уорхолом</div>
+                                          <div class="style-card__category">Новый Поп Арт</div>
+                                        </div></a>
+                  </div>
+                  <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-6.jpg"/>
+                                        <div class="style-card__overlay">
+                                          <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                          <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                        </div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide style-review__slide">
+                <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-1.jpg"/>
+                                      <div class="style-card__overlay">
+                                        <div class="style-card__title">Современное НЮ</div>
+                                        <div class="style-card__category">Новое изобразительное искусство</div>
+                                      </div></a>
+                </div>
+                <div class="style-review__slide-row">
+                  <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-2.jpg"/>
+                                        <div class="style-card__overlay">
+                                          <div class="style-card__title">Вдохновение Уорхолом</div>
+                                          <div class="style-card__category">Новый Поп Арт</div>
+                                        </div></a>
+                  </div>
+                  <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-3.jpg"/>
+                                        <div class="style-card__overlay">
+                                          <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                          <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                        </div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide style-review__slide">
+                <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-1.jpg"/>
+                                      <div class="style-card__overlay">
+                                        <div class="style-card__title">Современное НЮ</div>
+                                        <div class="style-card__category">Новое изобразительное искусство</div>
+                                      </div></a>
+                </div>
+                <div class="style-review__slide-row">
+                  <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-2.jpg"/>
+                                        <div class="style-card__overlay">
+                                          <div class="style-card__title">Вдохновение Уорхолом</div>
+                                          <div class="style-card__category">Новый Поп Арт</div>
+                                        </div></a>
+                  </div>
+                  <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-3.jpg"/>
+                                        <div class="style-card__overlay">
+                                          <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                          <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                        </div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide style-review__slide">
+                <div class="style-review__slide-row"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-1.jpg"/>
+                                      <div class="style-card__overlay">
+                                        <div class="style-card__title">Современное НЮ</div>
+                                        <div class="style-card__category">Новое изобразительное искусство</div>
+                                      </div></a>
+                </div>
+                <div class="style-review__slide-row">
+                  <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-2.jpg"/>
+                                        <div class="style-card__overlay">
+                                          <div class="style-card__title">Вдохновение Уорхолом</div>
+                                          <div class="style-card__category">Новый Поп Арт</div>
+                                        </div></a>
+                  </div>
+                  <div class="style-review__slide-col"><a class="style-card style-review__style-card" href="#"><img class="style-card__img" src="img/style-card-3.jpg"/>
+                                        <div class="style-card__overlay">
+                                          <div class="style-card__title">Вдохновение Гансом Хофманном</div>
+                                          <div class="style-card__category">Новый абстрактный экспрессионизм</div>
+                                        </div></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="news">
+        <div class="container news__wrapper">
+          <h2 class="news__title title-lg">Новости искусства</h2>
+          <div class="news__slider-buttons">
+                        <button class="slider-btn slider-btn--left news__slider-btn js-swiper-news-prev">
+                          <svg class="slider-btn__icon">
+                            <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+                          </svg>
+                        </button>
+                        <button class="slider-btn slider-btn--right news__slider-btn js-swiper-news-next">
+                          <svg class="slider-btn__icon">
+                            <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </button>
+          </div>
+        </div>
+                  <div class="section-line news__section-line"></div>
+        <div class="container">
+          <div class="news__slider swiper-container-news">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                                <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
+                                  <div class="news-card__info">
+                                    <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a><span class="news-card__date">21.12.2018</span></div><span class="news-card__date news-card__date--mobile">21.12.2018</span><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                    <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                            <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                              <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                            </svg></a>
+                                  </div>
+                                </div>
+              </div>
+              <div class="swiper-slide">
+                                <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-2.jpg"/></a>
+                                  <div class="news-card__info">
+                                    <div class="news-card__header"><a class="news-card__category" href="#">Коллекционирование</a><span class="news-card__date">21.12.2018</span></div><span class="news-card__date news-card__date--mobile">21.12.2018</span><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                    <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                            <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                              <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                            </svg></a>
+                                  </div>
+                                </div>
+              </div>
+              <div class="swiper-slide">
+                                <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
+                                  <div class="news-card__info">
+                                    <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a><span class="news-card__date">21.12.2018</span></div><span class="news-card__date news-card__date--mobile">21.12.2018</span><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                    <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                            <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                              <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                            </svg></a>
+                                  </div>
+                                </div>
+              </div>
+              <div class="swiper-slide">
+                                <div class="news-card news__news-card"><a class="news-card__img-link" href="#"><img class="news-card__img" src="img/news-card-1.jpg"/></a>
+                                  <div class="news-card__info">
+                                    <div class="news-card__header"><a class="news-card__category" href="#">ГАЛЕРЕИ И ВЫСТАВКИ</a><span class="news-card__date">21.12.2018</span></div><span class="news-card__date news-card__date--mobile">21.12.2018</span><a class="news-card__title" href="#">Обзор нашего экспетра Владимира Рубинштейна-Загорского</a>
+                                    <p class="news-card__intro">Теперь чтобы увидеть и сравнить все 36 картин культового голландца, не нужно объезжать весь мир.</p><a class="news-card__btn" href="#">Смотреть и читать
+                                                            <svg class="long-arrow-icon news-card__long-arrow-icon">
+                                                              <use xlink:href="img/svg/sprite.svg#long-arrow"></use>
+                                                            </svg></a>
+                                  </div>
+                                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <footer class="footer">

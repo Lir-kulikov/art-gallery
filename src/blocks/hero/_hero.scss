@@ -115,11 +115,14 @@
   @include media('<desktop-sm') {
     height: fit-content;
   }
-  // height: 800px;
-  // max-height: 800px;
 
   & .swiper-slide {
     width: 100%;
+    height: auto;
+  }
+
+  & .swiper-wrapper {
+    height: auto;
   }
 
   & .swiper-pagination-bullets {

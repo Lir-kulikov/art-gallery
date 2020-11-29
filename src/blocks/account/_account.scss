@@ -1,6 +1,5 @@
 .account {
   position: relative;
-  //width: min-content;
 
   &__name {
     margin-left: 10px;
@@ -61,27 +60,26 @@
   &__user-icon {
     display: block;
     flex-shrink: 0;
-    //margin-right: 10px;
 
     @include media('>desktop-sm', '<desktop') {
       margin-right: 0;
     }
 
-    @include media('<desktop-sm') {
-      display: none;
-    }
+    // @include media('<desktop-sm') {
+    //   display: none;
+    // }
   }
 
   &__avatar {
-    display: none;
+    display: block;
 
-    @include media('<desktop-sm') {
-      display: block;
-    }
+    // @include media('<desktop-sm') {
+    //   display: block;
+    // }
 
-    @include media('<tablet') {
-      margin-right: 0;
-    }
+    // @include media('<tablet') {
+    //   margin-right: 0;
+    // }
   }
 
   &__drop {

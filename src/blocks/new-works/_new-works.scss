@@ -1,15 +1,5 @@
 .new-works {
 
-  // --msnry-gutter: 45px;
-
-  // @include media('<desktop-sm') {
-  //   --msnry-gutter: 13px;
-  // }
-
-  // @include media('<desktop-sm') {
-  //   --msnry-gutter: 7px;
-  // }
-
   padding-top: 47px;
   padding-bottom: 62px;
   background-color: var(--light-gray);
@@ -72,78 +62,6 @@
     }
   }
 
-  // &__grid {
-  //   position: relative;
-  //   width: 1240px;
-  //   max-width: 100%;
-  //   margin-right: auto;
-  //   margin-bottom: 20px;
-  //   margin-left: auto;
-
-  //   @include media('<desktop-sm') {
-  //     margin-bottom: 0;
-  //   }
-  // }
-
-  // &__grid-item-sizer,
-  // &__grid-item,
-  // &__grid-item-fixed-card {
-  //   width: calc((100% - var(--msnry-gutter) * 3) / 4);
-  // }
-
-  // &__grid-item {
-  //   margin-bottom: 32px;
-
-  //   @include media('<tablet') {
-  //     margin-bottom: 24px;
-  //   }
-
-  //   // &:nth-child(-n+2) {
-  //   //   display: none !important;
-  //   // }
-  // }
-
-  // &__grid-item--empty {
-  //   height: 1px;
-  //   border: none;
-  //   margin-bottom: 0;
-  //   background-color: transparent;
-  // }
-
-  // @media (max-width: 1279px) {
-  //   &__grid-item-sizer,
-  //   &__grid-item,
-  //   &__grid-item-fixed-card {
-  //     width: calc((100% - var(--msnry-gutter) * 2) / 3);
-  //   }
-  // }
-
-  // @media (max-width: 767px) {
-  //   &__grid-item-sizer,
-  //   &__grid-item,
-  //   &__grid-item-fixed-card {
-  //     width: calc((100% - var(--msnry-gutter)) / 2);
-  //   }
-  // }
-
-  // &__grid-item-gutter {
-  //   width: var(--msnry-gutter);
-  // }
-
-  // &__grid-item-fixed-card {
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0 !important;
-  //   height: 480px;
-  //   margin-bottom: 32px;
-  // }
-
-  // @media (max-width: 767px) {
-  //   &__grid-item-fixed-card {
-  //     display: none;
-  //   }
-  // }
-
   &__btn {
     display: block;
     border: 1px solid #999999;
@@ -154,27 +72,3 @@
     }
   }
 }
-
-// @media (max-width: 767px) {
-//   .hidden-mobile-down {
-//     display: none !important;
-//   }
-// }
-
-// @media (max-width: 1279px) {
-//   .hidden-tablet-down {
-//     display: none !important;
-//   }
-// }
-
-// @media (min-width: 1280px) {
-//   .hidden-desktop-up {
-//     display: none !important;
-//   }
-// }
-
-// .js-fixed-card {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-// }

@@ -10,7 +10,7 @@ const validateAutorizeInit = () => {
         default: 'Заполните поле'
       },
       patternMismatch: {
-        email: 'Неверный формат email',
+        email: 'Введите правильный e-mail',
         password: 'Введите не менее 6 символов'
       },
       wrongLength: {
@@ -195,8 +195,8 @@ for (let item of triggerNextModal) {
 }
 
 resForm.addEventListener('bouncerFormValid', () => {
-  //MicroModal.show('modal-succes');
   document.querySelector('#modal-succes').classList.add('is-open');
+  document.querySelector('#modal-succes').setAttribute('aria-hidden', 'false')
   document.querySelector('#modal-res').classList.remove('is-open');
   const modalSucces = document.querySelector('.modal-succes');
   const modalSuccesCloseBtns = modalSucces.querySelectorAll('[data-modal-close]');
@@ -206,9 +206,8 @@ resForm.addEventListener('bouncerFormValid', () => {
     btn.addEventListener('click', (e) => {
       if (btn === e.target) {
         document.querySelector('#modal-succes').classList.remove('is-open');
+        document.querySelector('#modal-succes').setAttribute('aria-hidden', 'true')
       }
     })
   }
 }, false);
-
-

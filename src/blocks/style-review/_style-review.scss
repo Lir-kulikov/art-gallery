@@ -120,4 +120,13 @@
 
 .swiper-container-style-review {
   overflow: hidden;
+  height: auto;
+
+  .swiper-wrapper {
+    height: auto;
+  }
+
+  // .swiper-slide {
+  //   min-width: 0;
+  // }
 }

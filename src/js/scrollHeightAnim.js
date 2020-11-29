@@ -7,6 +7,7 @@ export const scrollHeightAnim = (elem) => {
 }
 
 export const setHeight = (showBtn, elBlock) => {
+  elBlock.style.height = 0 + 'px';
   if (elBlock.style.height !== "0px") {
     showBtn.classList.add('is-open');
     elBlock.classList.add('is-open');
@@ -19,7 +20,7 @@ export const setHeight = (showBtn, elBlock) => {
     } else {
       elBlock.style.height = `${ elBlock.scrollHeight }px`;
       window.getComputedStyle(elBlock, null).getPropertyValue("height");
-      elBlock.style.height = "0";
+      elBlock.style.height = "0px";
       showBtn.classList.remove('is-open');
       elBlock.classList.remove('is-open');
     }

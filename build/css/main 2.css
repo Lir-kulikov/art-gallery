@@ -3247,7 +3247,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal__question-text {
     margin-right: 2px;
   }
@@ -3288,7 +3288,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal__title-sm--mobile-hidden {
     display: none;
   }
@@ -3376,7 +3376,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-autorize__title {
     margin: 0 auto;
     font-size: 22px;
@@ -3389,7 +3389,7 @@ body {
   padding-top: 40px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-autorize__body {
     flex-direction: column-reverse;
     padding-top: 20px;
@@ -3406,7 +3406,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-autorize__social {
     padding-top: 25px;
     margin-right: auto;
@@ -3426,7 +3426,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-autorize__form {
     padding-bottom: 30px;
     padding-left: 0;
@@ -3444,7 +3444,7 @@ body {
   content: '';
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-autorize__form::before {
     display: none;
   }
@@ -3470,7 +3470,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-autorize__btn.btn-blue {
     margin-bottom: 12px;
   }
@@ -3494,7 +3494,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-autorize .modal__container {
     width: 653px;
     padding-top: 40px;
@@ -3502,10 +3502,6 @@ body {
     padding-bottom: 30px;
     padding-left: 20px;
   }
-}
-
-.modal-autorize .modal__question {
-  justify-content: space-between;
 }
 
 .error-message {
@@ -3520,7 +3516,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .error-message {
     right: 0;
     left: auto;
@@ -3657,7 +3653,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-reg .modal__container {
     padding-top: 30px;
     padding-right: 20px;
@@ -3676,7 +3672,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-reg__title {
     font-size: 22px;
     text-align: center;
@@ -3719,7 +3715,7 @@ body {
   justify-content: space-between;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-reg__header-row {
     display: block;
     margin: 0 auto;
@@ -3742,7 +3738,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-reg__header-anons {
     display: block;
     margin-bottom: 5px;
@@ -3767,7 +3763,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-reg__btn.btn-blue {
     margin-top: 20px;
     margin-bottom: 12px;
@@ -3784,7 +3780,7 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .form-reg__body-top {
     padding: 16px 0 5px;
     border-bottom: none;
@@ -3796,7 +3792,7 @@ body {
   justify-content: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .form-reg__radio-wrapper {
     justify-content: flex-start;
   }
@@ -3814,7 +3810,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .form-reg__body-main {
     flex-direction: column-reverse;
     padding-top: 0;
@@ -3832,7 +3828,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .form-reg__social {
     padding-top: 25px;
     margin: 0 auto;
@@ -3850,7 +3846,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .form-reg__fields {
     padding-bottom: 20px;
     padding-left: 0;
@@ -3885,7 +3881,7 @@ body {
   margin-bottom: 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .form-reg__item:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -3974,7 +3970,7 @@ body {
   margin-right: 34px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .radio:not(:last-child) {
     margin-right: 12px;
   }
@@ -4033,7 +4029,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-res .modal__container {
     width: 370px;
     padding-top: 45px;
@@ -4082,7 +4078,7 @@ body {
   }
 }
 
-@media (max-width: 1279px) and (max-width: 767px) {
+@media (max-width: 1279px) and (max-width: 649px) {
   .modal-res__title {
     font-size: 22px;
   }
@@ -4107,7 +4103,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-res__btn.btn-blue {
     margin-top: 20px;
     margin-bottom: 12px;
@@ -4136,7 +4132,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-succes .modal__container {
     width: 370px;
     padding-top: 45px;
@@ -4179,7 +4175,7 @@ body {
   padding-top: 35px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-succes__body {
     padding-top: 30px;
   }
@@ -4192,7 +4188,7 @@ body {
   text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-succes__text {
     margin-bottom: 25px;
     font-size: 14px;
@@ -4203,7 +4199,7 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 649px) {
   .modal-succes__img {
     width: 90px;
   }
@@ -4262,6 +4258,7 @@ body {
 .choices__inner {
   display: inline-block;
   overflow: hidden;
+  min-width: 282px;
   min-height: 44px;
   padding: 7.5px 10px 3.75px;
   border: none;
@@ -4914,27 +4911,27 @@ body {
   white-space: nowrap;
 }
 
-.filter__btn--show.is-open {
+.filter__btn--show.is-active {
   bottom: 0;
   transition: bottom 0.2s linear;
 }
 
 @media (max-width: 767px) {
-  .filter__btn--show.is-open {
+  .filter__btn--show.is-active {
     bottom: 0;
     border-bottom: none;
   }
 }
 
-.filter__btn--show.is-open span {
+.filter__btn--show.is-active span {
   opacity: 0;
 }
 
-.filter__btn--show.is-open::after {
+.filter__btn--show.is-active::after {
   opacity: 1;
 }
 
-.filter__btn--show.is-open .dropdown-icon {
+.filter__btn--show.is-active .dropdown-icon {
   transform: rotate(180deg);
 }
 
@@ -4985,8 +4982,8 @@ body {
 
 .filter__tabs {
   overflow: hidden;
-  height: 0px;
-  transition: height var(--transition);
+  max-height: 0;
+  transition: max-height var(--transition) ease;
 }
 
 .filter__tabs.is-open {

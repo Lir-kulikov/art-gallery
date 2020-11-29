@@ -1,7 +1,7 @@
 import noUiSlider from 'nouislider';
 import Choices from 'choices.js';
 import {
-  scrollHeightAnim
+  scrollHeightAnim, setHeight
 } from '../../js/scrollHeightAnim.js';
 
 import PerfectScrollbar from 'perfect-scrollbar';
@@ -117,11 +117,11 @@ if (document.querySelector('#js-filter-select')) {
           const autocomplete = document.querySelector('.js-autocomplete')
           const autocomleteItem = document.createElement('span');
           autocomleteItem.classList.add("js-autocomplete-item");
-          if (showFilters.classList.contains('is-open')) {
-            showFilters.style.maxHeight = showFilters.scrollHeight + 100 + 'px';
-          } else {
-            elem.style.maxHeight = 0;
-          }
+          // if (showFilters.classList.contains('is-open')) {
+          //   showFilters.style.maxHeight = showFilters.scrollHeight + 100 + 'px';
+          // } else {
+          //   elem.style.maxHeight = 0;
+          // }
           //scrollHeightAnim(showFilters) // обновление max-height при добавлении стикеров с именами
 
           for (let i = 0; i < values.length; i++) {
@@ -174,10 +174,6 @@ if (document.querySelector('#js-filter-select')) {
       const accordionHeaders = document.querySelectorAll('.js-accordion-header');
 
       showFilterBtn.addEventListener('click', () => {
-        showFilterBtn.classList.toggle('is-active');
-        showFilters.classList.toggle('is-open');
-        scrollHeightAnim(showFilters);
-
         if (document.body.clientWidth < 768) {
           for (let item of accordionHeaders) { //скрытые подфильтра
             item.classList.remove('is-open');
@@ -186,6 +182,8 @@ if (document.querySelector('#js-filter-select')) {
           }
         }
       })
+
+      setHeight(showFilterBtn, showFilters)
       
       // скрытие фильтра в мобильной версии
 
@@ -198,15 +196,15 @@ if (document.querySelector('#js-filter-select')) {
         filterMore.classList.toggle('is-open');
 
         showFilters.classList.remove('is-open'); //скрытые подфильтра
-        showFilters.style.maxHeight = '0px'; //скрытые подфильтра
-        showFilterBtn.classList.remove('is-active'); //скрытые подфильтра
+        showFilters.style.height = '0px'; //скрытые подфильтра
+        showFilterBtn.classList.remove('is-open'); //скрытые подфильтра
 
-        scrollHeightAnim(filterMain)
+        scrollHeightAnim(filterMain);
         if (document.body.clientWidth < 768) {
           for (let item of accordionHeaders) { //скрытые подфильтра
             item.classList.remove('is-open');
             item.nextElementSibling.classList.remove('is-open');
-            setTimeout(scrollHeightAnim(item.nextElementSibling), 1000)
+            scrollHeightAnim(item.nextElementSibling);
           }
         }
       });
@@ -220,13 +218,13 @@ if (document.querySelector('#js-filter-select')) {
           scrollHeightAnim(item.nextElementSibling);
           //scrollHeightAnim(showFilters);
           scrollHeightAnim(filterMain);
-          if (showFilters.classList.contains('is-open')) {
-            let h = 0;
-            for (let item2 of accordionHeaders) {
-              h += item2.nextElementSibling.scrollHeight;
-            }
-            showFilters.style.maxHeight = h + "px";
-          }
+          // if (showFilters.classList.contains('is-open')) {
+          //   let h = 0;
+          //   for (let item2 of accordionHeaders) {
+          //     h += item2.nextElementSibling.scrollHeight;
+          //   }
+          //   showFilters.style.maxHeight = h + "px";
+          // }
         });
       }
 

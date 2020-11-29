@@ -11,6 +11,7 @@
   "author": "Lirrr",
   "license": "ISC",
   "dependencies": {
+    "a11y-dialog": "^5.4.2",
     "choices.js": "^9.0.1",
     "formbouncerjs": "^1.4.6",
     "glightbox": "^3.0.5",
