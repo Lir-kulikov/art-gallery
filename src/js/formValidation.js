@@ -87,8 +87,10 @@ const fixEmptyError = (form) => {
       item.addEventListener('blur', () => {
         if(item.value == "" && trySubmit === 0) {
           item.classList.remove('error');
-          item.nextElementSibling.parentNode.removeChild(item.nextElementSibling);
-        }
+          if(item.nextElementSibling.classList.contains('error-message')) {
+            item.nextElementSibling.parentNode.removeChild(item.nextElementSibling);
+          }
+          }
       })
     }
   }
@@ -111,11 +113,14 @@ for (let item of modalClose) {
     if (item === e.target) {
       for (let element of autorizeForm.elements) {
         if (element.tagName == 'INPUT') {
+          element.checked = false;
           element.value = "";
           validateAutorize.destroy();
           validateAutorizeInit();
         }
       }
+
+      document.querySelector('.form-reg__check-input').checked = false;
     }
   }, true);
 }

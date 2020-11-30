@@ -2,8 +2,7 @@ mixin account(ClassName, mod)
   .account(class= ClassName + " " + "account" + "--" + mod)
     if pageTheme == 'theme-light'
       button.account__btn.js-account-opener
-        include ../user-icon/user-icon
-        +user-icon('account__user-icon')
+        img.account__avatar(src="img/avatar.png")
         span.account__name(class= "account__name--" + mod) Александрелло
       .account__drop.js-account-drop
         ul.account__menu-group
@@ -24,8 +23,8 @@ mixin account(ClassName, mod)
           | Выйти
     if pageTheme == 'theme-dark'
       button.account__btn(data-modal-open="modal-autorize")
-        img.account__avatar(src="img/avatar.png")
-        span.account__name(class= "account__name--" + mod) Александрелло
+        include ../user-icon/user-icon
+        +user-icon('account__user-icon')
       .account__drop.js-account-drop
         ul.account__menu-group
           li.account__menu-item
