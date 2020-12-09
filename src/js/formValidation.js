@@ -212,6 +212,7 @@ resForm.addEventListener('bouncerFormValid', () => {
       if (btn === e.target) {
         document.querySelector('#modal-succes').classList.remove('is-open');
         document.querySelector('#modal-succes').setAttribute('aria-hidden', 'true')
+        document.body.style.overflow = 'visible';
       }
     })
   }

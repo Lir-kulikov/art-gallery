@@ -1,8 +1,16 @@
 .choices {
-  max-width: 282px;
+  min-width: 276px;
   border: 1px solid var(--white);
   font-family: inherit;
   font-size: 15px;
+
+  @include media('<desktop-sm') {
+    min-width: calc((100vw - 50px) / 3);
+  }
+
+  @include media('<tablet') {
+    min-width: calc((100vw - 30px) / 2);
+  }
 
   &[data-type*=select-one]::after {
     width: 10px;

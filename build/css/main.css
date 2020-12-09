@@ -99,16 +99,16 @@ input[type=text]::-ms-clear {
   font-display: swap;
   font-family: "ProximaNova";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff");
+  font-weight: 300;
+  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
 }
 
 @font-face {
   font-display: swap;
   font-family: "ProximaNova";
   font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff");
+  font-weight: 400;
+  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -1009,7 +1009,7 @@ body {
   flex-direction: column;
   justify-content: center;
   padding-top: 245px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 @media (max-width: 1023px) {
@@ -4231,10 +4231,22 @@ body {
 }
 
 .choices {
-  max-width: 282px;
+  min-width: 276px;
   border: 1px solid var(--white);
   font-family: inherit;
   font-size: 15px;
+}
+
+@media (max-width: 1023px) {
+  .choices {
+    min-width: calc((100vw - 50px) / 3);
+  }
+}
+
+@media (max-width: 767px) {
+  .choices {
+    min-width: calc((100vw - 30px) / 2);
+  }
 }
 
 .choices[data-type*=select-one]::after {
@@ -4647,27 +4659,13 @@ body {
   color: var(--dark-2);
 }
 
-.catalog__sort .choices {
-  min-width: 277px;
-}
-
-@media (max-width: 767px) {
-  .catalog__sort .choices {
-    min-width: 146px;
-  }
-}
-
-.catalog__sort .choices__inner {
-  min-width: auto;
-  max-width: 100%;
-}
-
 .catalog__grid-masonry .grid-masonry__item--empty {
   display: none;
 }
 
 .catalog__product-btn {
   display: block;
+  padding: 12px;
   border: 1px solid #999999;
   margin: 0 auto;
 }
@@ -4986,12 +4984,14 @@ body {
 
 .filter__tabs {
   overflow: hidden;
-  height: 0px;
-  transition: height var(--transition);
+  max-height: 0;
+  transition: max-height 0.3s cubic-bezier(0.1, 1, 0.3, 1);
 }
 
 .filter__tabs.is-open {
   overflow: visible;
+  max-height: 2000px;
+  transition: max-height 0.3s ease-in;
 }
 
 @media (max-width: 767px) {
@@ -5870,7 +5870,7 @@ body {
 
 .settings-icon {
   width: 18px;
-  height: 22px;
+  height: 18px;
   stroke: black;
   stroke-width: 1px;
 }
@@ -6783,7 +6783,6 @@ body {
   overflow: hidden;
   width: calc(86% - 5px);
   width: 86%;
-  height: 100%;
 }
 
 @media (max-width: 767px) {

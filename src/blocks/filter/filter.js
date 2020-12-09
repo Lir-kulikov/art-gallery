@@ -108,6 +108,18 @@ if (document.querySelector('#js-filter-select')) {
 
       sliderMin.innerHTML = priceSlider.getAttribute('data-min');
 
+      var pips = sizeSlider.querySelectorAll('.noUi-value');
+
+      function clickOnPip() {
+          var value = Number(this.getAttribute('data-value'));
+          sizeSlider.noUiSlider.set(value);
+      }
+
+      for (var i = 0; i < pips.length; i++) {
+          pips[i].style.cursor = 'pointer';
+          pips[i].addEventListener('click', clickOnPip);
+      }
+
       // autocomplete
 
       const autocomplete = () => {
@@ -183,7 +195,13 @@ if (document.querySelector('#js-filter-select')) {
         }
       })
 
-      setHeight(showFilterBtn, showFilters)
+      //setHeight(showFilterBtn, showFilters)
+      showFilterBtn.addEventListener('click', () => {
+        showFilterBtn.classList.toggle('is-open');
+        showFilters.classList.toggle('is-open');
+      })
+
+      console.log(showFilters.scrollHeight);
       
       // скрытие фильтра в мобильной версии
 
@@ -196,7 +214,7 @@ if (document.querySelector('#js-filter-select')) {
         filterMore.classList.toggle('is-open');
 
         showFilters.classList.remove('is-open'); //скрытые подфильтра
-        showFilters.style.height = '0px'; //скрытые подфильтра
+        //showFilters.style.height = '0px'; //скрытые подфильтра
         showFilterBtn.classList.remove('is-open'); //скрытые подфильтра
 
         scrollHeightAnim(filterMain);

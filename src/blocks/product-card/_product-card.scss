@@ -612,7 +612,6 @@
   overflow: hidden;
   width: calc(86% - 5px);
   width: 86%;
-  height: 100%;
 
   @include media('<tablet') {
     width: 100%;

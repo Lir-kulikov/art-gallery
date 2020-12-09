@@ -101,18 +101,18 @@
       color: var(--dark-2);
     }
 
-    .choices {
-      min-width: 277px;
+    // .choices {
+    //   min-width: 277px;
 
-      @include media('<tablet') {
-        min-width: 146px;
-      }
+    //   @include media('<tablet') {
+    //     min-width: 146px;
+    //   }
 
-      &__inner {
-        min-width: auto;
-        max-width: 100%;
-      }
-    }
+    //   &__inner {
+    //     min-width: auto;
+    //     max-width: 100%;
+    //   }
+    // }
   }
 
   &__grid-masonry {
@@ -123,6 +123,7 @@
 
   &__product-btn {
     display: block;
+    padding: 12px;
     border: 1px solid #999999;
     margin: 0 auto;
   }
